@@ -7,3 +7,8 @@ https://somostampa.com.ar/ Utilizamos esta pagina por sus productos y distrubuci
 https://cordoba.pluspet.com.ar/ Nos inspiro la funcionalidad de la pagina y plataforma del usuario.
 https://viacotone.com/  Los servicios, productos y clientela a la que apunta
 https://atelierbotanico.com.ar/ Principalmente estetica y funcionalidad de la pagina
+
+Integrantes:
+
+
+Fabricio Sebastian Porcel Barrera: Hola! Soy Fabricio y vivo en Nueva Zelanda. Siempre me gusto la programacion y decidi dar el primer paso este 2023. 
