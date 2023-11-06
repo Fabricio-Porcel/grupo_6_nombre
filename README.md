@@ -11,4 +11,5 @@ https://atelierbotanico.com.ar/ Principalmente estetica y funcionalidad de la pa
 Integrantes:
 
 
-Fabricio Sebastian Porcel Barrera: Hola! Soy Fabricio y vivo en Nueva Zelanda. Siempre me gusto la programacion y decidi dar el primer paso este 2023. 
+-Fabricio Sebastian Porcel Barrera: Hola! Soy Fabricio y vivo en Nueva Zelanda. Siempre me gusto la programacion y decidi dar el primer paso este 2023. 
+-Carolina González Portiglia: Hola! Soy Carolina, vivo en Córdoba y en mis ratos libres me gusta juntarme con amigos y hacer acitividad física. Este es mi tercer curso de programación!
