@@ -14,3 +14,4 @@ Integrantes:
 -Fabricio Sebastian Porcel Barrera: Hola! Soy Fabricio y vivo en Nueva Zelanda. Siempre me gusto la programacion y decidi dar el primer paso este 2023. 
 -Carolina González Portiglia: Hola! Soy Carolina, vivo en Córdoba y en mis ratos libres me gusta juntarme con amigos y hacer acitividad física. Este es mi tercer curso de programación!
 -Lucas Rodriguez Lardizabal: Hola! Soy Lucas y vivo en Pilar, ciudad de Buenos Aires. Soy un apasionado del futbol y de la musica, dado a mi falta de talento para vivir de eso decidi probar en el mundo de la programacion. Este camino comienza de la mano de mi primer curso con Digital House.
+-Maria Daniela Santini: Hola! Soy Daniela, vivo en San Nicolás, Provincia de Buenos Aires. Este es mi segundo curso de Programación Web. Me gusta y me parece interesante el proceso de armar y diseñar una página web. 
