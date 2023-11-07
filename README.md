@@ -19,4 +19,9 @@ Integrantes:
 
 -Maria Daniela Santini: Hola! Soy Daniela, vivo en San Nicolás, Provincia de Buenos Aires. Este es mi segundo curso de Programación Web. Me gusta y me parece interesante el proceso de armar y diseñar una página web. 
 
+<<<<<<< HEAD
 -Melisa Alvarez: Hola! Soy Melisa, Vivo en Rafaela, Santa Fe. Tengo 32 años, amante de los perros y de compartir buenos momentos junto a mi familia. Mi posición en el equipo es aportar mi creatividad y seguir conociendo este mundo de la programacion.
+=======
+-Melisa Alvarez: Hola! Soy Melisa, Vivo en Rafaela, Santa Fe. Tengo 32 años, amante de los perros y de compartir buenos momentos junto a mi familia. Mi posición en el equipo es aportar mi creatividad y seguir conociendo este mundo de la programacion.
+
+-Roman Ullua: Hola! Soy Roman, vivo en Santa Isabel, Santa Fe. En mi tiempo libre me gusta la musica, videojuegos y el futbol. Es mi primer curso de programacion Full Stacks.
