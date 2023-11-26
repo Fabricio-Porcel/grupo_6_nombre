@@ -10,26 +10,78 @@ header {
     font-family: 'Pacifico', cursive;
     
 }
+
+.header-principal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.logo{
+    width: 25%;
+    padding: 10px;
+
+}
+.caja-titulo-y-barra-busqueda{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 .titulo{
     color: #FEFAE0;
     text-align: center;
+    width: 100%;
+    
 }
 .caja-barra-busqueda{
     
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
+
 .barra-busqueda{
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 30%;
+    border-radius: 30px;
+    width: 60%;
     background-color: #FEFAE0;
 }
 .fa-magnifying-glass {
-    position: absolute;
-    right: 35%;
+    position: relative;
+    right: 30px;
+}
+.caja-botones-y-carrito{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+}
+.icono-carrito{
+    display: none;
+    margin: auto;
+    
+}
+
+
+.icono-carrito a{
+    text-decoration: none;
+    display: block;
+    color: #FEFAE0;
+    border: #FEFAE0 solid 1px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    transition: all 0.5s;
+}
+.icono-carrito a:hover{
+    transform: rotate(-90deg);
+    
 }
 
 .botones-ingresa-registrate {
@@ -37,8 +89,10 @@ header {
     flex-direction: column;
     align-items:self-end;
     padding: 10px;
+    justify-content: center;
     
 }
+
 
 .botones-ingresa-registrate a{
     text-decoration: none;
@@ -49,7 +103,7 @@ header {
     background-color: #32381b;
     color: #FEFAE0;
     border: 0px;
-    border-radius: 25%;
+    border-radius: 30px;
     width: 80px;
     text-align: center;
     margin-bottom: 8px;
@@ -58,7 +112,7 @@ header {
     background-color: #FEFAE0;
     color: #32381b;
     border: 0px;
-    border-radius: 25%;
+    border-radius: 30px;
     width: 80px;
     text-align: center; 
 }
@@ -86,3 +140,12 @@ header {
 
 
 
+
+
+
+@media (min-width: 420px){
+.icono-carrito{
+    display: block;
+}
+
+}
