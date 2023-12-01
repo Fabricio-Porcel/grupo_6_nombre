@@ -3,7 +3,11 @@
 
 /* Estilo para el header */
 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
 header {
     background-color: #606C34;
@@ -156,11 +160,28 @@ header {
 
 
 /* Main Home*/
+
+main {
+    background-color: #f5f5f5; 
+  }
+.titulo-main{
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    padding: 15px;
+}
+.titulo-nuevos-productos{
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    padding: 10px;
+    
+}
+
 .caja-productos-destacados{
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
     flex-direction: row;
+    justify-content: center;
     
     
 }
@@ -171,15 +192,31 @@ header {
     border: solid black 1px;
     padding: 10px;
     margin-bottom: 10px;
+    background-color: white;
+    transition: all 0.5s ease;
 }
+.caja-producto:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+}
+
+
 .caja-productos-nuevos{
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
     flex-direction: row;
+    justify-content: center;
+}
+.lista-descripcion-producto{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end; 
+     align-items: flex-start;
 }
 .lista-descripcion-producto li{
     list-style: none;
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: 600;
 }
 .caja-hija-productos-nuevos{
     width: 90%;
@@ -190,6 +227,7 @@ header {
     padding: 10px;
     margin-left: 10px;
     margin-bottom: 10px;
+    background-color: white;
 }
 .imagen-producto-nuevo{
     width: 90%;
@@ -197,6 +235,20 @@ header {
 .link-ver-mas{
     text-decoration: none;
     color: black;
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: 600;
+   
+}
+.ver-mas{
+    text-align: center;
+    border: solid 1px black;
+    background-color: #ccc;
+    transition: all 0.5s ease;
+}
+.ver-mas:hover{
+    background-color: rgb(42, 185, 42);
+    border: solid 3px black;
+    color: white;
 }
 
 
@@ -257,7 +309,12 @@ header {
     font-size: 18px;
     width: 100px;
 }
-
+.lista-descripcion-producto li{
+    font-size: 19px;
+}
+.link-ver-mas{
+    font-size: 19px;
+}
 
 }
 
