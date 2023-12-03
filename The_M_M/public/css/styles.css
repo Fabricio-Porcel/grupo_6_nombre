@@ -154,191 +154,6 @@ header {
 
 
 
-
-/* PRODUCT DETAIL */
-
-<<<<<<< HEAD
-.main{
-    background-color: #FEFAE0;
-}
-
-.titulo-principal{
-    text-align: center;
-    color: #32381b;
-    font-family: 'Amatic SC', sans-serif;
-    font-weight: bold;
-    margin-top: 50px;
-}
-
-.nombre-producto{
-    color: #32381b;
-    font-family: 'Amatic SC', sans-serif;
-    font-weight: bold;
-    justify-content: center;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-decoration: underline #32381b;
-    
-}
-
-.container-producto{
-    display: flex;
-    font-family: 'Amatic SC', sans-serif;
-    box-sizing: border-box;
-    background-color: #606C34;
-    border-radius: 1px;
-    border-color: #606C34;
-    margin-top: 50px;
-    margin-left: 30px;
-    margin-right: 30px;
-
-}
-
-
-.imagen-producto{
-    float: left;
-    margin-left: 10%;
-    margin-right: 5%;
-    margin-top: 90px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: #32381b 1px;
-}
-
-.imagen-tazas{
-    width: 350px;
-    
-}
-
-.descripcion-producto{
-    margin-top: 90px;
-    margin-left: 10%;
-    
-}
-
-.descripcion{
-    font-family: 'Amatic SC', sans-serif;
-    font-weight: bold;
-    color: #FEFAE0;
-    margin-bottom: 5px;
-    text-align: left;
-}
-
-.subrayado{
-    text-decoration: underline #FEFAE0;
-}
-
-.carrito{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    
-}
-
-.agregarAlCarrito{
-    font-weight: bold;
-    color: #FEFAE0;
-    margin-top: 50px;
-   
-}
-
-.boton-carrito{
-    width: 40px;
-    height: 50px;
-    background-color: #FEFAE0;
-    border-radius: 1px solid;
-    border: #FEFAE0;
-    margin-left: 10px;
-    margin-top: 40px;
-    transition-duration: 0.5s;
-}
-
-.boton-carrito:hover{
-    background-color: #afb988;
-}
-
-.fa-cart-shopping{
-    font-size: 20px;
-    color: #606C34;
-    margin-top: 10px;
-}
-
-.flechas{
-    display: flex;
-    margin-top: 50px;
-    margin-bottom: 90px;
-}
-
-.flecha-volver{
-    justify-content: left;
-    margin-right: 40%;
-    margin-left: 40px;
-   
-}
-
-.boton-icono{
-    width: 100px;
-    height: 50px;
-    margin-top: 50px;
-    background-color: #606C34;
-    border: #32381b;
-    transition-duration: 0.5s;
-    
-}
-
-.boton-icono:hover{
-    background-color: #afb988;
-}
-
-.fa-arrow-left{
-    font-size: 30px;
-    font-weight: bold;
-    color: #FEFAE0;
-    transition-duration: 0.5s;
-}
-
-.fa-arrow-left:hover{
-    color: #606C34;
-
-}
-
-.flecha-continuar{
-    justify-content: right;
-    margin-left: 40%;
-}
-
-.fa-arrow-right{
-    font-size: 30px;
-    font-weight: bold;
-    color: #FEFAE0;
-    transition-duration: 0.5s;
-}
-
-.fa-arrow-right:hover{
-    color: #606C34;
-}
-
-.volver{
-    font-family: 'Amatic SC', sans-serif;
-    color: #606C34;
-    font-weight: bold;
-    margin-bottom: 0px;
-    text-align: center;
-}
-
-.continuar{
-    font-family: 'Amatic SC', sans-serif;
-    color: #606C34;
-    font-weight: bold;
-    margin-bottom: 0px;
-    text-align: center;
-   
-}
-
-=======
-
-
 /* Main Home*/
 
 main {
@@ -547,8 +362,188 @@ main {
 .carrito-total .btn-pagar:hover{
     scale: 1.05;
 }
->>>>>>> f9174dc34d9f093ba1de986b1c532565b124a9d7
 
+
+/* PRODUCT DETAIL */
+
+
+.main{
+    background-color: #FEFAE0;
+}
+
+.titulo-principal{
+    text-align: center;
+    color: #32381b;
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.nombre-producto{
+    color: #32381b;
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-decoration: underline #32381b;
+    
+}
+
+.container-producto{
+    display: flex;
+    font-family: 'Amatic SC', sans-serif;
+    box-sizing: border-box;
+    background-color: #606C34;
+    border-radius: 1px;
+    border-color: #606C34;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+
+.imagen-producto{
+    float: left;
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-top: 90px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: #32381b 1px;
+}
+
+.imagen-tazas{
+    width: 350px;
+    
+}
+
+.descripcion-producto{
+    margin-top: 90px;
+    margin-left: 10%;
+    
+}
+
+.descripcion{
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: bold;
+    color: #FEFAE0;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.subrayado{
+    text-decoration: underline #FEFAE0;
+}
+
+.carrito{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+}
+
+.agregarAlCarrito{
+    font-weight: bold;
+    color: #FEFAE0;
+    margin-top: 50px;
+   
+}
+
+.boton-carrito{
+    width: 40px;
+    height: 50px;
+    background-color: #FEFAE0;
+    border-radius: 1px solid;
+    border: #FEFAE0;
+    margin-left: 10px;
+    margin-top: 40px;
+    transition-duration: 0.5s;
+}
+
+.boton-carrito:hover{
+    background-color: #afb988;
+}
+
+.fa-cart-shopping{
+    font-size: 20px;
+    color: #606C34;
+    margin-top: 10px;
+}
+
+.flechas{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.flecha-volver{
+    justify-content: left;
+    margin-right: 40%;
+    margin-left: 40px;
+   
+}
+
+.boton-icono{
+    width: 100px;
+    height: 50px;
+    margin-top: 50px;
+    background-color: #606C34;
+    border: #32381b;
+    transition-duration: 0.5s;
+    
+}
+
+.boton-icono:hover{
+    background-color: #afb988;
+}
+
+.fa-arrow-left{
+    font-size: 30px;
+    font-weight: bold;
+    color: #FEFAE0;
+    transition-duration: 0.5s;
+}
+
+.fa-arrow-left:hover{
+    color: #606C34;
+
+}
+
+.flecha-continuar{
+    justify-content: right;
+    margin-left: 40%;
+}
+
+.fa-arrow-right{
+    font-size: 30px;
+    font-weight: bold;
+    color: #FEFAE0;
+    transition-duration: 0.5s;
+}
+
+.fa-arrow-right:hover{
+    color: #606C34;
+}
+
+.volver{
+    font-family: 'Amatic SC', sans-serif;
+    color: #606C34;
+    font-weight: bold;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.continuar{
+    font-family: 'Amatic SC', sans-serif;
+    color: #606C34;
+    font-weight: bold;
+    margin-bottom: 0px;
+    text-align: center;
+   
+}
 
 
 
