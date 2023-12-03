@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Pacifico&display=swap" rel="stylesheet">
     <title>Carrito de Compras</title>
 </head>
+
 <body>
     <header>
         <section class="header-principal">
@@ -19,7 +21,7 @@
             </a>
             <section class="caja-titulo-y-barra-busqueda">
                 <h1 class="titulo"> The Merch Market</h1>
-                <form action="" >
+                <form action="">
                     <label class="caja-barra-busqueda">
                         <input type="text" name="barra-busqueda" class="barra-busqueda" placeholder="Buscar...">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -29,7 +31,7 @@
             <div class="caja-botones-y-carrito">
 
                 <div class="icono-carrito">
-                     <a href="/productCart" ><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
                 <article class="botones-ingresa-registrate">
                     <a href="/login" class="enlace-ingresa">Ingresa</a>
@@ -45,97 +47,68 @@
                     <li>Lo Nuevo</li>
                     <li>Nosotros</li>
                     <li>Contactanos</li>
-            </ul>
-        </nav>
+                </ul>
+            </nav>
         </section>
 
 
     </header>
-    <section class="contenedor-de-productos">
-        <div class="productos-varios">
-            <article class="items">
-                <h3>Nombre del Producto</h3>
-                <img src="" alt="">
-                <p>precio del producto</p>
-                <button class="boton-agregar">Agregar al carrito</button>
-            </article>
-            
-                <article class="items">
-                    <h3>Nombre del Producto</h3>
-                    <img src="" alt="">
-                    <p>precio del producto</p>
-                    <button class="boton-agregar">Agregar al carrito</button>
-                </article>
-               
-                    <article class="items">
-                        <h3>Nombre del Producto</h3>
-                        <img src="" alt="">
-                        <p>precio del producto</p>
-                        <button class="boton-agregar">Agregar al carrito</button>
-                    </article>
-                    
-                        <article class="items">
-                            <h3>Nombre del Producto</h3>
-                            <img src="" alt="">
-                            <p>precio del producto</p>
-                            <button class="boton-agregar">Agregar al carrito</button>
-                        </article>
-                    </div>
-                    <!--carrito de compras-->
-                    <div class="carrito">
-                        <div class="header-carrito">
-                            <h3>Tu Carrito</h3>
-                        </div>
+    <main>
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
 
-                        <div class="carrito-items">
-                            
-                     <!-- 
+            <div class="carrito-items">
+
                 <div class="carrito-item">
-                    <img src="foto producto seleccionado" width="80px" alt="">
+                    <img src="/img/audifonos-bluetooth-celestes.jfif" width="80px" alt="audifonos-bluetooth-celestes">
                     <div class="carrito-item-detalles">
-                        <span class="carrito-item-titulo"></span>
+                        <span class="carrito-item-titulo">Auriculares Bluetooth</span>
                         <div class="selector-cantidad">
                             <i class="fa-solid fa-minus restar-cantidad"></i>
                             <input type="text" value="1" class="carrito-item-cantidad" disabled>
                             <i class="fa-solid fa-plus sumar-cantidad"></i>
                         </div>
-                        <span class="carrito-item-precio">precio del producto</span>
+                        <span class="carrito-item-precio">$150.000</span>
                     </div>
-                   <span class="btn-eliminar">
-                        <i class="fa-solid fa-trash"></i>
-                   </span>
+                    <span class="btn-eliminar">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </span>
                 </div>
                 <div class="carrito-item">
-                    <img src="foto de otro producto" width="80px" alt="">
+                    <img src="/img/llavero-tela&metal-azul.jpg" width="80px" alt="llavero-tela-azul">
                     <div class="carrito-item-detalles">
-                        <span class="carrito-item-titulo">Nombre del producto</span>
+                        <span class="carrito-item-titulo">Llavero de tela (azul)</span>
                         <div class="selector-cantidad">
                             <i class="fa-solid fa-minus restar-cantidad"></i>
                             <input type="text" value="3" class="carrito-item-cantidad" disabled>
                             <i class="fa-solid fa-plus sumar-cantidad"></i>
                         </div>
-                        <span class="carrito-item-precio">precio del otro producto</span>
+                        <span class="carrito-item-precio">$1000,00</span>
                     </div>
-                   <button class="btn-eliminar">
-                        <i class="fa-solid fa-trash"></i>
-                   </button>
+                    <button class="btn-eliminar">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
                 </div>
-                 -->
+
             </div>
             <div class="carrito-total">
                 <div class="fila">
                     <strong>Tu Total</strong>
                     <span class="carrito-precio-total">
-                        colocar precio total
+                        $153.000,00
                     </span>
                 </div>
                 <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
             </div>
-        </div>    
-                    
+        </div>
 
+    </main>
 
-    </section>
-    
+    <footer>
+        <small class="nav-footer-copyright">Copyright © 2023-2023 The Merch Market.</small>
+    </footer>
 </body>
+
 </html>
