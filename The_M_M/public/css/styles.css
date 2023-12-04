@@ -545,6 +545,91 @@ main {
    
 }
 
+/* REGISTER */
+
+
+
+
+.formulario-registro {
+    width: 300px;
+    margin: 0 auto;
+    justify-items: center;
+    display: flex;
+    padding: 15px;
+
+
+   
+}
+
+
+.formulario-registro h2 {
+    text-align: center;
+    width: 100%;
+    display: flex;
+   font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+
+   
+
+
+}
+
+
+.item-formulario {
+    margin-bottom: 15px;
+   
+}
+
+
+.item-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 20px;
+
+
+}
+
+
+.item-formulario input,
+.item-formulario select {
+    width: 150%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+   
+}
+
+
+.boton-registro {
+    display: block;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    width: 150%;
+    padding: 10px;
+    background-color: #606C38;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+.boton-registro:hover {
+    background-color: #475128;
+}
+
+
+/* LOGIN */
+
+
+.link-registrate {
+    font-size: 18px;
+    color: #475128;
+}
 
 
 
