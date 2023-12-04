@@ -1,0 +1,12 @@
+{
+  "name": "grupo_6_nombre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node The_M_M/src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
