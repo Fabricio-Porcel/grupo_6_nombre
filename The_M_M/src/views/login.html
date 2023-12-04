@@ -1,11 +1,87 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <script src="https://kit.fontawesome.com/732f64c85a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Pacifico&display=swap" rel="stylesheet">
+    <title>Registro</title>
 </head>
 <body>
-    
-</body>
+    <header>
+        <section class="header-principal">
+            <a href="/" class="caja-logo">
+                <img src="/img/logo-ajustado.jpg" alt="logo" class="logo">
+                <img src="/img/mini-logo1.jpg" alt="mini-logo" class="mini-logo">
+            </a>
+            <section class="caja-titulo-y-barra-busqueda">
+                <h1 class="titulo"> The Merch Market</h1>
+                <form action="" >
+                    <label class="caja-barra-busqueda">
+                        <input type="text" name="barra-busqueda" class="barra-busqueda" placeholder="Buscar...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                </form>
+            </section>
+            <div class="caja-botones-y-carrito">
+
+                <div class="icono-carrito">
+                     <a href="/productCart" ><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <article class="botones-ingresa-registrate">
+                    <a href="/login" class="enlace-ingresa">Ingresa</a>
+                    <a href="/register" class="enlace-registrate">Registrate</a>
+                </article>
+            </div>
+        </section>
+        <section class="header-navbar">
+            <nav class="barra-navegacion">
+                <ul class="caja-barra-navegacion">
+                    <li>Inicio</li>
+                    <li>Categorias</li>
+                    <li>Lo Nuevo</li>
+                    <li>Nosotros</li>
+                    <li>Contactanos</li>
+            </ul>
+        </nav>
+        </section>
+
+
+    </header>
+</head>
+<main>
+    <div class="formulario-registro">
+        
+        <form action="#">
+            <h2>Inicio de sesion</h2>
+            
+            <div class="item-formulario">
+                
+            <div class="item-formulario">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="item-formulario">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" minlength= "5" required >
+            </div>
+           
+            <button class="boton-registro" type="submit">Inicio</button>
+
+            <div>
+                <a href="/register" class="link-registrate">Sos nuevo? Registrate</a>
+            </div>
+        </form>
+    </div>
+  </main>
+
+<footer>
+
+
+</footer>
+
 </html>
