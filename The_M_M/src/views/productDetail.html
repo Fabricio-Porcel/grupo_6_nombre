@@ -74,7 +74,7 @@
                 <p class="descripcion"><u class="subrayado">Modos de envio</u>: correo Argentino - Andreani - retiro en oficina</p>
             
                 <p class="agregarAlCarrito">Agregar al carrito:</p>
-                <button class="boton-carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="boton-carrito"><i class="fa-solid fa-cart-shopping" id="fa-cart-shopping"></i></button>
             </div>
         </div>
 
@@ -96,9 +96,21 @@
     </main>
 
     <footer>
-        <footer>
-            <small class="nav-footer-copyright">Copyright © 2023-2023 The Merch Market.</small>
-        </footer>
+        <nav class="barra-navegacion-footer" >
+            <p><i class="fa-solid fa-phone"></i> Contactanos al +54 156 789 1011</p>
+            <p><i class="fa-brands fa-whatsapp"> O por WhatsApp +54 156 789 1011</i></p>
+            <a href="#" class="link-email"><i class="fa-solid fa-envelope"></i> ventas@themerchmarket.com</a>
+            <p>Visita nuestras redes sociales <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-x-twitter"></i></p>
+        </nav>
+        <form action="/#" method="post">
+            <label for="email">Suscríbete para recibir nuestras novedades:</label>
+            <input type="email" id="email" name="email" class="barra-email-suscripcion" placeholder="Ingresa tu email" required>
+            <button type="submit" class="boton-footer-suscribir">Suscribirse</button>
+        </form>
+
+
+
+        <small class="nav-footer-copyright">Copyright © 2023-2023 The Merch Market.</small>
     </footer>
     
 </body>

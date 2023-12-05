@@ -88,9 +88,8 @@ header {
     border: #FEFAE0 solid 1px;
     border-radius: 50%;
     text-align: center;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
     margin-top: 10px;
     transition: all 0.5s;
 }
@@ -466,7 +465,7 @@ main {
     background-color: #afb988;
 }
 
-.fa-cart-shopping{
+#fa-cart-shopping{
     font-size: 20px;
     color: #606C34;
     margin-top: 10px;
@@ -648,6 +647,46 @@ main {
     font-size: 18px;
     color: #475128;
 }
+
+/* Footer */
+
+footer {
+    background-color: #606C34;
+    color: #FEFAE0;
+    padding: 20px;
+
+}
+.barra-navegacion-footer{
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 23px;
+}
+.link-email{
+    color: #FEFAE0;
+}
+
+.barra-email-suscripcion{
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+.barra-email-suscripcion:hover{
+    background-color: #ccc;
+}
+.boton-footer-suscribir{
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    transition: all 0.5s ease;
+    padding: 3px;
+}
+.boton-footer-suscribir:hover{
+    background-color: #FEFAE0;
+    color: #606C34;
+    
+}
+
 
 
 
