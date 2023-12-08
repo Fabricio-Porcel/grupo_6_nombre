@@ -1,0 +1,57 @@
+<%- include('./partials/head.ejs', {cssSheet: "styles.css", title: "Carrito de Compras"}) %>
+<%- include('./partials/header.ejs') %>
+
+    <main>
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+
+                <div class="carrito-item">
+                    <img src="/img/audifonos-bluetooth-celestes.jfif" width="80px" alt="audifonos-bluetooth-celestes">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Auriculares Bluetooth</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$150.000</span>
+                    </div>
+                    <span class="btn-eliminar">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="/img/llavero-tela&metal-azul.jpg" width="80px" alt="llavero-tela-azul">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Llavero de tela (azul)</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$1000,00</span>
+                    </div>
+                    <button class="btn-eliminar">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $153.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+
+    </main>
+
+    <%- include('./partials/footer.ejs') %>

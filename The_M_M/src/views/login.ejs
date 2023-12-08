@@ -1,0 +1,30 @@
+<%- include('./partials/head.ejs', {cssSheet: "styles.css", title: "Login"}) %>
+<%- include('./partials/header.ejs') %>
+
+<main>
+    <div class="formulario-registro">
+        
+        <form action="#">
+            <h2>Inicio de sesion</h2>
+            
+            <div class="item-formulario">
+                
+            <div class="item-formulario">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="item-formulario">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" minlength= "5" required >
+            </div>
+           
+            <button class="boton-registro" type="submit">Inicio</button>
+
+            <div>
+                <a href="/register" class="link-registrate">Sos nuevo? Registrate</a>
+            </div>
+        </form>
+    </div>
+  </main>
+
+  <%- include('./partials/footer.ejs') %>
