@@ -1,8 +1,3 @@
 # Ignorar node_modules/
 node_modules/
 
-# Ignorar archivos de bloqueo de versiones
-package-lock.json
-
-# Ignorar package.json 
-package.json
