@@ -1,0 +1,37 @@
+<%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Editar Producto"}) %>
+<%- include('../partials/header.ejs') %>
+
+<h2>Editar Producto</h2>
+<form >
+    <div class="item-formulario">
+        <label for="nombreProducto">Nombre del Producto</label>
+        <input type="text" id="nombreProducto" name="nombreProducto" required>
+    </div>
+    <div class="item-formulario">
+        <label for="descipcionProducto">Descripcion del Producto</label>
+        <input type="textarea" id="descipcionProducto" name="descipcionProducto" required>
+    </div>
+    <div class="item-formulario">
+        <label for="imagenProducto">Imagen del Producto</label>
+        <input type="file" id="imagenProducto" name="imagenProducto" required>
+    </div>
+    <div class="item-formulario">
+        <label for="categoria">Categoria</label>
+        <input type="text" id="categoria" name="categoria" required>
+    </div>
+    <div class="item-formulario">
+        <label for="colorProducto">Color del Producto</label>
+        <input type="text" id="colorProducto" name="colorProducto" required>
+    </div>
+    <div class="item-formulario">
+        <label for="precioProducto">Precio del Producto</label>
+        <input type="text" id="precioProducto" name="precioProducto" required>
+    </div>
+
+    <button class="boton-registro" type="submit">Enviar</button>
+
+
+
+
+
+<%- include('../partials/footer.ejs') %>

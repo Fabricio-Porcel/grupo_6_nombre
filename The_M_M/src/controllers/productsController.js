@@ -3,7 +3,7 @@ const express = require('express');
 
 const productsController = {
     productDetail: (req , res) =>{
-        res.render('productDetail')
+        res.render('products/productDetail')
     }
 }
 

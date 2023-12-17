@@ -3,22 +3,22 @@ const express = require('express');
 
 const usersController = {
     register: (req , res) =>{
-        res.render('register')
+        res.render('users/register')
     },
     login: (req , res) =>{
-        res.render('login')
+        res.render('users/login')
     },
     adminLogin : (req, res) =>{
-        res.render('adminLogin')
+        res.render('users/adminLogin')
     },
     admin : (req,res) =>{
-        res.render('admin')
+        res.render('users/admin')
     },
     eliminarProducto :(req , res) =>{
-        res.render('eliminarProducto')
+        res.render('users/eliminarProducto')
     },
     editarProducto : (req , res) =>{
-        res.render('editarProducto')
+        res.render('users/editarProducto')
     }
 }
 

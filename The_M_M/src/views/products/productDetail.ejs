@@ -1,0 +1,50 @@
+<%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Detalle de Producto"}) %>
+<%- include('../partials/header.ejs') %>
+
+    
+    <main class="main-detalleProducto">
+        <div class="titulo-principal">
+            <h1>Detalle de Productos:</h1>
+        </div>
+
+        <div class="nombre-producto">
+            <h2>Tazas de ceramica y corcho</h2>
+        </div>
+   
+        <div class="container-producto">
+            <div class="imagen-producto">
+                <img src="/img/tazas-ceramica-varias.jpg" alt="tazas-ceramica" class="imagen-tazas">
+            </div>
+            <div class="descripcion-producto">
+                <p class="descripcion"><u class="subrayado">Materiales</u>: cerámica y base de corcho</p>
+                <p class="descripcion"><u class="subrayado">Colores</u>: rojo - marrón - blanco - negro - azul - verde</p>
+                <p class="descripcion"><u class="subrayado">Medidas</u>: 6,00 cm (ancho) - 10,50cm (alto) - 310g (peso)
+                <p class="descripcion"><u class="subrayado">Capacidad</u>: 280ml</p>
+                <p class="descripcion"><u class="subrayado">Unidades de embalaje</u>: 1 pieza</p>
+                <p class="descripcion"><u class="subrayado">Costo por unidad</u>: $2.000</p>
+                <p class="descripcion"><u class="subrayado">Formas de pago</u>: efectivo - débito - crédito - Mercado Pago</p>
+                <p class="descripcion"><u class="subrayado">Modos de envio</u>: correo Argentino - Andreani - retiro en oficina</p>
+            
+                <p class="agregarAlCarrito">Agregar al carrito:</p>
+                <button class="boton-carrito"><i class="fa-solid fa-cart-shopping" id="fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+
+        <div class="flechas">
+            <div class="flecha-anterior">
+                <button class="boton-flechaAnterior"><i class="fa-solid fa-arrow-left"></i></button>
+                <p class="anterior">(ANTERIOR)</p>
+            </div>
+
+            <div class="flecha-siguiente">
+                <button class="boton-flechaSiguiente"><i class="fa-solid fa-arrow-right"></i></button>
+                <p class="siguiente">(SIGUIENTE)</p>
+            </div>
+        </div>
+
+            
+
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
