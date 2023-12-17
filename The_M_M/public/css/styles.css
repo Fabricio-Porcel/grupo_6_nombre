@@ -712,6 +712,112 @@ footer {
 }
 
 
+/* Editar Producto Ejs */
+
+.main-editarProducto{
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-editarProducto{
+    color: #32381b;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.form-editarProducto{
+    width: 450px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 2px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    padding-left: 30px; 
+    background-color: #606C38; 
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: bold;
+    color: #ebebeb;
+   
+   
+}
+
+.item-editarProducto{
+    width: 400px;
+    font-size: 18px;
+    font-weight: bold;
+
+
+}
+
+label{
+    display: block; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input{
+    background-color: #ebebeb; 
+    width: 350px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #606C34;
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+}
+
+input:hover{
+    background-color: white;
+}
+
+.boton-editarProducto{
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;  
+        margin-bottom: 20px; 
+        margin-top: 10px;
+        text-transform: uppercase;
+        background-color: #ebebeb; 
+        border-style: solid; 
+        border-radius: 10px;  
+        width: 100px;   
+        color: #32381b;
+        font-family: 'Pacifico', cursive;
+        cursor: pointer;
+        transition-duration: 0.5s;
+    }
+
+.boton-editarProducto:hover{
+        background-color: #afb988;
+    }  
+    
+
+/*.boton-registro {
+    color: #475128;
+    font-family: 'Amatic SC', sans-serif; 
+    font-weight: bold;
+    padding-bottom: 20px;
+
+}*/
+
+
+
+
+
+
+    
+
+/* MEDIA QUERIES */
+
 @media (min-width: 420px){
 .icono-carrito{
     display: block;
