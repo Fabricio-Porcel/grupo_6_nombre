@@ -686,10 +686,30 @@ footer {
     color: #606C34;
     
 }
+ 
+/*admin ejs*/
+
+.h2-admin{
+    padding: 20px;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.link-editar{
+    font-size: 18px;
+    color: #475128;
+    padding-left: 20px;
+}
+.link-eliminar{
+    font-size: 18px;
+    color: #475128;
+}
 
 
-
-
+.form-admin-ejs{
+    width: 300px;
+    padding-left: 25px;
+}
 
 
 @media (min-width: 420px){

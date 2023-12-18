@@ -2,13 +2,14 @@
 <%- include('../partials/header.ejs') %>
 
 
-<h2>Crear productos</h2>
+<h2 class="h2-admin">Crear productos</h2>
 
-<a href="/users/admin/editarProducto" class="">Ya tengo un producto, Editar</a>
-<a href="/users/admin/eliminarProducto" class="">Eliminar un producto existente</a>
+<a href="/users/admin/editarProducto" class="link-editar">Ya tengo un producto, Editar</a>
+<a href="/users/admin/eliminarProducto" class="link-eliminar">Eliminar un producto existente</a>
 
 
 <form>
+    <div class="form-admin-ejs">
     <div class="item-formulario">
         <label for="nombreProducto">Nombre del Producto</label>
         <input type="text" id="nombreProducto" name="nombreProducto" required>
@@ -35,7 +36,7 @@
     </div>
 
     <button class="boton-registro" type="submit">Enviar</button>
-
+</div>
 
 
 </form>
