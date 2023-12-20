@@ -887,3 +887,69 @@ input:hover{
 
 }
 
+.button-editar , .button-eliminar {
+    width: 80px;
+    height: 50px;
+    background-color: #FEFAE0;
+    border-radius: 1px solid;
+    border: #FEFAE0;
+    margin-left: 10px;
+    transition-duration: 0.5s;
+    
+}
+
+.eliminarProducto-formulario{
+    width: 300px;
+    margin: 0 auto;
+    justify-items: center;
+    display: flex;
+    padding: 15px;
+}
+
+.eliminarProducto-formulario h2{
+    text-align: center;
+    width: 100%;
+    display: flex;
+   font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+
+
+
+.item-eliminarProducto label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 20px;
+
+
+}
+
+
+.item-eliminarProducto input {
+    width: 150%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+   
+}
+
+.boton-eliminarProducto {
+    display: block;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    width: 150%;
+    padding: 10px;
+    background-color: #606C38;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.boton-eliminarProducto:hover {
+    background-color: #475128;
+}

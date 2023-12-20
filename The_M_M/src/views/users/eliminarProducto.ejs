@@ -1,15 +1,21 @@
 <%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Eliminar Producto"}) %>
 <%- include('../partials/header.ejs') %>
 
-<h2>Eliminar Producto</h2>
 
-<form>
-    <div class="item-formulario">
+
+<main>
+    <div class="eliminarProducto-formulario">
+       <form action="#">
+        <h2>Eliminar Producto</h2>
+       <div class="item-eliminarProducto">
         <label for="eliminarProducto">Ingresa el ID del producto a Eliminar</label>
-        <input type="text" id="eliminarProducto" name="eliminarProducto" required>
+        <input type="text" id="eliminarProducto" name="eliminarProducto" required> 
     </div>
-    <button class="boton-registro" type="submit">Eliminar</button>
+    <button class="boton-eliminarProducto" type="submit">Eliminar</button>
+</div>
 </form>
+    
+</main>
 
 
 
