@@ -25,6 +25,28 @@ const productsController = {
     createProduct: (req , res) =>{
         res.render('products/createProduct')
     },
+    processCreate : (req , res) =>{
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        // Crear el objeto literal (producto) a sumar al array
+		const newProduct = {
+			id: products[products.length - 1].id + 1,
+			name: req.body.name,
+			description: req.body.description,
+			image: req.file.filename,
+			category: req.body.category,
+			price: req.body.price
+			
+		}
+		// Pushear el objeto literal al array
+		products.push(newProduct);
+
+		// Transformar a json y Sobreescribir el archivo JSON
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+
+		// Mostrarle al usuario una vista (index)
+		res.redirect("/products/Detalle-Producto/" + newProduct.id);
+
+    },
     processEdit:(req,res)=>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
