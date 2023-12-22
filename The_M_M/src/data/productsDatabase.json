@@ -70,32 +70,32 @@
 },
 {
     "id":"8",
-    "name":"",
-    "description":"",
-    "image": "",
-    "category": "",  
-    "colour": "",
-    "price" : ""
+    "name":"Llavero de tela y metal.",
+    "description":"Medidas 28mm x 60mm x 6mm. Materiales metal y webbing. Personalizables, colores varios.",
+    "image": "llavero-tela&metal-azul.jpg",
+    "category": "accesorios",  
+    "colour": "Azul",
+    "price" : "3450"
 
 },
 {
     "id":"9",
-    "name":"",
-    "description":"",
-    "image": "",
-    "category": "",  
-    "colour": "",
-    "price" : ""
+    "name":"Mini Parlante bluetooth",
+    "description":"Parlante bluetooth. Tamaño ideal para llevar a todas partes. Posee una calidad de sonido y bajos reforzados que te van a sorprender. Incluye microfono para atender tus llamadas por sistema de manos libres. Personalizable y varios colores disponibles.",
+    "image": "miniparlante-negro.jpg",
+    "category": "tech",  
+    "colour": "Negro",
+    "price" : "17499"
 
 },
 {
     "id":"10",
-    "name":"",
-    "description":"",
-    "image": "",
-    "category": "",  
-    "colour": "",
-    "price" : ""
+    "name":"Taza de ceramica y base de corcho.",
+    "description":"Medidas 6cm ancho x 10,50cm de alto y peso de 310gr. Capacidad de 280ml. Colores Rojo, Marron, Blanco, Azul y Verde. ",
+    "image": "tazas-ceramica-varias.jpg",
+    "category": "accesorios",  
+    "colour": "Varios",
+    "price" : "2350"
 
 }
 

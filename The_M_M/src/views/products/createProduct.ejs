@@ -1,0 +1,38 @@
+<%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Editar Producto"}) %>
+<%- include('../partials/header.ejs') %>
+
+<main class="main-editarProducto">
+    <h2 class="titulo-editarProducto">Crear Producto</h2>
+    <form class="form-editarProducto">
+        <div class="item-editarProducto">
+            <label for="nombreProducto">Nombre del Producto</label>
+            <input type="text" id="nombreProducto" name="nombreProducto" required>
+        </div>
+        <div class="item-editarProducto">
+            <label for="descipcionProducto">Descripcion del Producto</label>
+            <input type="textarea" id="descipcionProducto" name="descipcionProducto" required>
+        </div>
+        <div class="item-editarProducto">
+            <label for="imagenProducto">Imagen del Producto</label>
+            <input type="file" id="imagenProducto" name="imagenProducto" required>
+        </div>
+        <div class="item-editarProducto">
+            <label for="categoria">Categoria</label>
+            <input type="text" id="categoria" name="categoria" required>
+        </div>
+        <div class="item-editarProducto">
+            <label for="colorProducto">Color del Producto</label>
+            <input type="text" id="colorProducto" name="colorProducto" required>
+        </div>
+        <div class="item-editarProducto">
+            <label for="precioProducto">Precio del Producto</label>
+            <input type="text" id="precioProducto" name="precioProducto" required>
+        </div>
+        
+        <button class="boton-editarProducto" type="submit">Enviar</button>
+
+
+</main>
+
+
+<%- include('../partials/footer.ejs') %>
