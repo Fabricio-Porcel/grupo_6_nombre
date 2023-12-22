@@ -1,0 +1,493 @@
+
+/* ●        Paleta de colores
+Amarillo: #EAC926; Azul: #03264C; Celeste: #1259c3; Gris oscuro: #666; Gris claro: #ebebeb; Verde: #39b54a; */
+
+* {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    
+    
+}
+header{
+    background-color: #EAC926;
+    box-sizing: border-box;
+    padding: 10px 0px 0px;
+    
+
+}
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 10px;
+
+}
+.barra-de-busqueda{
+  display: flex;
+  width: 120px;
+  margin: 0 auto;
+  flex: 1;
+  flex-wrap: wrap;
+  text-align: end;
+}
+input{
+    flex: 1;
+    padding: 8px;
+    width: 100px;
+}
+button {
+    margin-left: 5px;
+    background-color: #39b54a;
+    color: #fff;
+    padding: 8px 12px;
+    border: solid #666 1px;
+    border-radius: 30%;
+    cursor: pointer;
+  }
+
+
+.main-navbar {
+    display: none;
+    padding-bottom: 15px;
+    
+}
+
+.main-navbar a {
+    font-size: 12px;
+    color: black;
+}
+
+.logo-mercado-liebre{
+    width: 150px;
+    padding-right: 20px;
+}
+/* .logo-mercado-liebre a {
+    width: 100%;
+} */
+.link-comprar-cuotas{
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0px 15px 0px;
+}
+
+.link-comprar-cuotas a{
+    
+    text-decoration: none;
+    color: black;
+}
+
+
+.burger-menu{
+    background-color: #1259c3;
+    border: 1px solid #000;
+    width: 28px;
+    color: white;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.fa-bars{
+    color: white;
+}
+.banner{
+    box-sizing: border-box;
+    width: 100vw;
+    margin: 0vw;
+    display: flex;
+    
+}
+.banner img{
+    width: 100%;
+}
+main{
+    width: 100%;
+    background-color: #ebebeb;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+   
+
+}
+.titulo-seccion{
+    font-size: 16px;
+}
+
+.lista-productos{
+    list-style: none;
+    padding-top: 10px;
+    
+}
+
+.caja-producto{
+    width: 90%;
+    background-color: white;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.caja-descripcion-producto{
+    border-top: #ebebeb 1px solid;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content:left;
+    flex-wrap: wrap;
+}
+
+
+
+.imagen-producto{
+    width: 90%;
+    padding: 15px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.separador-camion{
+    width: 100%;
+}
+#icono-camion{
+    color: #39b54a;
+    border: solid #39b54a 1px;
+    background-color: white;
+    border-radius: 50% ;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    position: relative;
+    display: block;
+    right: 20px;
+    top: -30px;
+    transition: all 1s;
+    
+}
+
+#icono-camion:hover{
+    transform: rotate(-90deg);
+}
+
+.precio{
+    font-size: 18px;
+    width: 30%;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 0%;
+    
+}
+.descuento{
+    font-size: 16px;
+    color: #39b54a;
+    width: 70%;
+    box-sizing: border-box;
+    text-align: right;
+    margin: auto;
+    padding-left: 5%;
+    
+}
+.descripcion{
+    font-size: 15px;
+    display: none;
+    color: #666;
+    
+}
+.cuerpo-de-texto{
+    font-size: 12px;
+    
+}
+
+footer{
+    background-color: #ebebeb;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+footer h4 {
+    font-size: 12px;
+}
+
+
+.iconos-footer{
+    color:#1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+    transition: all 0.5s ease;
+}
+.iconos-footer:hover {
+    color:#39b54a
+}
+
+
+.caja-footer{
+    margin-bottom: 15px;
+}
+
+
+/* pagina /create-account.html */
+
+.crear-cuenta{
+    padding: 20px 10px;
+}
+
+.control-formulario{
+    margin-bottom: 15px;
+}
+.control-formulario label{
+    margin-bottom: 5px;
+    display: block;
+}
+.control-input{
+    width: 100%;
+    padding: 8px;
+    transition: all 0.5s;
+}
+
+.control-input:hover{
+    background-color: #ebebeb;
+}
+.boton-enviar ,
+.boton-borrar {
+    transition: all 0.5s;
+}
+
+.boton-enviar:hover{
+    background-color: #1259c3;
+}
+.boton-borrar:hover{
+    background-color: #1259c3;
+}
+
+
+/* formulario login */
+
+
+.formulario-login{
+    padding: 20px 10px;
+}
+.control-caja-login{
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+.control-caja-login label{
+    margin: auto;
+   
+}
+.control-login{
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.5s ;
+}
+
+.control-login:hover{
+background-color: #ebebeb;
+}
+
+
+.boton-login{
+    background-color: #1259c3 ;
+    display: block;
+    margin: auto;
+    transition: all 450ms;
+}
+.boton-login:hover{
+    background-color: #39b54a;
+}
+
+@media (min-width: 478px){
+    .logo-mercado-liebre{
+        width: 100%;
+    }
+
+    .barra-de-busqueda{
+        width: 40%;
+    }
+    .titulo-seccion{
+        font-size: 20px;
+    }
+    .caja-producto{
+        transition: all 0.5s;
+    }
+    .caja-producto:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+    }
+
+   
+    .descripcion{
+        display: block;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        
+    }
+    .caja-producto:hover .caja-descripcion-producto .descripcion {
+        opacity: 1;
+    }
+
+    .main-navbar {
+        display: flex ;
+        justify-content: space-between;
+        padding: 0px;
+        width: 100%;
+    
+    }
+    .main-navbar ul{
+        list-style: none;
+        display: flex;
+        }
+     .main-navbar a {
+            text-decoration: none;
+            display: flex;
+
+        }
+    
+
+    
+    .main-navbar li{
+        margin-right: 5px;
+        display: flex;
+    }
+    .burger-menu{
+        display: none;
+    }
+
+    .lista-productos{
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        
+    }
+    .caja-producto{
+        
+        max-width: 40%;
+    }
+    .imagen-producto{
+        max-width: 90%;
+    }
+
+}
+
+
+
+@media (min-width: 768px) {
+.titulo-seccion{
+    font-size: 25px;
+}
+
+    .lista-productos{
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+    .caja-producto{
+        
+        max-width: 24%;
+    }
+    .imagen-producto{
+        max-width: 90%;
+    }
+    #icono-camion{
+        position: relative;
+    }
+    .main-navbar a{
+        font-size: 16px;
+        margin: 0 5px 5px;
+    }
+    .link-comprar-cuotas{
+        font-size: 18px;
+    }
+
+    .control-input{
+        max-width: 600px;
+    }
+
+    .control-login{
+        max-width: 600px;;
+    }
+}
+
+
+@media (min-width: 992px) {
+.titulo-seccion{
+    font-size: 32px;
+    max-width: 300px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+header {
+    display: flex;
+    flex-wrap: wrap;
+}
+.top-header {
+    width: 70%;
+}
+h3 {
+    width: 30%;
+}
+.main-navbar{
+    font-size: 22px;
+}
+
+.cuerpo-de-texto{
+    font-size: 14px;
+    
+}
+footer h4{
+    font-size: 16px;
+}
+
+    
+}
+@media (min-width: 1200px) {
+    
+    .cuerpo-de-texto{
+        font-size: 16px;
+        
+    }
+    .barra-de-busqueda{
+        max-width: 550px;
+        font-size: 25px;
+    }
+    footer h4{
+        font-size: 18px;
+    }
+    .main-navbar a {
+        font-size: 18px;
+
+    }
+    .link-comprar-cuotas{
+        font-size: 20px;
+    }
+    .caja-footer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .caja-footer section {
+        max-width: 30%;
+        margin-bottom: 20px;
+    }
+    .descripcion{
+        font-size: 18px;
+    }
+
+    .control-formulario label{
+        font-size: 20px;
+    }
+    .control-login{
+        font-size: 20px;
+    }
+    #contenido-barra-busqueda {
+        font-size: 20px;
+    }
+}

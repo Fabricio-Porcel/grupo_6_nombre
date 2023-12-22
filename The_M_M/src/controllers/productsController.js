@@ -20,9 +20,7 @@ const productsController = {
        const modifyProduct = products.find(product =>{
            return product.id == req.params.id
        })
-       console.log(req.params.id);
-       console.log(modifyProduct);
-       res.render("editarProducto", {modifyProduct})
+       res.render("products/editarProducto", {modifyProduct})
    },
     createProduct: (req , res) =>{
         res.render('products/createProduct')
@@ -53,6 +51,9 @@ const productsController = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "))
         
         res.redirect("/")
+    },
+    eliminarProducto: ( req , res) =>{
+        res.render('products/eliminarProducto')
     }
 }
 
