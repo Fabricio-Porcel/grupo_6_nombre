@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const methodOverride = require('method-override') // para usar los metodos PUT y DELETE
 
 const publicPath = path.resolve(__dirname , '../public');
 app.use(express.static(publicPath));
@@ -13,6 +14,7 @@ const usersRoutes = require('./routes/usersRoutes');
 
 app.set("view engine", "ejs");
 app.set('views', path.resolve(__dirname, "views"));
+app.use(methodOverride('_method'));// para usar los metodos PUT y DELETE
 
 app.listen(3010, () =>{
     console.log('Servidor corriendo en puerto http://localhost:3010')

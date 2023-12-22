@@ -8,8 +8,7 @@ router.get('/register' , usersController.register);
 router.get('/login' , usersController.login);
 router.get('/adminLogin' , usersController.adminLogin);
 router.post('/admin' , usersController.admin);
-router.get('/admin/editarProducto' , usersController.editarProducto);
-router.get('/admin/eliminarProducto' , usersController.eliminarProducto);
+
 
 
 

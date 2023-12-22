@@ -10,5 +10,7 @@ const productsController = require ('../controllers/productsController');
 router.get('/Detalle-Producto/:id' , productsController.productDetail);
 router.get('/Crear-Producto' , productsController.createProduct )
 
+router.get('/edit/:id', productsController.edit); 
+router.put('/edit/:id', productsController.processEdit);
 
 module.exports = router;
