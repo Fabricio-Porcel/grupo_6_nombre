@@ -6,36 +6,23 @@
     <main>
         <h2 class="titulo-main"> Productos Destacados</h2>
         <section class="caja-productos-destacados">
-            <div class="caja-producto">
-                <img src="/img/audifonos-bluetooth-celestes.jfif" class="imagen-producto">
-                <div class="descripcion-producto">
-                    <ul class="lista-descripcion-producto">
-                        <li>Auriculares Bluetooth</li>
-                        <li>Desde $150.000</li>
-                    
-                    </ul>
-                </div>
-            </div>
-            <div class="caja-producto">
-                <img src="/img/botella-aceroinoxidable-burdeos.jpg" class="imagen-producto">
-                <div class="descripcion-producto">
-                    <ul class="lista-descripcion-producto">
-                        <li>Botellas de Inox</li>
-                        <li>Desde $200.000</li>
-                    
-                    </ul>
-                </div>
-            </div>
-            <div class="caja-producto">
-                <img src="/img/chomba-gris.jpg" class="imagen-producto">
-                <div class="descripcion-producto">
-                    <ul class="lista-descripcion-producto">
-                        <li>Chombas</li>
-                        <li>Desde $100.000</li>
-                    
-                    </ul>
-                </div>
-            </div>
+
+            <% products.forEach(producto => { %>
+                
+                <a href="products/Detalle-Producto/<%= producto.id %>" class="caja-producto">
+                    <img src="/img/<%= producto.image %>" class="imagen-producto">
+                    <div class="descripcion-producto">
+                        <ul class="lista-descripcion-producto">
+                            <li><%=producto.name %></li>
+                            <li>Desde $<%= producto.price %></li>
+                            
+                            </ul>
+                            </div>
+                            
+                            
+                            </a>
+                        <% }); %>
+                        
         </section>
         <h2 class="titulo-nuevos-productos">Nuevos Productos</h2>
         <section class="caja-productos-nuevos">
