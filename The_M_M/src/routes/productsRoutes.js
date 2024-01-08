@@ -24,7 +24,7 @@ router.get('/Detalle-Producto/:id' , productsController.productDetail);
 router.get('/Crear-Producto' , productsController.createProduct )
 router.post('/Crear-Producto', upload.single("imagenProducto") , productsController.processCreate);
 
-router.get('/admin/eliminarProducto' , productsController.eliminarProducto)
+router.delete('/admin/eliminarProducto' , productsController.eliminarProducto);
 
 router.get('/admin/edit/:id', productsController.edit); 
 router.put('/edit/:id', productsController.processEdit);

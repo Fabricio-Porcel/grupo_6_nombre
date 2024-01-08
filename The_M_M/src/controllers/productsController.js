@@ -75,8 +75,23 @@ const productsController = {
         
         res.redirect("/")
     },
-    eliminarProducto: ( req , res) =>{
-        res.render('products/eliminarProducto')
+    eliminarProducto : (req, res) => {
+        const productId = req.params.id; // Asumiendo que usas un parámetro en la URL para el ID del producto a eliminar
+      
+        // Leer el archivo de productos
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+      
+        // Filtrar los productos, excluyendo el que se va a eliminar
+        const productsActualizado = products.filter(product => product.id !== productId);
+      
+        // Guardar los productos actualizados en el archivo
+        fs.writeFileSync(productsFilePath, JSON.stringify(productsActualizado, null, 2), 'utf-8');
+      
+        // Redirigir o enviar una respuesta según sea necesario
+        res.redirect('/'); // Cambia esto según tus necesidades
+            
+
+
     }
 }
 
