@@ -92,5 +92,26 @@
  {
   "id": "101",
   "image": "imagenProducto-1704240799850.jpg"
+ },
+ {
+  "id": "1011",
+  "image": "imagenProducto-1704748944660.jpg"
+ },
+ {
+  "id": "10111",
+  "name": "Fabricio Porcel",
+  "description": "Soy yo",
+  "image": "imagenProducto-1704749434985.jpg",
+  "category": "tech",
+  "price": "222"
+ },
+ {
+  "id": "101111",
+  "name": "Martin Enrique",
+  "description": "Ni idea",
+  "image": "imagenProducto-1704749538082.jpg",
+  "category": "indumentaria",
+  "price": "111",
+  "colour": "Naranja"
  }
 ]

@@ -27,7 +27,10 @@
                 
                 
                 <button class="button-editar"><a href="/products/admin/edit/<%= singleProduct.id %>" class="link-editar">Editar</a></button>
-                <button class="button-eliminar"><a href="/products/admin/eliminarProducto" class="link-eliminar">Eliminar</a> </button>
+                <form action="/ruta/:id" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                <button class="button-eliminar"  id="link-eliminar">Eliminar</a> </button>
+                </form>
             </div>
 
         </div>

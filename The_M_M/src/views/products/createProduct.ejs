@@ -6,11 +6,11 @@
     <form action="/products/Crear-Producto" class="form-editarProducto" method="POST" enctype="multipart/form-data">
         <div class="item-editarProducto">
             <label for="nombreProducto">Nombre del Producto</label>
-            <input type="text" id="nombreProducto" name="nombreProducto" required>
+            <input type="text" id="nombreProducto" name="name" required>
         </div>
         <div class="item-editarProducto">
             <label for="descipcionProducto">Descripcion del Producto</label>
-            <textarea id="descipcionProducto" name="descipcionProducto" required></textarea>
+            <textarea id="descipcionProducto" name="description" required></textarea>
         </div>
         <div class="item-editarProducto">
             <label for="imagenProducto">Imagen del Producto</label>
@@ -19,7 +19,7 @@
         
         <div class="item-editarProducto">
             <label for="categoria">Categoría</label>
-            <select id="categoria" name="categoria" required>
+            <select id="categoria" name="category" required>
                 <option value="" disabled selected>Elige uno</option>
                 <option value="tech">Tecnología</option>
                 <option value="indumentaria">Indumentaria</option>
@@ -28,11 +28,11 @@
         </div>
         <div class="item-editarProducto">
             <label for="colorProducto">Color del Producto</label>
-            <input type="text" id="colorProducto" name="colorProducto" required>
+            <input type="text" id="colorProducto" name="colour" required>
         </div>
         <div class="item-editarProducto">
             <label for="precioProducto">Precio del Producto</label>
-            <input type="text" id="precioProducto" name="precioProducto" required>
+            <input type="text" id="precioProducto" name="price" required>
         </div>
         
         <button class="boton-editarProducto" type="submit">Enviar</button>

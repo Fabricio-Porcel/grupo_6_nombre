@@ -12,6 +12,7 @@ const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes')
 const usersRoutes = require('./routes/usersRoutes');
 
+app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 app.set('views', path.resolve(__dirname, "views"));
 app.use(methodOverride('_method'));// para usar los metodos PUT y DELETE

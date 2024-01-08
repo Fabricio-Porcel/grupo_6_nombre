@@ -34,7 +34,8 @@ const productsController = {
 			description: req.body.description,
 			image: req.file.filename,
 			category: req.body.category,
-			price: req.body.price
+			price: req.body.price,
+            colour : req.body.colour
 			
 		}
 		// Pushear el objeto literal al array
