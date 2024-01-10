@@ -29,11 +29,11 @@
                 <button class="button-editar-productDetail" title="Editar producto"><i class="fa-regular fa-pen-to-square"><a href="/users/admin/editarProducto" class="link-editar"></a></i></button>
                 
                 
-                <form action="/products/admin/eliminarProducto" method="POST" id="eliminarProductoForm">
-                    <!-- Puedes agregar otros campos o datos que necesites enviar en el formulario -->
+                <form action="/products/admin/eliminarProducto/<%= singleProduct.id %>?_method=DELETE" method="POST" id="eliminarProductoForm">
+                    <!-- Campo oculto para method-override -->
                     <input type="hidden" name="_method" value="DELETE">
-                    <!-- Puedes agregar más campos del formulario según tus necesidades -->
                   
+                    <!-- Otros campos o botones del formulario -->
                     <button type="submit" class="button-eliminar-productDetail" title="Eliminar producto">
                       <i class="fa-solid fa-x"></i>
                     </button>

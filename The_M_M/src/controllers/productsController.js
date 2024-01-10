@@ -75,7 +75,7 @@ const productsController = {
         
         res.redirect("/")
     },
-    eliminarProducto : (req, res) => {
+    eliminarProducto: (req, res) => {
         const productId = req.params.id; // Asumiendo que usas un parámetro en la URL para el ID del producto a eliminar
       
         // Leer el archivo de productos
@@ -89,10 +89,7 @@ const productsController = {
       
         // Redirigir o enviar una respuesta según sea necesario
         res.redirect('/'); // Cambia esto según tus necesidades
-            
-
-
-    }
+      }
 }
 
 module.exports = productsController;
