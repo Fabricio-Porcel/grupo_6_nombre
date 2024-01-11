@@ -9,8 +9,16 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const mainController = {
     index: (req , res) =>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('index' , {products})
+        // res.render('index' , {products})
+        // console.log(products)
+        const featuredProducts = products.filter(product =>{
+            return product.categoryProduct == "featuredProducts"
+        })
 
+        const newProducts = products.filter(product =>{
+            return product.categoryProduct == "newProducts"
+        })
+        return res.render("index", {featuredProducts, newProducts});
     },
     
   
