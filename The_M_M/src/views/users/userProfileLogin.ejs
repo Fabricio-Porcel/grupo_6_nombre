@@ -1,0 +1,17 @@
+<%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Login"}) %>
+<%- include('../partials/header.ejs') %>
+
+<div class="user-Profile">
+    <div class="row">
+        <div class="col-md-3">
+            <h2> Hola <%= user.fullName %> </h2>
+            <img src="colocar ruta de la imagen de avatar/<%= user.avatar %>" alt="">
+            <br>
+            <br>
+            <div class="alert alert-success"> <%= user.fullName %> </div>
+
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>
