@@ -2,31 +2,47 @@
 <%- include('../partials/header.ejs') %>
 
 <main class="main-editarProducto">
+
     <h2 class="titulo-editarProducto">Editar Producto</h2>
-    <form action="/products/admin/edit/<%= modifyProduct.id %>?_method=PUT" method="POST" class="form-editarProducto">
-        <div class="item-editarProducto">
-            <label for="nombreProducto">Nombre del Producto</label>
-            <input type="text" id="nombreProducto" name="nombreProducto" required value="<%= modifyProduct.name%>">
+
+    <form action="/products/edit/<%= modifyProduct.id %>?_method=PUT" method="POST" class="form-editarProducto">
+        
+        <div class="item-editarProducto"> 
+            <label for="name">Nombre del Producto</label>
+            <input type="text" id="name" name="name"  value="<%= modifyProduct.name%>">
         </div>
+
         <div class="item-editarProducto">
-            <label for="descipcionProducto">Descripcion del Producto</label>
-            <input type="textarea" id="descipcionProducto" name="descipcionProducto" required value="<%= modifyProduct.description%>">
+            <label for="description">Descripcion del Producto</label>
+            <input type="textarea" id="description" name="description"  value="<%= modifyProduct.description%>">
         </div>
-        <div class="item-editarProducto">
+
+        <!-- <div class="item-editarProducto">
             <label for="imagenProducto">Imagen del Producto</label>
-            <input type="file" id="imagenProducto" name="imagenProducto" required value="">
-        </div>
+            <input type="file" id="imagenProducto" name="imagenProducto"  value="<%= modifyProduct.image %>">
+        </div> -->
         <div class="item-editarProducto">
-            <label for="categoria">Categoria</label>
-            <input type="text" id="categoria" name="categoria" required value="">
+            <label for="category">Categoria</label>
+            <input type="text" id="category" name="category"  value="<%= modifyProduct.category %>">
         </div>
+ 
+            <div class="item-editarProducto">
+                <label for="categoryProduct">Categoría de producto</label>
+                <select id="categoryProduct" name="categoryProduct">
+                    <option value="<%= modifyProduct.categoryProduct %>">Elige</option>
+                    <option value="featuredProducts">Productos destacados</option>
+                    <option value="newProducts">Nuevos Productos</option>
+                </select>
+            </div>
+
         <div class="item-editarProducto">
-            <label for="colorProducto">Color del Producto</label>
-            <input type="text" id="colorProducto" name="colorProducto" required value="<%= modifyProduct.colour%>">
+            <label for="colour">Color del Producto</label>
+            <input type="text" id="colour" name="colour"  value="<%= modifyProduct.colour%>">
         </div>
+        
         <div class="item-editarProducto">
-            <label for="precioProducto">Precio del Producto</label>
-            <input type="text" id="precioProducto" name="precioProducto" required value="<%= modifyProduct.price%>">
+            <label for="price">Precio del Producto</label>
+            <input type="text" id="price" name="price"  value="<%= modifyProduct.price%>">
         </div>
         
         <button class="boton-editarProducto" type="submit">Editar</button>

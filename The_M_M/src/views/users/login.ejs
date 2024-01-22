@@ -12,6 +12,11 @@
             <div class="item-formulario">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %>
+                    </div>
+                    <% } %>
             </div>
             <div class="item-formulario">
                 <label for="contraseña">Contraseña</label>

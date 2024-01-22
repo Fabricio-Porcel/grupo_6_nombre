@@ -35,7 +35,8 @@ const productsController = {
 			image: req.file.filename,
 			category: req.body.category,
 			price: req.body.price,
-            colour : req.body.colour
+            colour : req.body.colour,
+            categoryProduct: req.body.categoryProduct
 			
 		}
 		// Pushear el objeto literal al array
@@ -61,7 +62,8 @@ const productsController = {
             category: req.body.category,
             description: req.body.description,
             colour: req.body.colour,
-            image: productToEdit.image
+            image: productToEdit.image,
+            categoryProduct: req.body.categoryProduct
         }
 
         let indice = products.findIndex(product =>{

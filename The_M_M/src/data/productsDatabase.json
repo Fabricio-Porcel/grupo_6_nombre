@@ -1,108 +1,132 @@
 [
-  {
-    "id": 1,
-    "name": "Audífonos Bluetooth",
-    "description": "Excelente calidad de audio, compatible con video llamadas, llamadas, tiene micrófono incorporado en cada audífono, puedes usar 1 o los 2. La mejor calidad que vas a poder encontrar. (en audio, calidad de construcción, etc),Posee funciones touch en cada audífono para subir volumen, contestar, pausar o cambiar canción. También funciones de comandos de voz. (Siri y Google Assistant). Fácil conexión y compatible con cualquier dispositivo que cuente con conexión bluetooth (Celulares, Tablets, computadores, etc)",
-    "image": "audifonos-bluetooth-celestes.jfif",
-    "category": "tech",
-    "colour": "Celestes",
-    "price": 6299
-  },
-  {
-    "id": 2,
-    "name": "Botella de Acero Inoxidable",
-    "description": "Botella de acero inoxidable, apta para bebidas de cualquier tipo calientes, frías. No transmiten olor y sabor al líquido interior. Capacidad de 500ml",
-    "image": "botella-aceroinoxidable-burdeos.jpg",
-    "category": "accesorios",
-    "colour": "Burdeos",
-    "price": 8190
-  },
-  {
-    "id": 3,
-    "name": "Chomba Piqué",
-    "description": "Chomba de punto ligero, poco ceñida y larga hasta la cintura, con mangas y cuello abierto",
-    "image": "chomba-gris.jpg",
-    "category": "indumentaria",
-    "colour": "Gris Menlange",
-    "price": 7330
-  },
-  {
-    "id": 4,
-    "name": "Funda para Notebook",
-    "description": "Funda notebook neoprene textil, cierre forzado con deslizador metálico",
-    "image": "funda-notebook-azul.jpg",
-    "category": "accesorios",
-    "colour": "Azul",
-    "price": 18599
-  },
-  {
-    "id": 5,
-    "name": "Gorra Bagaje",
-    "description": "Incluye un bordado en frente, 100% poliester. Corte alto. Costuras al tono. Vicera curva preformada. Talles varios",
-    "image": "gorra-azul.png",
-    "category": "indumentaria",
-    "colour": "Azul Acero",
-    "price": 23999
-  },
-  {
-    "id": 6,
-    "name": "Kit para el mate de Jean y Cuero",
-    "description": "Jean y cuero vacuno. Estuche cerrado. Medidas estuche cerrado 34cm x 23cm x 12 cm. Termo de litro forrado en cuero y bombilla niquelada. Lata yerbera y azucarera forrada. Mate tipo baqueta costura artesanal.",
-    "image": "kitmatero-jean&cuero.jpg",
-    "category": "accesorios",
-    "colour": "Negro",
-    "price": 39999
-  },
-  {
-    "id": 7,
-    "name": "Libreta de anillas con tapa de carton",
-    "description": "Libreta de anillas con tapa de carton reciclado. 80 hojas con disposición a una raya y acabado kraft y distintivo reciclado. Medidas 14,5 x 21 x 1 | Ø | 190 gr",
-    "image": "libreta-tapacartonreciclado-verde.jpg",
-    "category": "accesorios",
-    "colour": "Azul",
-    "price": 13200
-  },
-  {
-    "id": "8",
-    "name": "Llavero de tela y metal.",
-    "description": "Medidas 28mm x 60mm x 6mm. Materiales metal y webbing. Personalizables, colores varios.",
-    "image": "llavero-tela&metal-azul.jpg",
-    "category": "accesorios",
-    "colour": "Azul",
-    "price": "3450"
-  },
-  {
-    "id": "9",
-    "name": "Mini Parlante bluetooth",
-    "description": "Parlante bluetooth. Tamaño ideal para llevar a todas partes. Posee una calidad de sonido y bajos reforzados que te van a sorprender. Incluye microfono para atender tus llamadas por sistema de manos libres. Personalizable y varios colores disponibles.",
-    "image": "miniparlante-negro.jpg",
-    "category": "tech",
-    "colour": "Negro",
-    "price": "17499"
-  },
-  {
-    "id": "10",
-    "name": "Taza de ceramica y base de corcho.",
-    "description": "Medidas 6cm ancho x 10,50cm de alto y peso de 310gr. Capacidad de 280ml. Colores Rojo, Marron, Blanco, Azul y Verde. ",
-    "image": "tazas-ceramica-varias.jpg",
-    "category": "accesorios",
-    "colour": "Varios",
-    "price": "2350"
-  },
-  {
-    "id": "101",
-    "image": "imagenProducto-1704240799850.jpg"
-  },
-  {
-    "id": "1011",
-    "image": "imagenProducto-1704748944660.jpg"
-  },
-  {
-    "id": "10111",
-    "name": "Fabricio Porcel",
-    "description": "Soy yo",
-    "image": "imagenProducto-1704749434985.jpg",
-    "category": "tech",
-    "price": "222"
-  }
+ {
+  "id": 1,
+  "name": "Audífonos Bluetooth",
+  "description": "Excelente calidad de audio, compatible con video llamadas, llamadas, tiene micrófono incorporado en cada audífono, puedes usar 1 o los 2. La mejor calidad que vas a poder encontrar. (en audio, calidad de construcción, etc),Posee funciones touch en cada audífono para subir volumen, contestar, pausar o cambiar canción. También funciones de comandos de voz. (Siri y Google Assistant). Fácil conexión y compatible con cualquier dispositivo que cuente con conexión bluetooth (Celulares, Tablets, computadores, etc)",
+  "image": "audifonos-bluetooth-celestes.jfif",
+  "category": "tech",
+  "colour": "Celestes",
+  "price": 6299,
+  "categoryProduct": "featuredProducts"
+ },
+ {
+  "id": 2,
+  "name": "Botella de Acero Inoxidable",
+  "description": "Botella de acero inoxidable, apta para bebidas de cualquier tipo calientes, frías. No transmiten olor y sabor al líquido interior. Capacidad de 500ml",
+  "image": "botella-aceroinoxidable-burdeos.jpg",
+  "category": "accesorios",
+  "colour": "Burdeos",
+  "price": 8190,
+  "categoryProduct": "featuredProducts"
+ },
+ {
+  "id": 3,
+  "name": "Chomba Piqué",
+  "description": "Chomba de punto ligero, poco ceñida y larga hasta la cintura, con mangas y cuello abierto",
+  "image": "chomba-gris.jpg",
+  "category": "indumentaria",
+  "colour": "Gris Menlange",
+  "price": 7330,
+  "categoryProduct": "featuredProducts"
+ },
+ {
+  "id": 4,
+  "name": "Funda para Notebook",
+  "description": "Funda notebook neoprene textil, cierre forzado con deslizador metálico",
+  "image": "funda-notebook-azul.jpg",
+  "category": "accesorios",
+  "colour": "Azul",
+  "price": 18599,
+  "categoryProduct": "featuredProducts"
+ },
+ {
+  "id": 5,
+  "name": "Gorra Bagaje",
+  "description": "Incluye un bordado en frente, 100% poliester. Corte alto. Costuras al tono. Vicera curva preformada. Talles varios",
+  "image": "gorra-azul.png",
+  "category": "indumentaria",
+  "colour": "Azul Acero",
+  "price": 23999,
+  "categoryProduct": "featuredProducts"
+ },
+ {
+  "id": 6,
+  "name": "Kit para el mate de Jean y Cuero",
+  "description": "Jean y cuero vacuno. Estuche cerrado. Medidas estuche cerrado 34cm x 23cm x 12 cm. Termo de litro forrado en cuero y bombilla niquelada. Lata yerbera y azucarera forrada. Mate tipo baqueta costura artesanal.",
+  "image": "kitmatero-jean&cuero.jpg",
+  "category": "accesorios",
+  "colour": "Negro",
+  "price": 39999,
+  "categoryProduct": "featuredProducts"
+ },
+ {
+  "id": 7,
+  "name": "Libreta de anillas con tapa de carton",
+  "description": "Libreta de anillas con tapa de carton reciclado. 80 hojas con disposición a una raya y acabado kraft y distintivo reciclado. Medidas 14,5 x 21 x 1 | Ø | 190 gr",
+  "image": "libreta-tapacartonreciclado-verde.jpg",
+  "category": "accesorios",
+  "colour": "Azul",
+  "price": 13200,
+  "categoryProduct": "newProducts"
+ },
+ {
+  "id": "8",
+  "name": "Llavero de tela y metal.",
+  "description": "Medidas 28mm x 60mm x 6mm. Materiales metal y webbing. Personalizables, colores varios.",
+  "image": "llavero-tela&metal-azul.jpg",
+  "category": "accesorios",
+  "colour": "Azul",
+  "price": "3450",
+  "categoryProduct": "newProducts"
+ },
+ {
+  "id": "9",
+  "name": "Mini Parlante bluetooth",
+  "description": "Parlante bluetooth. Tamaño ideal para llevar a todas partes. Posee una calidad de sonido y bajos reforzados que te van a sorprender. Incluye microfono para atender tus llamadas por sistema de manos libres. Personalizable y varios colores disponibles.",
+  "image": "miniparlante-negro.jpg",
+  "category": "tech",
+  "colour": "Negro",
+  "price": "17499",
+  "categoryProduct": "featuredProducts"
+ },
+ {
+  "id": "10",
+  "name": "Taza de ceramica y base de corcho.",
+  "description": "Medidas 6cm ancho x 10,50cm de alto y peso de 310gr. Capacidad de 280ml. Colores Rojo, Marron, Blanco, Azul y Verde. ",
+  "image": "tazas-ceramica-varias.jpg",
+  "category": "accesorios",
+  "colour": "Varios",
+  "price": "2350",
+  "categoryProduct": "newProducts"
+ },
+ {
+  "id": "101111",
+  "name": "libro",
+  "description": "comedia",
+  "image": "imagenProducto-1704929893381.jpeg",
+  "category": "accesorios",
+  "price": "6000",
+  "colour": "verde",
+  "categoryProduct": "featuredProducts"
+ },
+ {
+  "id": "1011111",
+  "name": "Celular samsung",
+  "description": "sfsfs",
+  "image": "imagenProducto-1704939464742.jpg",
+  "category": "tech",
+  "price": "100000",
+  "colour": "negro",
+  "categoryProduct": "featuredProducts"
+ },
+ {
+  "id": "10111111",
+  "name": "Pato",
+  "description": "cuak cuak",
+  "image": "imagenProducto-1704939518452.jpg",
+  "category": "accesorios",
+  "price": "0",
+  "colour": "amarillo",
+  "categoryProduct": "newProducts"
+ }
 ]

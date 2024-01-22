@@ -1,10 +1,17 @@
 const express = require('express');
+const session = require('express-session');
+
 const app = express();
 const path = require('path');
 const methodOverride = require('method-override') // para usar los metodos PUT y DELETE
 
 const publicPath = path.resolve(__dirname , '../public');
 app.use(express.static(publicPath));
+app.use(session({
+    secret: "Nuestro mensaje secreto",
+    resave: false,
+    saveUninitialized: false,
+}));
 
 //treaemos la constante de routes
 
