@@ -1,4 +1,5 @@
 const express = require('express');
+const bcrypt = require('bcryptjs');
 
 
 const usersController = {
@@ -9,7 +10,7 @@ const usersController = {
         res.render('users/login')
     },
     loginProcess: (req , res) =>{
-        let userToLogin = User.findByField('email, req.body.email');
+        let userToLogin = User.findByField('email', req.body.email);
        // verifico si la contraseña es la que vino con el req
         if(userToLogin) {
             let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -46,8 +47,11 @@ const usersController = {
     logout: (req , res) =>{
          req.session.destroy();
          return res.redirect('/');
-        
+
+    }, myProfile : (req, res) =>{
+        res.render('users/myProfile')
     },
+
     adminLogin : (req, res) =>{
         res.render('users/adminLogin')
     },
