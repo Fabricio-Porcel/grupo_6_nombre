@@ -15,6 +15,7 @@ router.get('/logout/', usersController.logout);
 router.get('/adminLogin' , usersController.adminLogin);
 router.post('/admin' , usersController.admin);
 
+router.get('/myProfile', usersController.myProfile)
 
 
 

@@ -1078,3 +1078,88 @@ input:hover{
 .boton-eliminarProducto:hover {
     background-color: #475128;
 }
+
+
+/*----------------------- myProfile ---------------------- */
+.section-MyProfile {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.section-MyProfile .name-email {
+ 
+    padding: 15px 15px;
+    margin:50px auto;
+    margin-bottom: 20px;
+    width: 50%; 
+    max-width: 600px; 
+    box-shadow: 0px 0px 8px rgb(157, 157, 157);
+    transition: all 450ms;
+    border-radius: 10px;
+
+}
+.section-MyProfile .name-email:hover{
+    box-shadow: 0px 0px 15px rgb(100, 100, 100);
+    opacity: 1;
+}
+
+.section-MyProfile .info-profile {
+ 
+    padding: 25px 15px;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 50%; 
+    max-width: 600px; 
+    box-shadow: 0px 0px 8px rgb(157, 157, 157);
+    transition: all 450ms;
+    border-radius: 10px;
+
+}
+.section-MyProfile .info-profile:hover{
+    box-shadow: 0px 0px 15px rgb(100, 100, 100);
+    opacity: 1;
+}
+
+.name-email img{
+    width: 60px;
+    margin: 10px;
+    display: flex;
+    margin-right: 15px;
+}
+.name-email {
+    display: flex;
+    justify-content:flex-start;
+}
+.name-email .name{
+    margin-top: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.name-email .email{
+    font-weight: 200;
+}
+.info-profile h3{
+    font-weight: 500;
+}
+
+.info-profile .info{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.fa-phone {
+    margin-right: 10px;
+    margin-bottom: 16px;
+    
+}
+.fa-location-dot{
+    margin-right: 10px;
+    margin-bottom: 16px;
+}
+.fa-earth-americas{
+    margin-right: 10px;
+    margin-bottom: 16px;
+}
+
+.link-myProfile{
+    background-color: #afb988;
+
+}
