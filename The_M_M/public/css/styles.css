@@ -707,6 +707,11 @@ main {
     background-color: #475128;
 }
 
+.text-danger{
+    color: red;
+    font-family: 'Amatic SC', sans-serif;
+}
+
 
 /* LOGIN */
 

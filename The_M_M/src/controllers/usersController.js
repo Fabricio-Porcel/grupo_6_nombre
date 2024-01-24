@@ -1,10 +1,23 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
+const {validationResult} = require('express-validator');
 
 
 const usersController = {
     register: (req , res) =>{
         res.render('users/register')
+    },
+    processRegister: (req , res) =>{
+        const resultsValidation = validationResult(req);
+        if (resultsValidation.errors.length > 0 ){
+            return res.render('users/register' , 
+            {errors : resultsValidation.mapped(),
+            oldData : req.body
+        })
+        }
+        res.send('Pasaste todas las validaciones')
+
+       
     },
     login: (req , res) =>{
         res.render('users/login')
