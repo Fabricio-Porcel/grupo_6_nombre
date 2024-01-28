@@ -50,8 +50,8 @@ router.post('/register', upload.single('avatar'), validations, (req, res) => {
 });
 
 
-router.get('/login' ,guestMiddleware, usersController.login);
-router.post('/login' , usersController.loginProcess);
+router.get('/login',guestMiddleware, usersController.login);
+router.post('/login', usersController.loginProcess);
 router.get('/profile', authMiddleware, usersController.profile);//perfil del usuario
 router.get('/logout', usersController.logout); 
 router.get('/adminLogin' , usersController.adminLogin);
