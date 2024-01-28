@@ -37,7 +37,7 @@ const usersController = {
        
     },
     login: (req , res) =>{
-        res.render('users/login')
+        res.render('users/login');
     },
     loginProcess: (req , res) =>{
         let userToLogin = User.findByField('email', req.body.email);
@@ -49,7 +49,7 @@ const usersController = {
                 req.session.userLogged = userToLogin;
                 return res.redirect('users/profile');
             }
-            return res.render('login', {
+            return res.render('users/login', {
                 errors: {
                 email: {
                     msg: 'El mail o contraseña son incorrectos'
@@ -59,7 +59,7 @@ const usersController = {
         });
     }
 
-            return res.render('login', {
+            return res.render('users/login', {
                 errors: {
                 email: {
                     msg: 'No se encuentra este mail en nuestra base de datos'
@@ -70,7 +70,7 @@ const usersController = {
         
     },
     profile: (req , res) =>{
-       return res.render('userProfileLogin', {
+       return res.render('users/userProfileLogin', {
        user: req.session.userLogged
        });
     },
