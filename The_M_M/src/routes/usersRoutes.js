@@ -56,8 +56,9 @@ router.get('/profile', authMiddleware, usersController.profile);//perfil del usu
 router.get('/logout', usersController.logout); 
 router.get('/adminLogin' , usersController.adminLogin);
 router.post('/admin' , usersController.admin);
-
-router.get('/myProfile',authMiddleware, usersController.myProfile)
+router.get('/myProfile',authMiddleware, usersController.myProfile);
+router.get('/userProfileLogin', usersController.profile);
+router
 
 
 

@@ -62,16 +62,22 @@ const usersController = {
             if (passwordOk) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
-                return res.redirect('/users/profile');
+
+            if(req.body.rememberUser){
+                res.cookie('userEmail' , req.body.email , {maxAge : (1000 * 60) * 2})
+            }
+                
+            return res.redirect('/users/profile');
+
             }
     
-            return res.render('users/login', {
-                errors: {
-                    email: {
-                        msg: 'El correo o contraseña son incorrectos'
-                    }
+        return res.render('users/login', {
+            errors: {
+                email: {
+                    msg: 'El correo o contraseña son incorrectos'
                 }
-            });
+            }
+        });
         }
     
         return res.render('users/login', {
@@ -83,13 +89,16 @@ const usersController = {
         });
     },
     profile: (req , res) => {
-       return res.render('users/userProfileLogin', {
-       users: req.session.userLogged
+        console.log(req.cookies.userEmail);
+        
+        return res.render('users/userProfileLogin', {
+        users: req.session.userLogged
        });
     },
     logout: (req , res) =>{
-         req.session.destroy();
-         return res.redirect('/');
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
 
     }, myProfile : (req, res) =>{
        return res.render('users/myProfile',{
