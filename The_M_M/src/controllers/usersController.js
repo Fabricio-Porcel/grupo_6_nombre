@@ -92,7 +92,9 @@ const usersController = {
          return res.redirect('/');
 
     }, myProfile : (req, res) =>{
-        res.render('users/myProfile')
+       return res.render('users/myProfile',{
+            users: req.session.userLogged
+            })
     },
 
     adminLogin : (req, res) =>{

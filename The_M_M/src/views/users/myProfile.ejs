@@ -1,38 +1,43 @@
 <%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Login"}) %>
 <%- include('../partials/header.ejs') %>
 
+<body>
 
     <div class="section-MyProfile">
    
     <div class="name-email">
         <div>
-            <img src="/img/users/profile.jpg" alt="img">
+            <img src="/img/users/<%= users.avatar%>" alt="img">
         </div>
         
         <div>
-            <h3 class="name">Nombre y apellido</h3>
-            <h3 class="email">Email:</h3>
+            <h3 class="name"> <%= users.name + " "+ users.lastName%></h3>
+            <h3 class="email"><%= users.email%></h3>
         </div>
     </div>
 
-    <div>
+   
         <div class="info-profile">
             <div class="info">
                 <i class="fa-solid fa-phone"></i>
-                <h3>Telefono:</h3>
+                <h3>Telefono: <%= users.phoneNumber%></h3>
             </div>
             <div class="info">
                 <i class="fa-solid fa-earth-americas"></i>
-                <h3>Pais:</h3>
+                <h3>Pais: <%= users.country%></h3>
             </div>
             <div class="info">
                 <i class="fa-solid fa-location-dot"></i>
-                <h3>Localidad:</h3>
+                <h3>Localidad: <%= users.city%></h3>
             </div>
-   
-        </div>
-    </div>
-</div>
-</div>
+         </div>
 
+         <div class="logout">
+        <button class="button-logout">
+            <a href="/users/logout">Salir</a>
+        </button>
+    </div>
+    </div>
+
+</body>
 <%- include('../partials/footer.ejs') %>

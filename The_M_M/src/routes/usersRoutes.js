@@ -46,7 +46,7 @@ router.post('/register', upload.single('avatar'), validations, (req, res) => {
         });
     }
     // Llama a la función processRegister del controlador si no hay errores de validación
-    usersController.processRegister(req, res);
+    usersController.processRegister;
 });
 
 
@@ -57,7 +57,7 @@ router.get('/logout', usersController.logout);
 router.get('/adminLogin' , usersController.adminLogin);
 router.post('/admin' , usersController.admin);
 
-router.get('/myProfile', usersController.myProfile)
+router.get('/myProfile',authMiddleware, usersController.myProfile)
 
 
 

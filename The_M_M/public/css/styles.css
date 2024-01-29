@@ -151,7 +151,18 @@ header {
     font-weight: 600;
 }
 
+header{
+    top: 0;
+    margin: 0%;
+    position: fixed;
+    width: 100%;
+}
 
+body{
+    margin: 0;
+    padding: 0;
+    margin-top: 175px;
+}
 
 /* Main Home*/
 
@@ -1088,11 +1099,12 @@ input:hover{
 /*----------------------- myProfile ---------------------- */
 .section-MyProfile {
     font-family: Arial, Helvetica, sans-serif;
+    padding-top: 1px;
 }
 .section-MyProfile .name-email {
- 
+    
     padding: 15px 15px;
-    margin:50px auto;
+    margin: 20px auto;
     margin-bottom: 20px;
     width: 50%; 
     max-width: 600px; 
@@ -1124,10 +1136,11 @@ input:hover{
 }
 
 .name-email img{
-    width: 60px;
+    width: 100px;
     margin: 10px;
     display: flex;
     margin-right: 15px;
+    border-radius: 50%;
 }
 .name-email {
     display: flex;
@@ -1166,5 +1179,67 @@ input:hover{
 
 .link-myProfile{
     background-color: #afb988;
+}
 
+
+.section-MyProfile  .button-logout{
+    background-color:#4f96e1;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 450ms;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: medium;
+}
+.section-MyProfile .button-logout:hover{
+    background-color: #094e98;
+}
+.section-MyProfile .button-logout a{
+    text-decoration: none;
+    color: white;
+}
+
+.logout{
+    margin: auto 50%;
+}
+
+
+/*----------------------- usersProfileLogin ---------------------- */
+
+.user-Profile{
+    text-align: center;
+    padding-top: 50px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center ;
+}
+.user-Profile img{
+    width: 250px;
+    border-radius: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.buttom-home .button-logout{
+    background-color:#4f96e1;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 450ms;
+    text-decoration: none;
+    font-size: medium;
+    
+
+}
+ .buttom-home .button-logout:hover{
+    background-color: #094e98;
+}
+ .buttom-home .button-logout a{
+    text-decoration: none;
+    color: white;
+}
+.user-Profile .alert-alert-success{
+    padding-bottom: 20px;
 }
