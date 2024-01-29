@@ -24,10 +24,12 @@ const usersController = {
             {errors : {email:{msg: "Ya hay un usuario con este email"}},
             oldData : req.body})
         }
+        // Elimino el repeatPassword para que no se almacene esa informacion
+        const { repeatPassword, ...userWithoutRepeatPassword } = req.body;
 
         let userToCreate = {
-            ...req.body,
-            password : bcrypt.hashSync(req.body.password , 10 ),
+            ...userWithoutRepeatPassword,
+            password: bcrypt.hashSync(req.body.password, 10),
             avatar: req.file.filename
         }
 
@@ -41,6 +43,7 @@ const usersController = {
     },
     loginProcess: (req, res) => {
         let userToLogin = User.findByField('email', req.body.email);
+        
     
         if (userToLogin) {
             // Verificar si req.body.password está definido
@@ -54,12 +57,12 @@ const usersController = {
                 });
             }
     
-            let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            let passwordOk = bcrypt.compareSync(req.body.password, userToLogin.password);
     
             if (passwordOk) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
-                return res.redirect('users/profile');
+                return res.redirect('/users/profile');
             }
     
             return res.render('users/login', {
