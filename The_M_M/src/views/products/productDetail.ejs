@@ -13,7 +13,7 @@
    
         <div class="container-producto">
             <div class="imagen-producto">
-                <img src="/img/<%= singleProduct.image %>" alt="<%= singleProduct.name %>" class="imagen-single-product">
+                <img src="/img/products/<%= singleProduct.image %>" alt="<%= singleProduct.name %>" class="imagen-single-product">
             </div>
             <div class="descripcion-producto">
                 <p class="descripcion"><u class="subrayado">Descripcion:</u> <%= singleProduct.description %></p>
@@ -33,15 +33,15 @@
                 </a>
                 
                 
-                <form action="/products/admin/eliminarProducto/<%= singleProduct.id %>?_method=DELETE" method="POST" id="eliminarProductoForm">
+                <form action="/products/admin/eliminarProducto/<%= singleProduct.id %>?_method=DELETE"  method="POST" id="eliminarProductoForm">
                     <!-- Campo oculto para method-override -->
-                    <input type="hidden" name="_method" value="DELETE">
-                  
+                    <!-- <input type="hidden" name="_method" value="DELETE"> -->
+                    <!-- <input type="hidden" id="id" name="id"  value="<%= singleProduct.id%>"> -->
                     <!-- Otros campos o botones del formulario -->
                     <button type="submit" class="button-eliminar-productDetail" title="Eliminar producto">
                       <i class="fa-solid fa-x"></i>
                     </button>
-                  </form>
+                </form>
             </div>
 
         </div>

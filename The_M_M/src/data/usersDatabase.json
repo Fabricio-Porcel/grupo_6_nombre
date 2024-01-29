@@ -1,11 +1,98 @@
 [
-    {
-        "Identificador":1,
-"Nombre": "firstName",
- "Apellido": "lastName",
- "Email": "email",
-"Contraseña": "password",
- "Categoría": "category",
- "Imagen": "image"
-    }
+ {
+  "id": 1,
+  "Nombre": "firstName",
+  "Apellido": "lastName",
+  "Email": "email",
+  "Contraseña": "password",
+  "Categoría": "category",
+  "Imagen": "image"
+ },
+ {
+  "id": 2,
+  "name": "Pedro",
+  "lastName": "Poroto",
+  "email": "pedro@poroto.net",
+  "password": "contrasenia1234",
+  "country": "Singapur",
+  "avatar": "default"
+ },
+ {
+  "id": 3,
+  "name": "Juan",
+  "lastName": "Perez",
+  "country": "Argentina",
+  "email": "juan@perez.com"
+ },
+ {
+  "id": 4,
+  "name": "FABRICIO",
+  "lastName": "PORCEL",
+  "email": "faba_59@hotmail.com",
+  "password": "123456",
+  "repeatPassword": "123456",
+  "phoneNumber": "+64225908182",
+  "country": "New Zealand",
+  "city": "Martinborough"
+ },
+ {
+  "id": 5,
+  "name": "FABRICIO",
+  "lastName": "PORCEL",
+  "email": "faba_59@hotmail.com",
+  "password": "123456",
+  "repeatPassword": "123456",
+  "phoneNumber": "+64225908182",
+  "country": "New Zealand",
+  "city": "Martinborough",
+  "avatar": "avatar-1706132955364.jpg"
+ },
+ {
+  "id": 6,
+  "name": "FABRICIO",
+  "lastName": "PORCEL",
+  "email": "faba_59@hotmail.com",
+  "password": "123456",
+  "repeatPassword": "123456",
+  "phoneNumber": "+64225908182",
+  "country": "New Zealand",
+  "city": "Martinborough",
+  "avatar": "avatar-1706133347684.jpg"
+ },
+ {
+  "id": 7,
+  "name": "FABRICIO",
+  "lastName": "PORCEL",
+  "email": "faba_59@hotmail.com",
+  "password": "$2a$10$QSiAYGtiNox23Jig1oPeaen/e72TLizBWd6ouAMe4fU/xZ57SXw96",
+  "repeatPassword": "123456",
+  "phoneNumber": "+64225908182",
+  "country": "New Zealand",
+  "city": "Martinborough",
+  "avatar": "avatar-1706133503732.jpg"
+ },
+ {
+  "id": 8,
+  "name": "FABRICIO",
+  "lastName": "PORCEL",
+  "email": "fabricio.sebastian9@gmail.com",
+  "password": "$2a$10$zQsVPFyqJB/YfCLLIvmmwOK2X1OzeTqLwrpbkE0fYq3OnF18QGx6i",
+  "repeatPassword": "123456",
+  "phoneNumber": "+64225908182",
+  "country": "New Zealand",
+  "city": "Martinborough",
+  "avatar": "avatar-1706134198493.jpg"
+ },
+ {
+  "id": 9,
+  "name": "carolina",
+  "lastName": "gonzalez portiglia",
+  "email": "caro.gonpor@gmail.com",
+  "password": "$2a$10$dOCMlgbIZ7Kr1F0YBWfMDORfjhBp8UUSBdJ5Bg4l/ak3WxgOSd5y6",
+  "repeatPassword": "12345",
+  "phoneNumber": "1168266106",
+  "country": "argentina",
+  "city": "cordoba",
+  "avatar": "avatar-1706478950963.jpg"
+ }
 ]

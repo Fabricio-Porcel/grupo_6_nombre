@@ -10,7 +10,7 @@
             <% featuredProducts.forEach(producto => { %>
                 
                 <a href="products/Detalle-Producto/<%= producto.id %>" class="caja-producto">
-                    <img src="/img/<%= producto.image %>" class="imagen-producto">
+                    <img src="/img/products/<%= producto.image %>" class="imagen-producto">
                     <div class="descripcion-producto">
                         <ul class="lista-descripcion-producto">
                             <li><%=producto.name %></li>
@@ -30,7 +30,7 @@
             <% newProducts.forEach(producto => { %>
 
                 <div class="caja-hija-productos-nuevos" >
-                    <img src="/img/<%= producto.image %>" class="imagen-producto-nuevo">
+                    <img src="/img/products/<%= producto.image %>" class="imagen-producto-nuevo">
                     <div class="ver-mas"><a href="/products/Detalle-Producto/<%= producto.id %>" class="link-ver-mas">Ver Mas</a></div>
                 </div>
                 

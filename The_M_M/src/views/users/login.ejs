@@ -4,7 +4,7 @@
 <main>
     <div class="formulario-registro">
         
-        <form action="#">
+        <form action="/users/login" method="POST">
             <h2>Inicio de sesion</h2>
             
             <div class="item-formulario">
@@ -19,8 +19,8 @@
                     <% } %>
             </div>
             <div class="item-formulario">
-                <label for="contraseña">Contraseña</label>
-                <input type="password" id="contraseña" name="contraseña" minlength= "5" required >
+                <label for="password">Contraseña</label>
+                <input type="password" id="contraseña" name="password" minlength= "5" required >
             </div>
            
             <button class="boton-registro" type="submit">Inicio</button>

@@ -24,8 +24,8 @@ app.set("view engine", "ejs");
 app.set('views', path.resolve(__dirname, "views"));
 app.use(methodOverride('_method'));// para usar los metodos PUT y DELETE
 
-app.listen(3010, () =>{
-    console.log('Servidor corriendo en puerto http://localhost:3010')
+app.listen(3011, () =>{
+    console.log('Servidor corriendo en puerto http://localhost:3011')
 })
 
 
