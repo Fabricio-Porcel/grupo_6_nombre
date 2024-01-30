@@ -72,18 +72,6 @@
   "avatar": "avatar-1706133503732.jpg"
  },
  {
-  "id": 8,
-  "name": "FABRICIO",
-  "lastName": "PORCEL",
-  "email": "fabricio.sebastian9@gmail.com",
-  "password": "$2a$10$zQsVPFyqJB/YfCLLIvmmwOK2X1OzeTqLwrpbkE0fYq3OnF18QGx6i",
-  "repeatPassword": "123456",
-  "phoneNumber": "+64225908182",
-  "country": "New Zealand",
-  "city": "Martinborough",
-  "avatar": "avatar-1706134198493.jpg"
- },
- {
   "id": 9,
   "name": "carolina",
   "lastName": "gonzalez portiglia",

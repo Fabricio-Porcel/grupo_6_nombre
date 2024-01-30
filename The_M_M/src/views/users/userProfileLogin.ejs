@@ -1,20 +1,47 @@
 <%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Login"}) %>
 <%- include('../partials/header.ejs') %>
 
-<div class="user-Profile">
+<body>
+
+    <div class="section-MyProfile">
    
-        <div class="col-md-3">
-            <h2> Hola <%= users.name + " "+ users.lastName%>! </h2>
-            <img src="/img/users/<%= users.avatar %> " alt="">
-            <br>
-            <br>
-            <div class="alert-alert-success"> <%= users.email %> </div>
-            <div class="buttom-home">
-                <button class="button-logout">
-                    <a href="/">Inicio</a>
-                </button>
-            </div>
+    <div class="name-email">
+        <div>
+            <img src="/img/users/<%= users.avatar%>" alt="img">
         </div>
-</div>
+        
+        <div>
+            <h3 class="name"> <%= users.name + " "+ users.lastName%></h3>
+            <h3 class="email"><%= users.email%></h3>
+        </div>
+    </div>
+
+   
+        <div class="info-profile">
+            <div class="info">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Telefono: <%= users.phoneNumber%></h3>
+            </div>
+            <div class="info">
+                <i class="fa-solid fa-earth-americas"></i>
+                <h3>Pais: <%= users.country%></h3>
+            </div>
+            <div class="info">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Localidad: <%= users.city%></h3>
+            </div>
+         </div>
+
+         <div class="buttons">
+            <button class="button-logout">
+                <a href="/users/logout">Cerrar Sesion</a>
+            </button>
+            <button class="button-edit">
+                <a href="/users/profileEdit/<%= users.id %>">Editar</a>
+            </button>
+        </div>
+
+
+</body>
 
 <%- include('../partials/footer.ejs') %>

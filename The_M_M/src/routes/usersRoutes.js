@@ -53,11 +53,13 @@ router.post('/register', upload.single('avatar'), validations, (req, res) => {
 router.get('/login',guestMiddleware, usersController.login);
 router.post('/login', usersController.loginProcess);
 router.get('/profile', authMiddleware, usersController.profile);//perfil del usuario
+router.get('/profileEdit/:id', authMiddleware, usersController.profileEdit);//perfil del usuario
+router.post('/profileEdit/:id', authMiddleware, usersController.profileProcessEdit);//perfil del usuario
 router.get('/logout', usersController.logout); 
 router.get('/adminLogin' , usersController.adminLogin);
 router.post('/admin' , usersController.admin);
 
-router.get('/myProfile',authMiddleware, usersController.myProfile)
+// router.get('/myProfile',authMiddleware, usersController.myProfile)
 
 
 
