@@ -46,7 +46,7 @@ router.post('/register', upload.single('avatar'), validations, (req, res) => {
         });
     }
     // Llama a la función processRegister del controlador si no hay errores de validación
-    usersController.processRegister;
+    usersController.processRegister(req, res);
 });
 
 
@@ -54,7 +54,7 @@ router.get('/login',guestMiddleware, usersController.login);
 router.post('/login', usersController.loginProcess);
 router.get('/profile', authMiddleware, usersController.profile);//perfil del usuario
 router.get('/profileEdit/:id', authMiddleware, usersController.profileEdit);//perfil del usuario
-router.post('/profileEdit/:id', authMiddleware, usersController.profileProcessEdit);//perfil del usuario
+router.put('/profileEdit/:id', authMiddleware, usersController.profileProcessEdit);//perfil del usuario
 router.get('/logout', usersController.logout); 
 router.get('/adminLogin' , usersController.adminLogin);
 router.post('/admin' , usersController.admin);

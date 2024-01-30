@@ -119,7 +119,7 @@ const usersController = {
             email:req.body.email,
             phoneNumber:req.body.phoneNumber,
             avatar:UserToEdit.avatar,
-            password:req.body.password
+            password:UserToEdit.password
         }
         let indice = users.findIndex(user =>{
             return user.id == id
@@ -127,7 +127,7 @@ const usersController = {
         users[indice] = UserToEdit;
 
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-        res.redirect("userProfileLogin",{users: req.session.userLogged})
+        res.redirect("/users/profileEdit/" + id ,{users: req.session.userLogged})
      },
     logout: (req , res) =>{
          req.session.destroy();
