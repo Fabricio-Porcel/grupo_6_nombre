@@ -20,17 +20,10 @@
                 <div class="icono-carrito">
                      <a href="/Carrito-de-compras" ><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
-                <% if (locals.isLogged) { %>
-                    <article class="botones-miPerfil-logOut">
-                        <a href="/users/userProfileLogin" class="enlace-miPerfil">Mi Perfil</a>
-                        <a href="/users/logout" class="enlace-logOut">Cerrar Sesión</a>
-                    </article>
-                <% } else { %>
-                    <article class="botones-ingresa-registrate">
-                        <a href="/users/login" class="enlace-ingresa">Ingresa</a>
-                        <a href="/users/register" class="enlace-registrate">Registrate</a>
-                    </article>
-                <% } %>
+                <article class="botones-ingresa-registrate">
+                    <a href="/users/login" class="enlace-ingresa">Ingresa</a>
+                    <a href="/users/register" class="enlace-registrate">Registrate</a>
+                </article>
             </div>
         </section>
         <section class="header-navbar">
