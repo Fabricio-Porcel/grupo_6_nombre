@@ -131,6 +131,35 @@ header {
     text-align: center; 
 }
 
+.botones-miPerfil-logOut{
+    display: flex;
+    flex-direction: column;
+    align-items:self-end;
+    padding: 10px;
+    justify-content: center;
+    
+}
+
+.enlace-miPerfil{
+    background-color: #32381b;
+    color: #FEFAE0;
+    border: 0px;
+    border-radius: 30px;
+    width: 80px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.enlace-logOut{
+    background-color: #FEFAE0;
+    color: #32381b;
+    border: 0px;
+    border-radius: 30px;
+    width: 80px;
+    text-align: center; 
+
+}
+
 .barra-navegacion{
     font-family: 'Amatic SC', sans-serif;
     background-color: #FEFAE0;
