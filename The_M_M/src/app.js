@@ -1,7 +1,11 @@
 const express = require('express');
 const session = require('express-session');
+const cookies = require('cookie-parser');
 
 const app = express();
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
 const path = require('path');
 const methodOverride = require('method-override') // para usar los metodos PUT y DELETE
 
@@ -12,6 +16,10 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+
+app.use(cookies());
+
+app.use(userLoggedMiddleware);
 
 //treaemos la constante de routes
 

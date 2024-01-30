@@ -732,6 +732,22 @@ main {
     color: #475128;
 }
 
+.checkbox-login{
+    font-family: 'Amatic SC', sans-serif;
+    color: #475128;
+    font-size: 18px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.rememberUser{
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    margin-right: 80px;
+
+}
+
 
 /* FOOTER */
 
