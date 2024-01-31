@@ -127,7 +127,7 @@ const usersController = {
         users[indice] = UserToEdit;
 
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-        res.redirect("/users/profileEdit/" + id ,{users: req.session.userLogged})
+        res.render("users/userProfileLogin" ,{users: req.session.userLogged})
      },
     logout: (req , res) =>{
          req.session.destroy();
