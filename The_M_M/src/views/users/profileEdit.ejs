@@ -1,46 +1,59 @@
 <%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Login"}) %>
 <%- include('../partials/header.ejs') %>
 
+
 <body>
+    <form action="/users/profileEdit/<%= users.id %>?_method=PUT" method="POST"  class="section-ProfileEdit">
+    
    
-        <form action="/users/profileEdit/<%= users.id %>?_method=PUT" method="POST" class="edit-form">
-            <div class="title-form">
-                <h1>Modificar Usuario</h1>
-            </div>
-            <div class="form-desktop">
+        <div class="form-desktop">
+            <div class="form-block">
             <div class="control-form">
-                <label for="name">Nombre:</label>
+                <label for="name"><i class="fa-solid fa-pen"></i>Nombre:</label>
                 <input type="text" id="name" name="name" class="control" value="<%= users.name %>">
             </div>
+
             <div class="control-form">
-                <label for="lastName">Apellido:</label>
+                <label for="lastName"><i class="fa-solid fa-pen"></i>Apellido:</label>
                 <input type="text" id="lastName" name="lastName" class="control"value="<%= users.lastName %>">
             </div>
+
             <div class="control-form">
-                <label for="email">Email:</label>
+                <label for="email"><i class="fa-solid fa-envelope"></i>Email:</label>
                 <input type="email" id="email" name="email" class="control" value="<%= users.email %>">
             </div>
+
             <div class="control-form">
-                <label for="phoneNumber">Telefono:</label>
+                
+                <label for="phoneNumber"><i class="fa-solid fa-phone"></i>Telefono:</label>
                 <input type="tel" name="phoneNumber" class="control" value="<%= users.phoneNumber %>">
             </div>
+        </div>
+        <div class="form-block">
             <div class="control-form">
-                <label for="country">Pais:</label>
+                <label for="country"><i class="fa-solid fa-earth-americas"></i>Pais:</label>
                 <input type="text" name="country" class="control" value="<%= users.country %>">
             </div>
             <div class="control-form">
-                <label for="city">Ciudad:</label>
+                <label for="city"><i class="fa-solid fa-location-dot"></i>Ciudad:</label>
                 <input type="text" name="city" class="control" value="<%= users.city %>">
             </div>
             <div class="control-form">
-                <label for="avatar">Imagen de pefil:</label>
+                <label for="avatar"><i class="fa-solid fa-upload"></i>Imagen de pefil:</label>
                 <input type="file" name="avatar" class="control" value="<%= users.avatar %>">
             </div>
-     
-            <button type="reset" class="button-form">Eliminar Todos</button>
-            <button type="submit" class="button-form">Modificar</button>
-            </div>
-        </form>
+        </div>
+        
+         </div>
+         <div class="buttons-edit">
+            
+            <button type="reset" class="button-delete">Eliminar campos</button>
+            <button type="submit" class="button-edit">Modificar</button>
+        
+        </div>
+        <form>
 
 </body>
+
+
 <%- include('../partials/footer.ejs') %>
