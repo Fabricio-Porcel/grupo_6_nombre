@@ -89,7 +89,7 @@ const usersController = {
         });
     },
     profile: (req , res) => {
-       return res.render('users/userProfileLogin', {
+       return res.render('users/profile', {
        users: req.session.userLogged
        });
     },
@@ -99,7 +99,7 @@ const usersController = {
         //     return users.id == req.params.id
         // })
 
-         res.render('users/userProfileEdit', {
+         res.render('users/profileEdit', {
         users: req.session.userLogged
         // userToEdit
         });
@@ -132,7 +132,7 @@ const usersController = {
         users[indice] = UserToEdit;
 
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-        res.render("users/userProfileLogin" ,{users: req.session.userLogged})
+        res.render("users/profile" ,{users: req.session.userLogged})
      },
     logout: (req , res) =>{
         res.clearCookie('userEmail');
