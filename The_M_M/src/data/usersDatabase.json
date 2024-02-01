@@ -19,13 +19,12 @@
   "id": 4,
   "name": "carolina",
   "lastName": "gonzalez portiglia",
-  "email": "caro.gonpor@gmail.com",
-  "password": "$2a$10$dOCMlgbIZ7Kr1F0YBWfMDORfjhBp8UUSBdJ5Bg4l/ak3WxgOSd5y6",
-  "repeatPassword": "12345",
-  "phoneNumber": "1168266106",
-  "country": "argentina",
+  "country": "españa",
   "city": "cordoba",
-  "avatar": "avatar-1706478950963.jpg"
+  "email": "caro.gonpor@gmail.com",
+  "phoneNumber": "1168266106",
+  "avatar": "avatar-1706478950963.jpg",
+  "password": "$2a$10$dOCMlgbIZ7Kr1F0YBWfMDORfjhBp8UUSBdJ5Bg4l/ak3WxgOSd5y6"
  },
  {
   "id": 5,

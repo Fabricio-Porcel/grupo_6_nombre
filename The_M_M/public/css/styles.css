@@ -20,6 +20,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    
 }
 .caja-logo{
     width: 25%;
@@ -163,7 +164,7 @@ header {
 .barra-navegacion{
     font-family: 'Amatic SC', sans-serif;
     background-color: #FEFAE0;
-   
+    
 
 }
 
@@ -178,6 +179,7 @@ header {
 
 .caja-barra-navegacion li {
     font-weight: 600;
+    
 }
 
 header{
