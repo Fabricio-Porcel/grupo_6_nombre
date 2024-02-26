@@ -1005,6 +1005,13 @@ input:hover{
 .boton-editarProducto:hover{
         background-color: #afb988;
     }  
+
+.checkbox-editarProducto{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    
+}
     
 
 
@@ -1469,4 +1476,7 @@ input:hover{
     flex-wrap: wrap;
     background-color:white;
 }
+
+
+
 

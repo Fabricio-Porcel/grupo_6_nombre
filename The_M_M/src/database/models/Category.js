@@ -5,12 +5,12 @@ module.exports = function (sequelize, dataTypes) {
 
     let cols = {
         id: {
-            types: dataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         name: {
-            types: dataTypes.STRING,
+            type: dataTypes.STRING,
             allowNull: false
         }
     }

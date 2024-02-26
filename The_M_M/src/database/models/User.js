@@ -5,40 +5,40 @@ module.exports = function (sequelize, dataTypes) {
 
         let cols = {
                 id: {
-                        types: dataTypes.INTEGER,
+                        type: dataTypes.INTEGER,
                         primaryKey: true,
                         autoIncrement: true
                 },
                 name: {
-                        types: dataTypes.STRING,
+                        type: dataTypes.STRING,
                         allowNull: false
                 },
                 lastName: {
-                        types: dataTypes.STRING,
+                        type: dataTypes.STRING,
                         allowNull: false
                 },
                 email: {
-                        types: dataTypes.STRING,
+                        type: dataTypes.STRING,
                         allowNull: false
                 },
                 password: {
-                        types: dataTypes.STRING,
+                        type: dataTypes.STRING,
                         allowNull: false
                 },
                 country: {
-                        types: dataTypes.STRING,
+                        type: dataTypes.STRING,
                         allowNull: false
                 },
                 city: {
-                        types: dataTypes.STRING,
+                        type: dataTypes.STRING,
                         allowNull: false
                 },
                 proneNumber: {
-                        types: dataTypes.INTEGER,
+                        type: dataTypes.INTEGER,
                         allowNull: false
                 },
                 avatar: {
-                        types: dataTypes.STRING,
+                        type: dataTypes.STRING,
                         allowNull: false
                 }
         }

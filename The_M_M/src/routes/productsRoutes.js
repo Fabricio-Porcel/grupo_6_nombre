@@ -28,5 +28,11 @@ router.delete('/admin/eliminarProducto/:id', productsController.eliminarProducto
 
 router.get('/edit/:id', productsController.edit); 
 router.put('/edit/:id', productsController.processEdit);
+router.patch('/edit/:id', productsController.update);
+
+router.get("/", productsController.listProducts);
+
+router.get("/:id", productsController.detail);
+
 
 module.exports = router;

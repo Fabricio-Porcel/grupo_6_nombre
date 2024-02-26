@@ -4,28 +4,28 @@ module.exports = function (sequelize, dataTypes) {
 
         let cols = {
                 id: {
-                        types: dataTypes.INTEGER,
+                        type: dataTypes.INTEGER,
                         primaryKey: true,
                         autoIncrement: true
                 },
                 name: {
-                        types: dataTypes.STRING,
+                        type: dataTypes.STRING,
                         allowNull: false
                 },
                 description: {
-                        types: dataTypes.STRING,
+                        type: dataTypes.STRING,
 
                 },
                 image: {
-                        types: dataTypes.STRING,
+                        type: dataTypes.STRING,
                         allowNull: false
                 },
                 category_id: {
-                        types: dataTypes.INTEGER,
+                        type: dataTypes.INTEGER,
                         allowNull: false
                 },
                 price: {
-                        types: dataTypes.INTEGER,
+                        type: dataTypes.INTEGER,
                         allowNull: false
                 },
                 colour_id: {

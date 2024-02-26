@@ -5,21 +5,21 @@
     <h2 class="titulo-editarProducto">Crear Producto</h2>
     <form action="/products/Crear-Producto" class="form-editarProducto" method="POST" enctype="multipart/form-data">
         <div class="item-editarProducto">
-            <label for="nombreProducto">Nombre del Producto</label>
-            <input type="text" id="nombreProducto" name="name" required>
+            <label for="name">Nombre del Producto</label>
+            <input type="text" id="name" name="name" required>
         </div>
         <div class="item-editarProducto">
-            <label for="descipcionProducto">Descripcion del Producto</label>
-            <textarea id="descipcionProducto" name="description" required></textarea>
+            <label for="description">Descripcion del Producto</label>
+            <textarea id="description" name="description" required></textarea>
         </div>
         <div class="item-editarProducto">
-            <label for="imagenProducto">Imagen del Producto</label>
-            <input type="file" id="imagenProducto" name="imagenProducto" required>
+            <label for="image">Imagen del Producto</label>
+            <input type="file" id="image" name="image" required>
         </div>
         
         <div class="item-editarProducto">
-            <label for="categoria">Categoría</label>
-            <select id="categoria" name="category" required>
+            <label for="categories">Categoría</label>
+            <select id="categories" name="categories" required>
                 <option value="" disabled selected>Elige uno</option>
                 <option value="tech">Tecnología</option>
                 <option value="indumentaria">Indumentaria</option>
@@ -28,12 +28,23 @@
         </div>
     
         <div class="item-editarProducto">
-            <label for="colorProducto">Color del Producto</label>
-            <input type="text" id="colorProducto" name="colour" required>
+            <label for="colours">Color del Producto:</label>
+            <input type="checkbox" id="colours" name="colours" value="colours" class="checkbox-editarProducto"> celeste
+            <input type="checkbox" id="colours" name="colours" value="colours" class="checkbox-editarProducto"> burdeos
+            <input type="checkbox" id="colours" name="colours" value="colours" class="checkbox-editarProducto"> gris melange
+            <input type="checkbox" id="colours" name="colours" value="colours" class="checkbox-editarProducto"> azul
+            <input type="checkbox" id="colours" name="colours" value="colours" class="checkbox-editarProducto"> negro
+            <input type="checkbox" id="colours" name="colours" value="colours" class="checkbox-editarProducto"> verde oliva
+            <input type="checkbox" id="colours" name="colours" value="colours" class="checkbox-editarProducto"> rojo
+            <input type="checkbox" id="colours" name="colours" value="colours" class="checkbox-editarProducto"> rosa coral
+            <input type="checkbox" id="colours" name="colours" value="colours" class="checkbox-editarProducto"> verde agua
+            <input type="checkbox" id="colours" name="colours" value="colours" class="checkbox-editarProducto"> blanco
+            
         </div>
+
         <div class="item-editarProducto">
-            <label for="precioProducto">Precio del Producto</label>
-            <input type="text" id="precioProducto" name="price" required>
+            <label for="price">Precio del Producto</label>
+            <input type="text" id="price" name="price" required>
         </div>
         
         <button class="boton-editarProducto" type="submit">Enviar</button>
