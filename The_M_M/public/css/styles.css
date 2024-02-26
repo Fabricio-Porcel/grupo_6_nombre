@@ -1380,3 +1380,93 @@ input:hover{
 .section-ProfileEdit .button-delete a{
     text-decoration: none;
 }
+
+
+/* <------------------products details---------------> */
+.background-product{
+    font-family:sans-serif;
+    background-color: #afb988;
+}
+.products{
+    display: flex;
+    justify-content: center;
+    background-color:white;
+    width: 700px;
+    margin: auto;
+    margin-top: 240px;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+.products img{
+    width: 400px;
+}
+.pay{
+    padding-left: 10px;
+}
+ .price-green{
+    color: green;
+    font-size: 30px;
+    
+}
+.payment{
+    text-decoration: none;
+    color: #4f96e1;
+}
+
+
+.products .button-buy {
+    background-color:#1ad323;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 450ms;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: medium;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.products .button-buy:hover{
+    background-color: #139319;
+}
+.products .button-buy a{
+    text-decoration: none;
+}
+
+.products .button-shopping-cart {
+    background-color:#2596e2;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 450ms;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: medium;
+    color: white;
+}
+.products .button-shopping-cart:hover{
+    background-color: #1c6ea4;
+}
+.products .button-shopping-cart a{
+    text-decoration: none;
+}
+.view{
+    font-size: 15px;
+}
+
+.product-detail {
+    display: flex;
+    justify-content:start;
+    background-color:#f3f3f3;
+    width: 700px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    background-color:white;
+}
+

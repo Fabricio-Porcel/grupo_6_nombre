@@ -2,7 +2,7 @@
 <%- include('../partials/header.ejs') %>
 
     
-    <main class="main-detalleProducto">
+    <!-- <main class="main-detalleProducto">
         <div class="titulo-principal">
             <h1>Detalle de Productos:</h1>
         </div>
@@ -34,10 +34,7 @@
                 
                 
                 <form action="/products/admin/eliminarProducto/<%= singleProduct.id %>?_method=DELETE"  method="POST" id="eliminarProductoForm">
-                    <!-- Campo oculto para method-override -->
-                    <!-- <input type="hidden" name="_method" value="DELETE"> -->
-                    <!-- <input type="hidden" id="id" name="id"  value="<%= singleProduct.id%>"> -->
-                    <!-- Otros campos o botones del formulario -->
+                
                     <button type="submit" class="button-eliminar-productDetail" title="Eliminar producto">
                       <i class="fa-solid fa-x"></i>
                     </button>
@@ -59,6 +56,30 @@
 
             
 
-    </main>
+    </main> -->
 
+    <body class="background-product">
+    
+
+        <div class="products">
+            <div>
+                <img src="/img/products/<%= singleProduct.image %>" alt="<%= singleProduct.name %>" alt="<%= singleProduct.name %>">
+
+            </div>
+            <div class="pay">
+                <h1 class="product-name"><%= singleProduct.name %></h1>
+                <h3 class="view">⭐⭐⭐⭐⭐</h3> 
+                <h2 class="price-green">$ <%= singleProduct.price %></h2>
+                <a href="" class="payment">Ver los medios de pago</a>
+
+                <button class="button-buy"> Comprar</button>
+                <button class="button-shopping-cart"> Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="product-detail">
+            <h2 class="detail">Detalle del producto</h2>
+            <p><%= singleProduct.description %></p>
+        </div>
+    </body>
     <%- include('../partials/footer.ejs') %>
