@@ -1013,6 +1013,12 @@ input:hover{
     
 }
     
+.label-colorProducto{
+    font-family: 'Pacifico' cursive;
+    font-size: 15px;
+    color: #ebebeb;
+}
+
 
 
 /* MEDIA QUERIES */

@@ -47,5 +47,16 @@
   "country": "Argentina",
   "city": "Santa Fe",
   "avatar": "avatar-1706752902712.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Daniela ",
+  "lastName": "Santini",
+  "email": "danielasantini15@hotmail.com",
+  "password": "$2a$10$OPqoZSwTlotmGBbBw6Ap9.3074VLBNMGvPIiSWk1VUsJg6A2JMJ/q",
+  "phoneNumber": "3364331162",
+  "country": "Argentina",
+  "city": "San Nicolas",
+  "avatar": "avatar-1708999371442.jpg"
  }
 ]

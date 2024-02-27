@@ -22,23 +22,27 @@
             <input type="file" id="imagenProducto" name="imagenProducto"  value="<%= modifyProduct.image %>">
         </div> -->
         <div class="item-editarProducto">
-            <label for="category">Categoria</label>
-            <input type="text" id="category" name="category"  value="<%= modifyProduct.category %>">
-        </div>
- 
-            <div class="item-editarProducto">
                 <label for="categoryProduct">Categoría de producto</label>
                 <select id="categoryProduct" name="categoryProduct">
                     <option value="<%= modifyProduct.categoryProduct %>">Elige</option>
-                    <option value="tech">Tecnología</option>
-                    <option value="indumentaria">Indumentaria</option>
-                    <option value="accesorios">Accesorios</option>
+                    <option value="3">Tecnología</option>
+                    <option value="2">Indumentaria</option>
+                    <option value="1">Accesorios</option>
                 </select>
             </div>
 
         <div class="item-editarProducto">
             <label for="colour">Color del Producto</label>
-            <input type="text" id="colour" name="colour"  value="<%= modifyProduct.colour%>">
+            <input type="checkbox" id="colour_id" name="colours" value="1" class="checkbox-editarProducto"><label for="colour1" class="label-colorProducto">celeste</label> 
+            <input type="checkbox" id="colour_id" name="colours" value="2" class="checkbox-editarProducto"><label for="colour2" class="label-colorProducto">burdeos</label>
+            <input type="checkbox" id="colour_id" name="colours" value="3" class="checkbox-editarProducto"><label for="colour3" class="label-colorProducto">gris melange</label>
+            <input type="checkbox" id="colour_id" name="colours" value="4" class="checkbox-editarProducto"><label for="colour4" class="label-colorProducto">azul</label>
+            <input type="checkbox" id="colour_id" name="colours" value="5" class="checkbox-editarProducto"><label for="colour5" class="label-colorProducto">negro</label>
+            <input type="checkbox" id="colour_id" name="colours" value="6" class="checkbox-editarProducto"><label for="colour6" class="label-colorProducto">verde oliva</label>
+            <input type="checkbox" id="colour_id" name="colours" value="7" class="checkbox-editarProducto"><label for="colour7" class="label-colorProducto">rojo</label>
+            <input type="checkbox" id="colour_id" name="colours" value="8" class="checkbox-editarProducto"><label for="colour8" class="label-colorProducto">rosa coral</label>
+            <input type="checkbox" id="colour_id" name="colours" value="9" class="checkbox-editarProducto"><label for="colour9" class="label-colorProducto">verde agua</label>
+            <input type="checkbox" id="colour_id" name="colours" value="10" class="checkbox-editarProducto"><label for="colour10" class="label-colorProducto">blanco</label>
         </div>
         
         <div class="item-editarProducto">

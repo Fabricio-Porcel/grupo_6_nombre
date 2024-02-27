@@ -18,7 +18,7 @@ const productsController = {
     },
     edit:(req,res)=>{
         let pedidoProducto = db.Product.findByPk(req.params.id);
-        let pedidoCategorias = db.category.findAll();
+        let pedidoCategorias = db.Category.findAll();
         Promise.all([pedidoProducto, pedidoCategorias])
            .then(function([producto, categorias]) {
             res.render("edit", {producto:producto, categorias:categorias})
@@ -45,21 +45,20 @@ const productsController = {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         // Crear el objeto literal (producto) a sumar al array
 		db.newProduct.create({
-            id: products[products.length - 1].id + 1,
+            // id: products[products.length - 1].id + 1,
 			name: req.body.name,
 			description: req.body.description,
 			image: req.file.filename,
-			category: req.body.category,
 			price: req.body.price,
-            colour : req.body.colour,
-            categoryProduct: req.body.categoryProduct
+            colour_id: req.body.colours,
+            category_id: req.body.categories
 			
 		});
 		// Pushear el objeto literal al array
-		products.push(newProduct);
+		// products.push(newProduct);
 
 		// Transformar a json y Sobreescribir el archivo JSON
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+		// fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 
 		// Mostrarle al usuario una vista (index)
 		res.redirect("/products/Detalle-Producto/" + newProduct.id);
@@ -75,11 +74,10 @@ const productsController = {
             id: productToEdit.id,
             name: req.body.name,
             price: req.body.price,
-            category: req.body.category,
             description: req.body.description,
-            colour: req.body.colour,
+            colour_id: req.body.colour,
             image: productToEdit.image,
-            categoryProduct: req.body.categoryProduct
+            category_id: req.body.categoryProduct
         }
 
         let indice = products.findIndex(product =>{
