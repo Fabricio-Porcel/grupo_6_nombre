@@ -3,6 +3,7 @@ module.exports = function (sequelize, dataTypes) {
         let alias = "Product";
 
         let cols = {
+        // Configuraciones de las columnas
                 id: {
                         type: dataTypes.INTEGER,
                         primaryKey: true,
@@ -10,7 +11,7 @@ module.exports = function (sequelize, dataTypes) {
                 },
                 name: {
                         type: dataTypes.STRING,
-                        allowNull: false
+                        
                 },
                 description: {
                         type: dataTypes.STRING,
@@ -18,26 +19,26 @@ module.exports = function (sequelize, dataTypes) {
                 },
                 image: {
                         type: dataTypes.STRING,
-                        allowNull: false
+                        
                 },
                 category_id: {
                         type: dataTypes.INTEGER,
-                        allowNull: false
+                        
                 },
                 price: {
                         type: dataTypes.INTEGER,
-                        allowNull: false
+                        
                 },
-                colour_id: {
-                        type: dataTypes.INTEGER,
-                        allowNull: false
-                }
+                // colour_id: {  //ver error
+                //         type: dataTypes.INTEGER,
+                        
+                // }
 
         }
 
         let config = {
-                tableName: 'products',
-                timestamps: false
+                tableName: 'products', // si el nombre de la tabla no coincide con el modelo
+                timestamps: false // si no tengo timestamps
         }
 
         let Product = sequelize.define(alias, cols, config);
@@ -58,7 +59,6 @@ module.exports = function (sequelize, dataTypes) {
                         timestamps: false
                 })
         };
-
 
 
         return Product;

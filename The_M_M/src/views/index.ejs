@@ -7,10 +7,10 @@
         <h2 class="titulo-main"> Productos Destacados</h2>
         <section class="caja-productos-destacados">
 
-            <% featuredProducts.forEach(producto => { %>
+            <% productos.forEach(producto => { %>
                 
                 <a href="products/Detalle-Producto/<%= producto.id %>" class="caja-producto">
-                    <img src="/img/products/<%= producto.image %>" class="imagen-producto">
+                    <img src="<%= producto.image %>" class="imagen-producto">
                     <div class="descripcion-producto">
                         <ul class="lista-descripcion-producto">
                             <li><%=producto.name %></li>
@@ -27,28 +27,13 @@
         <h2 class="titulo-nuevos-productos">Nuevos Productos</h2>
         <section class="caja-productos-nuevos">
 
-            <% newProducts.forEach(producto => { %>
+            <% productos.forEach(producto => { %>
 
                 <div class="caja-hija-productos-nuevos" >
-                    <img src="/img/products/<%= producto.image %>" class="imagen-producto-nuevo">
+                    <img src="<%= producto.image %>" class="imagen-producto-nuevo">
                     <div class="ver-mas"><a href="/products/Detalle-Producto/<%= producto.id %>" class="link-ver-mas">Ver Mas</a></div>
                 </div>
                 
-            <!-- <div class="caja-hija-productos-nuevos" >
-                <img src="/img/funda-notebook-azul.jpg" class="imagen-producto-nuevo">
-                <div class="ver-mas"><a href="/products/Detalle-Producto/singleProduct.id" class="link-ver-mas">Ver Mas</a></div>
-            </div>
-            <div class="caja-hija-productos-nuevos">
-                <img src="/img/kitmatero-jean&cuero.jpg" class="imagen-producto-nuevo">
-                <div class="ver-mas"><a href="/products/Detalle-Producto" class="link-ver-mas">Ver Mas</a></div>
-            </div>
-            <div class="caja-hija-productos-nuevos">
-                <img src="/img/llavero-tela&metal-azul.jpg" class="imagen-producto-nuevo">
-                <div class="ver-mas"><a href="/products/Detalle-Producto" class="link-ver-mas">Ver Mas</a></div>
-            </div>
-            <div class="caja-hija-productos-nuevos">
-                <img src="/img/libreta-tapacartonreciclado-verde.jpg" class="imagen-producto-nuevo">
-                <div class="ver-mas"><a href="/products/Detalle-Producto" class="link-ver-mas">Ver Mas</a></div> -->
             </div>
 
             <% }) %>

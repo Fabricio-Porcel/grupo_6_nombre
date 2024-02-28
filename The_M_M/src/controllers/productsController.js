@@ -33,18 +33,18 @@ const productsController = {
        res.render("products/editarProducto", {modifyProduct})
    },
     createProduct: (req , res) =>{
-        db.Product.findAll()
-          .then(function(products) {
-            return res.render("creatProduct", {products:products});
-
-    }),
+        // db.Product.findAll()
+        //   .then(function(products) {
+        //     return res.render("creatProduct", {products:products});
+        // }),
+        res.render('products/createProduct')
 
     res.render('products/createProduct')
 },
     processCreate : (req , res) =>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         // Crear el objeto literal (producto) a sumar al array
-		db.newProduct.create({
+		db.Product.create({
             // id: products[products.length - 1].id + 1,
 			name: req.body.name,
 			description: req.body.description,
@@ -61,7 +61,7 @@ const productsController = {
 		// fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 
 		// Mostrarle al usuario una vista (index)
-		res.redirect("/products/Detalle-Producto/" + newProduct.id);
+		res.redirect("/products/Detalle-Producto/" + Product.id);
 
     },
     processEdit:(req,res)=>{
