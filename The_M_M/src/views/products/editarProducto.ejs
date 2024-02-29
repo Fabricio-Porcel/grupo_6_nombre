@@ -5,32 +5,25 @@
 
     <h2 class="titulo-editarProducto">Editar Producto</h2>
 
-    <form action="/products/edit/<%= modifyProduct.id %>?_method=PUT" method="POST" class="form-editarProducto">
+    <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" class="form-editarProducto">
         
         <div class="item-editarProducto"> 
             <label for="name">Nombre del Producto</label>
-            <input type="text" id="name" name="name"  value="<%= modifyProduct.name%>">
+            <input type="text" id="name" name="name"  value="<%= product.name%>">
         </div>
 
         <div class="item-editarProducto">
             <label for="description">Descripcion del Producto</label>
-            <input type="textarea" id="description" name="description"  value="<%= modifyProduct.description%>">
+            <input type="textarea" id="description" name="description"  value="<%= product.description%>">
         </div>
 
         <!-- <div class="item-editarProducto">
             <label for="imagenProducto">Imagen del Producto</label>
-            <input type="file" id="imagenProducto" name="imagenProducto"  value="<%= modifyProduct.image %>">
+            <input type="file" id="imagenProducto" name="imagenProducto"  value="<= modifyProduct.image %>">
         </div> -->
-        <div class="item-editarProducto">
-                <label for="categoryProduct">Categoría de producto</label>
-                <select id="categoryProduct" name="categoryProduct">
-                    <option value="<%= modifyProduct.categoryProduct %>">Elige</option>
-                    <option value="3">Tecnología</option>
-                    <option value="2">Indumentaria</option>
-                    <option value="1">Accesorios</option>
-                </select>
-            </div>
 
+
+<<<<<<< HEAD
         <label for="colour" class="item-colorProducto">Color del Producto</label>
         <div class="item-editarProductoColor">
             <input type="checkbox" id="colour_id" name="colours" value="1" class="checkbox-editarProducto"><label for="colour1" class="label-colorProducto">celeste</label> 
@@ -43,15 +36,39 @@
             <input type="checkbox" id="colour_id" name="colours" value="8" class="checkbox-editarProducto"><label for="colour8" class="label-colorProducto">rosa coral</label>
             <input type="checkbox" id="colour_id" name="colours" value="9" class="checkbox-editarProducto"><label for="colour9" class="label-colorProducto">verde agua</label>
             <input type="checkbox" id="colour_id" name="colours" value="10" class="checkbox-editarProducto"><label for="colour10" class="label-colorProducto">blanco</label>
+=======
+        <div class="item-editarProducto">
+            <label for="categoryProduct">Categoría de producto</label>
+            <select id="categoryProduct" name="categoryProduct">
+                <% categories.forEach(category => { %>
+                    <option value="<%= category.id %>" <%= (product.category_id && product.category_id === category.id) ? 'selected' : '' %>> <%= category.name %> </option>
+                <% }); %>
+            </select>
+>>>>>>> 3ede4d848085a8ce17b885fef44897afbb2e295e
         </div>
+        
+
+
+        <div class="item-editarProducto">
+            <label>Color del Producto</label>
+            <% const selectedColourId = product.colour_id; %>
+            <% colour.forEach(colour => { %>
+                <input type="checkbox" id="colour_<%= colour.id %>" name="colours" value="<%= colour.id %>" class="checkbox-editarProducto" <% if (selectedColourId === colour.id) { %> checked <% } %>>
+                <label for="colour_<%= colour.id %>" class="label-colorProducto"><%= colour.colour %></label>
+            <% }) %>
+        </div>
+        
+        
+        
         
         <div class="item-editarProducto">
             <label for="price">Precio del Producto</label>
-            <input type="text" id="price" name="price"  value="<%= modifyProduct.price%>">
+            <input type="text" id="price" name="price"  value="<%= product.price%>">
         </div>
         
         <button class="boton-editarProducto" type="submit">Editar</button>
     </form>
+    
 </main>
 
 

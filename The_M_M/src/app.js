@@ -26,6 +26,7 @@ app.use(userLoggedMiddleware);
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes')
 const usersRoutes = require('./routes/usersRoutes');
+const categoryRoutes = require('./routes/categoryRoutes');
 
 app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
@@ -45,6 +46,8 @@ app.use('/Carrito-de-compras' , mainRoutes);
 app.use('/users' , usersRoutes);
 
 app.use('/products' , productsRoutes);
+
+app.use('/category', categoryRoutes);
 
 
 

@@ -7,89 +7,113 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const db = require("../database/models");
 
 const productsController = {
-    productDetail: (req , res) =>{
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    productDetail: async (req , res)  =>{
+        // const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-		const singleProduct = products.find(product => {
-			return product.id == req.params.id
-		})
+		// const singleProduct = products.find(product => {
+		// 	return product.id == req.params.id
+		// })
         
-        res.render('products/productDetail' , {singleProduct})
+        // res.render('products/productDetail' , {singleProduct})
+        try {
+        let detalleProducto = await db.Product.findByPk(req.params.id, {
+            include: [
+                { association: 'categories' },
+                { association: 'colours' }
+            ]
+           
+        })
+        console.log(detalleProducto.colours)
+        res.render("products/productDetail", { product : detalleProducto});
+         
+        } catch  (error){
+            console.error("Error al ver el detalle:", error);
+            // Manejar el error apropiadamente
+            res.status(500).send("Error al ver el detalle");
+
+        }
     },
-    edit:(req,res)=>{
-        let pedidoProducto = db.Product.findByPk(req.params.id);
-        let pedidoCategorias = db.Category.findAll();
-        Promise.all([pedidoProducto, pedidoCategorias])
-           .then(function([producto, categorias]) {
-            res.render("edit", {producto:producto, categorias:categorias})
+    edit: async (req,res)=>{
 
+        try{
 
-           })
+            let pedidoProducto = await db.Product.findByPk(req.params.id);
+            let pedidoCategorias = await db.Category.findAll();
+            let pedidoColores = await db.Colour.findAll()
 
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-       const modifyProduct = products.find(product =>{
-           return product.id == req.params.id
-       })
-       res.render("products/editarProducto", {modifyProduct})
-   },
-    createProduct: (req , res) =>{
-        db.Product.findAll()
-          .then(function(products) {
-            return res.render("creatProduct", {products:products});
-
-    }),
-
-    res.render('products/createProduct')
-},
-    processCreate : (req , res) =>{
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        // Crear el objeto literal (producto) a sumar al array
-		db.newProduct.create({
-            // id: products[products.length - 1].id + 1,
-			name: req.body.name,
-			description: req.body.description,
-			image: req.file.filename,
-			price: req.body.price,
-            colour_id: req.body.colours,
-            category_id: req.body.categories
-			
-		});
-		// Pushear el objeto literal al array
-		// products.push(newProduct);
-
-		// Transformar a json y Sobreescribir el archivo JSON
-		// fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-
-		// Mostrarle al usuario una vista (index)
-		res.redirect("/products/Detalle-Producto/" + newProduct.id);
-
-    },
-    processEdit:(req,res)=>{
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-        const id = req.params.id;
-        let productToEdit = products.find(product => product.id == id)
-
-        productToEdit = {
-            id: productToEdit.id,
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            colour_id: req.body.colour,
-            image: productToEdit.image,
-            category_id: req.body.categoryProduct
+            res.render("products/editarProducto", {product: pedidoProducto, categories: pedidoCategorias , colour: pedidoColores})
+        } catch (error) {
+            console.error("Error en la función edit:", error); 
         }
 
-        let indice = products.findIndex(product =>{
-            return product.id == id
-        })
 
-        // Remplazamos
-        products[indice] = productToEdit
+
+
+    //     Promise.all([pedidoProducto, pedidoCategorias])
+    //        .then(function([producto, categorias]) {
+
+
+    //        })
+
+    //     let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    //    const modifyProduct = products.find(product =>{
+    //        return product.id == req.params.id
+    //    })
+    //    res.render("products/editarProducto", {modifyProduct})
+   },
+   createProduct: async (req, res) => {
+    try {
+        const colours = await db.Colour.findAll({
+            attributes: ['id', 'colour']
+        });
+        const categories = await db.Category.findAll();
         
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "))
-        
-        res.redirect("/")
+        res.render("products/createProduct", { colours: colours, categories: categories });
+    } catch (error) {
+        console.error("Error al cargar los colores y categorías:", error);
+        res.status(500).send("Error interno del servidor");
+    }
+},
+    
+processCreate: async (req, res) => {
+    try {
+        const newProduct = await db.Product.create({
+            name: req.body.name,
+            description: req.body.description,
+            image: '/img/products/' + req.file.filename,
+            price: req.body.price,
+            colour_id: req.body.colours,
+            category_id: req.body.categories
+        });
+
+        // Redirigir al detalle del producto recién creado
+        res.redirect("/products/Detalle-Producto/" + newProduct.id);
+    } catch (error) {
+        console.error("Error al crear el producto:", error);
+        // Manejar el error apropiadamente
+        res.status(500).send("Error al crear el producto");
+    }
+}
+    ,
+    processEdit: async (req, res) => {
+        try {
+            await db.Product.update({
+                name: req.body.name,
+                description: req.body.description,
+                category_id: req.body.categoryProduct,
+                price: req.body.price,
+                colour_id: req.body.colours
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            });
+    
+            res.redirect("/products/Detalle-Producto/" + req.params.id);
+        } catch (error) {
+            console.error("Error al procesar la edición del producto:", error);
+            res.redirect("/"); // O maneja el error de alguna otra forma adecuada
+        }
     },
     eliminarProducto: (req, res) => {
         db.Product.destroy({
@@ -99,15 +123,13 @@ const productsController = {
             }
         })
 
-        res.redirect("/productDetail");
+        res.redirect("/products");
 
-        const productId = parseInt(req.params.id); // Asumiendo que usas un parámetro en la URL para el ID del producto a eliminar
+        const productId = parseInt(req.params.id);
         
         // Leer el archivo de productos
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-        
-      
         // Filtrar los productos, excluyendo el que se va a eliminar
         const productsActualizado = products.filter(product => product.id !== productId);
        
@@ -115,17 +137,17 @@ const productsController = {
         // Guardar los productos actualizados en el archivo
         fs.writeFileSync(productsFilePath, JSON.stringify(productsActualizado, null, 2), 'utf-8');
       
-        // Redirigir o enviar una respuesta según sea necesario
-        res.redirect('/'); // Cambia esto según tus necesidades
+        // Redirigir 
+        res.redirect('/'); 
       },
       listProducts: function(req, res){
-        db.productsDatabase.findAll()
-          .the(function(products) {
-            res.render("listProducts", {products:products})
+        db.Product.findAll()
+          .then(function(products) {
+            res.render("products/listProducts", {products:products})
           })
       },
       detail: function(req, res){
-        db.productsDatabase.findByPk(req.params.id, {
+        db.Product.findByPk(req.params.id, {
             include: [{association: "name"}, {association: "image"}]
         })
           .then(function(product) {
