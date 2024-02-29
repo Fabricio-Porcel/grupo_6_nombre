@@ -1406,7 +1406,6 @@ input:hover{
     background-color:white;
     width: 700px;
     margin: auto;
-    margin-top: 240px;
     padding: 20px 20px;
     border-radius: 10px;
 }
@@ -1428,14 +1427,12 @@ input:hover{
 
 
 .products .button-buy {
-    background-color:#1ad323;
+    background-color:hsl(123, 58%, 46%);
     border: none;
     padding: 5px 15px;
     border-radius: 5px;
     transition: 450ms;
     text-decoration: none;
-    display: flex;
-    justify-content: flex-end;
     font-size: medium;
     color: white;
     margin-bottom: 20px;
@@ -1460,10 +1457,28 @@ input:hover{
     font-size: medium;
     color: white;
 }
-.products .button-shopping-cart:hover{
+.products .button-edit:hover{
     background-color: #1c6ea4;
 }
-.products .button-shopping-cart a{
+.products .button-edit a{
+    text-decoration: none;
+}
+.products .button-delete {
+    background-color:#cf1e1e;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 450ms;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: medium;
+    color: white;
+}
+.products .button-delete:hover{
+    background-color: #7f0d0d;
+}
+.products .button-delete a{
     text-decoration: none;
 }
 .view{
