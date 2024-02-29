@@ -958,8 +958,23 @@ a.link-email{
     width: 400px;
     font-size: 18px;
     font-weight: bold;
+    
 
 
+}
+.colours-container {
+    display: flex; 
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.colour-option {
+    display: flex; 
+    align-items: center; 
+}
+
+.colour-option input[type="checkbox"] {
+    margin-right: 5px;
 }
 
 label{
@@ -968,7 +983,7 @@ label{
     margin-bottom: 10px;
 }
 
-input{
+.input-create-list{
     background-color: #ebebeb; 
     width: 350px; 
     height: 40px; 
@@ -981,7 +996,7 @@ input{
     margin-bottom: 20px; 
 }
 
-input:hover{
+.input-create-list:hover{
     background-color: white;
 }
 
@@ -1005,6 +1020,11 @@ input:hover{
 .boton-editarProducto:hover{
         background-color: #afb988;
     }  
+
+.botones-borrar-editar{
+    display: flex;
+    justify-content: center;
+}
 
 .checkbox-editarProducto{
     width: 20px;

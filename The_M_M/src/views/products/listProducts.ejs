@@ -1,17 +1,29 @@
 <%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Editar Producto"}) %>
 <%- include('../partials/header.ejs') %>
 
-main class="main-listProducts">
+<main class="main-listProducts">
     <h2 class="titulo-listProducts">Lista de Productos</h2>
-    <ul>
-        <% for (let i = 0; i < products.length; i++) { %>
-            <li>
-                <a href="/productsDatebase/<%=products[i].id%>">
-                    <%= products[i].name%>
-                </a>
-            </li>
-        <% } %>
-    </ul>
+    
+    <section class="caja-productos-destacados">
+
+        <% products.forEach(product => { %>
+            
+            <a href="/products/Detalle-Producto/<%= product.id %>" class="caja-producto">
+                <img src="<%= product.image %>" class="imagen-producto">
+                <div class="descripcion-producto">
+                    <ul class="lista-descripcion-producto">
+                        <li><%=product.name %></li>
+                        <li>Desde $<%= product.price %></li>
+                        
+                        </ul>
+                        </div>
+                        
+                        
+                        </a>
+                    <% }) %>
+                    
+    </section>
+    
 
     <form action="../products/productDetail.ejs" class="form-listProducts" method="POST" enctype="multipart/form-data">
 
