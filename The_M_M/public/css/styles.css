@@ -1420,6 +1420,24 @@ label{
     font-family:sans-serif;
     background-color: #afb988;
 }
+.background-product a{
+    text-decoration: none;
+}
+
+.modificar-producto{
+    margin: auto;
+    text-align: end;
+    width: 700px;
+    color: black;
+}
+.modificar-producto .edit-product{
+
+    width: 1px;
+    padding-right: 25px;
+    color: black;
+}
+
+
 .products{
     display: flex;
     justify-content: center;
@@ -1434,6 +1452,23 @@ label{
 }
 .pay{
     padding-left: 10px;
+    /* border-style: solid;
+    border-width: 2px;
+    border-radius: 10px; */
+   
+}
+ .cantidad{
+    display: flex;
+    padding-top: 10px;
+   
+}
+.cantidad select{
+    border: none;
+    font-size: 15px;
+    
+}
+.product-name{
+    font-size: 25px;
 }
  .price-green{
     color: green;
@@ -1441,10 +1476,17 @@ label{
     
 }
 .payment{
+    font-size: 15px;
     text-decoration: none;
     color: #4f96e1;
 }
 
+.buttons-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
 
 .products .button-buy {
     background-color:hsl(123, 58%, 46%);
@@ -1457,6 +1499,8 @@ label{
     color: white;
     margin-bottom: 20px;
     margin-top: 20px;
+    width: 150px;
+    height: 42px;
 }
 .products .button-buy:hover{
     background-color: #139319;
@@ -1466,6 +1510,29 @@ label{
 }
 
 .products .button-shopping-cart {
+    background-color:hsla(123, 65%, 51%, 0.338);
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 450ms;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: medium;
+    color: rgb(31, 166, 19);
+    width: 150px;
+    height: 42px;
+    margin-bottom: 20px;
+   
+}
+.products .button-shopping-cart:hover{
+    background-color:rgba(51, 164, 41, 0.415);
+}
+.products .button-shopping-cart a{
+    text-decoration: none;
+}
+
+.products .button-edit {
     background-color:#2596e2;
     border: none;
     padding: 5px 15px;
@@ -1519,5 +1586,53 @@ label{
 }
 
 
+/* -------------------Category----------------------- */
+.background-category{
+    background-color: #afb988;
+    margin-top: 200px;
+}
+.section-categories{
+    font-family: sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+    padding: 20px 20px;
+    border-radius: 7px;  
+}
+.section-categories h1{
+    display: block;
+}
 
+.category{
+    display: flex;
+    padding: 10px 10px;
+    background-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #b5b5b5;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-width: 2px;
+}
+.category img{
+    width: 100px;
+}
 
+.name-category h3{
+    padding: 10px;
+    width: 150px;  
+}
+.section-categories a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.title-category{
+    margin-left: 20%;
+    font-family: sans-serif;
+    padding-bottom: 30px;
+
+}
