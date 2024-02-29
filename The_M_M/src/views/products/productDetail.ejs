@@ -8,17 +8,17 @@
         </div>
 
         <div class="nombre-producto">
-            <h2><%= singleProduct.name %></h2>
+            <h2>< singleProduct.name %></h2>
         </div>
    
         <div class="container-producto">
             <div class="imagen-producto">
-                <img src="/img/products/<%= singleProduct.image %>" alt="<%= singleProduct.name %>" class="imagen-single-product">
+                <img src="/img/products/< singleProduct.image %>" alt="< singleProduct.name %>" class="imagen-single-product">
             </div>
             <div class="descripcion-producto">
-                <p class="descripcion"><u class="subrayado">Descripcion:</u> <%= singleProduct.description %></p>
-                <p class="descripcion"><u class="subrayado">Color:</u> <%= singleProduct.colour %></p>
-                <p class="descripcion"><u class="subrayado">Costo por unidad:</u> $<%= singleProduct.price %></p>
+                <p class="descripcion"><u class="subrayado">Descripcion:</u> < singleProduct.description %></p>
+                <p class="descripcion"><u class="subrayado">Color:</u> < singleProduct.colour %></p>
+                <p class="descripcion"><u class="subrayado">Costo por unidad:</u> $< singleProduct.price %></p>
                 <p class="descripcion"><u class="subrayado">Formas de pago</u>: efectivo - débito - crédito - Mercado Pago</p>
                 <p class="descripcion"><u class="subrayado">Modos de envio</u>: Correo Argentino - Andreani - retiro en oficina</p>
             
@@ -26,14 +26,14 @@
                 <button class="button-carrito"><i class="fa-solid fa-cart-shopping" id="fa-cart-shopping"></i></button>
                 
                 
-                <a href="/products/edit/<%= singleProduct.id %>" class="link-editar">
+                <a href="/products/edit/<singleProduct.id %>" class="link-editar">
                     <button class="button-editar-productDetail" title="Editar producto">
                         <i class="fa-regular fa-pen-to-square"></i>
                     </button>
                 </a>
                 
                 
-                <form action="/products/admin/eliminarProducto/<%= singleProduct.id %>?_method=DELETE"  method="POST" id="eliminarProductoForm">
+                <form action="/products/admin/eliminarProducto/<singleProduct.id %>?_method=DELETE"  method="POST" id="eliminarProductoForm">
                 
                     <button type="submit" class="button-eliminar-productDetail" title="Eliminar producto">
                       <i class="fa-solid fa-x"></i>
@@ -63,13 +63,13 @@
 
         <div class="products">
             <div>
-                <img src="/img/products/<%= singleProduct.image %>" alt="<%= singleProduct.name %>" alt="<%= singleProduct.name %>">
+                <img src="<%= product.image %>" alt="<%= product.name %>" alt="<%= product.name %>">
 
             </div>
             <div class="pay">
-                <h1 class="product-name"><%= singleProduct.name %></h1>
+                <h1 class="product-name"><%= product.name %></h1>
                 <h3 class="view">⭐⭐⭐⭐⭐</h3> 
-                <h2 class="price-green">$ <%= singleProduct.price %></h2>
+                <h2 class="price-green">$ <%= product.price %></h2>
                 <a href="" class="payment">Ver los medios de pago</a>
 
                 <button class="button-buy"> Comprar</button>
@@ -77,9 +77,40 @@
             </div>
         </div>
 
+        
         <div class="product-detail">
             <h2 class="detail">Detalle del producto</h2>
-            <p><%= singleProduct.description %></p>
+            <p><%= product.description %></p>
         </div>
-    </body>
-    <%- include('../partials/footer.ejs') %>
+        <div class="product-detail">
+            <h2 class="detail">Colores del producto</h2>
+                    <ul>
+
+                <% product.colours.forEach(function(colour) { %>
+                    <br>
+                    <li><%= colour.colour %></li>
+                    <% }) %>
+                </ul>
+        </div>
+
+        
+        <section class="botones-borrar-editar">
+
+            <div>
+                
+                <a href="/products/edit/<%= product.id %>" class="link-editar">
+                    <button class="button-editar-productDetail" title="Editar producto">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </button>
+                </a>
+            </div>
+            <form action="/products/eliminarProducto/<%=product.id %>?_method=DELETE"  method="POST" id="eliminarProductoForm">
+                
+                <button type="submit" class="button-eliminar-productDetail" title="Eliminar producto">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+            </form>
+        </section>
+        </body>
+        <%- include('../partials/footer.ejs') %>
+        

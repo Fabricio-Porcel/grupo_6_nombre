@@ -1,4 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
+        const db = require("./");
 
         let alias = "Product";
 
@@ -11,6 +12,7 @@ module.exports = function (sequelize, dataTypes) {
                 },
                 name: {
                         type: dataTypes.STRING,
+                        allowNull : false
                         
                 },
                 description: {
@@ -19,20 +21,20 @@ module.exports = function (sequelize, dataTypes) {
                 },
                 image: {
                         type: dataTypes.STRING,
+                        allowNull : false
                         
                 },
                 category_id: {
                         type: dataTypes.INTEGER,
+                        allowNull : false
                         
                 },
                 price: {
                         type: dataTypes.INTEGER,
+                        allowNull : false
                         
-                },
-                // colour_id: {  //ver error
-                //         type: dataTypes.INTEGER,
-                        
-                // }
+                }
+                
 
         }
 
@@ -47,10 +49,7 @@ module.exports = function (sequelize, dataTypes) {
                 Product.belongsTo(models.Category, {
                         as: "categories",
                         foreignKey: 'category_id'
-                })
-        };
-
-        Product.associate = function (models) {
+                });
                 Product.belongsToMany(models.Colour, {
                         as: "colours",
                         through: 'colour_product',
@@ -60,6 +59,7 @@ module.exports = function (sequelize, dataTypes) {
                 })
         };
 
+        
 
         return Product;
 }
