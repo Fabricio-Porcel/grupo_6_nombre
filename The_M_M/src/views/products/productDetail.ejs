@@ -97,7 +97,7 @@
 
                 <!-- <button class="button-edit">Modificar producto</button> -->
                 <% if (locals.isLogged) { %>
-                    <form action="/products/admin/eliminarProducto/<%= product.id %>?_method=DELETE"  method="POST" id="eliminarProductoForm">
+                    <form action="/products/eliminarProducto/<%= product.id %>?_method=DELETE"  method="POST" id="eliminarProductoForm">
                         <button class="button-delete">Eliminar producto</button>
                     </form>
                 <% } %>
@@ -109,6 +109,16 @@
         <div class="product-detail">
             <h2 class="detail">Detalle del producto</h2>
             <p><%= product.description %></p>
+        </div>
+        <div class="product-detail" id="display-de-colores">
+            <h2 class="detail">Color del producto</h2>
+            <div>
+                <ul>
+                    <% product.colours.forEach(colour => { %>
+                        <li><%= colour.colour %></li>
+                    <% }) %>
+                    </ul>
+            </div>
         </div>
     </body>
     <%- include('../partials/footer.ejs') %>

@@ -1593,6 +1593,7 @@ label{
     border-radius: 10px;
     flex-wrap: wrap;
     background-color:white;
+    flex-direction: column;
 }
 
 

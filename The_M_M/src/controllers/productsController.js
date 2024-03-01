@@ -23,7 +23,7 @@ const productsController = {
             ]
            
         })
-        console.log(detalleProducto.colours)
+        
         res.render("products/productDetail", { product : detalleProducto});
          
         } catch  (error){
@@ -76,15 +76,20 @@ const productsController = {
 },
     
 processCreate: async (req, res) => {
+    console.log(req.body)
+  
+
     try {
         const newProduct = await db.Product.create({
             name: req.body.name,
             description: req.body.description,
             image: '/img/products/' + req.file.filename,
             price: req.body.price,
-            colour_id: req.body.colours,
+            // colour_id: req.body.colours,
             category_id: req.body.categories
         });
+        let coloresProducto = req.body.colours
+        await newProduct.addColours(coloresProducto);
 
         // Redirigir al detalle del producto recién creado
         res.redirect("/products/Detalle-Producto/" + newProduct.id);
@@ -125,20 +130,20 @@ processCreate: async (req, res) => {
 
         res.redirect("/products");
 
-        const productId = parseInt(req.params.id);
+        // const productId = parseInt(req.params.id);
         
-        // Leer el archivo de productos
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        // // Leer el archivo de productos
+        // const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-        // Filtrar los productos, excluyendo el que se va a eliminar
-        const productsActualizado = products.filter(product => product.id !== productId);
+        // // Filtrar los productos, excluyendo el que se va a eliminar
+        // const productsActualizado = products.filter(product => product.id !== productId);
        
       
-        // Guardar los productos actualizados en el archivo
-        fs.writeFileSync(productsFilePath, JSON.stringify(productsActualizado, null, 2), 'utf-8');
+        // // Guardar los productos actualizados en el archivo
+        // fs.writeFileSync(productsFilePath, JSON.stringify(productsActualizado, null, 2), 'utf-8');
       
-        // Redirigir 
-        res.redirect('/'); 
+        // // Redirigir 
+        // res.redirect('/'); 
       },
       listProducts: function(req, res){
         db.Product.findAll()
