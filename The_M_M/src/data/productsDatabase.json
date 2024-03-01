@@ -98,35 +98,5 @@
     "colour": "Varios",
     "price": "2350",
     "categoryProduct": "newProducts"
-  },
-  {
-    "id": 11,
-    "name": "libro",
-    "description": "comedia",
-    "image": "imagenProducto-1704929893381.jpeg",
-    "category": "accesorios",
-    "price": "6000",
-    "colour": "verde",
-    "categoryProduct": "featuredProducts"
-  },
-  {
-    "id": 12,
-    "name": "Celular samsung",
-    "description": "sfsfs",
-    "image": "imagenProducto-1704939464742.jpg",
-    "category": "tech",
-    "price": "100000",
-    "colour": "negro",
-    "categoryProduct": "featuredProducts"
-  },
-  {
-    "id": 13,
-    "name": "Pato",
-    "description": "cuak cuak",
-    "image": "imagenProducto-1704939518452.jpg",
-    "category": "accesorios",
-    "price": "0",
-    "colour": "amarillo",
-    "categoryProduct": "newProducts"
   }
 ]

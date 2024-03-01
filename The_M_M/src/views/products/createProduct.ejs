@@ -1,4 +1,4 @@
-<%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Editar Producto"}) %>
+<%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Crear Producto"}) %>
 <%- include('../partials/header.ejs') %>
 
 <main class="main-editarProducto">
@@ -6,7 +6,7 @@
     <form action="/products/Crear-Producto" class="form-editarProducto" method="POST" enctype="multipart/form-data">
         <div class="item-editarProducto">
             <label for="name">Nombre del Producto</label>
-            <input type="text" id="name" name="name" required>
+            <input class="input-create-list" type="text" id="name" name="name" required>
         </div>
         <div class="item-editarProducto">
             <label for="description">Descripcion del Producto</label>
@@ -14,37 +14,34 @@
         </div>
         <div class="item-editarProducto">
             <label for="image">Imagen del Producto</label>
-            <input type="file" id="image" name="image" required>
+            <input type="file" class="input-create-list" id="image" name="imagenProducto" required>
         </div>
         
         <div class="item-editarProducto">
             <label for="categories">Categoría</label>
             <select id="category_id" name="categories" required>
                 <option value="" disabled selected>Elige uno</option>
-                <option value="3">Tecnología</option>
-                <option value="2">Indumentaria</option>
-                <option value="1">Accesorios</option>
+                <% for (let i = 0 ; i < categories.length ; i++){ %>
+                <option value="<%= categories[i].id %>"><%= categories[i].name %></option>
+                <% } %>
             </select>
         </div>
     
-        <div class="item-editarProducto">
+        <div class="item-editarProducto" id="colour-product-list">
             <label for="colours">Color del Producto:</label>
-            <input type="checkbox" id="colour_id" name="colours" value="1" class="checkbox-editarProducto"><label for="colour1" class="label-colorProducto">celeste</label> 
-            <input type="checkbox" id="colour_id" name="colours" value="2" class="checkbox-editarProducto"><label for="colour2" class="label-colorProducto">burdeos</label>
-            <input type="checkbox" id="colour_id" name="colours" value="3" class="checkbox-editarProducto"><label for="colour3" class="label-colorProducto">gris melange</label>
-            <input type="checkbox" id="colour_id" name="colours" value="4" class="checkbox-editarProducto"><label for="colour4" class="label-colorProducto">azul</label>
-            <input type="checkbox" id="colour_id" name="colours" value="5" class="checkbox-editarProducto"><label for="colour5" class="label-colorProducto">negro</label>
-            <input type="checkbox" id="colour_id" name="colours" value="6" class="checkbox-editarProducto"><label for="colour6" class="label-colorProducto">verde oliva</label>
-            <input type="checkbox" id="colour_id" name="colours" value="7" class="checkbox-editarProducto"><label for="colour7" class="label-colorProducto">rojo</label>
-            <input type="checkbox" id="colour_id" name="colours" value="8" class="checkbox-editarProducto"><label for="colour8" class="label-colorProducto">rosa coral</label>
-            <input type="checkbox" id="colour_id" name="colours" value="9" class="checkbox-editarProducto"><label for="colour9" class="label-colorProducto">verde agua</label>
-            <input type="checkbox" id="colour_id" name="colours" value="10" class="checkbox-editarProducto"><label for="colour10" class="label-colorProducto">blanco</label>
-            
+            <div class="colours-container">
+                <% for (let i = 0 ; i < colours.length ; i++){ %>
+                    <div class="colour-option">
+                        <input type="checkbox" id="colour<%= i %>" name="colours"  value="<%= colours[i].id %>">
+                        <label for="colour<%= i %>"><%= colours[i].colour %></label>
+                    </div>
+                <% } %>
+            </div>
         </div>
 
         <div class="item-editarProducto">
             <label for="price">Precio del Producto</label>
-            <input type="text" id="price" name="price" required>
+            <input type="text" id="price" class="input-create-list" name="price" required>
         </div>
         
         <button class="boton-editarProducto" type="submit">Enviar</button>

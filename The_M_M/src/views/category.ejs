@@ -1,0 +1,24 @@
+
+<%- include('./partials/head.ejs', {cssSheet: "styles.css", title: "Home"}) %>
+<%- include('./partials/header.ejs') %>
+
+
+<body class="background-category">
+    <h1 class="title-category"><i class="fa-solid fa-icons"></i>  Categorías</h1>
+    <div class="section-categories">
+    <% category.forEach(categorias => { %>
+        
+    <a href="">
+        <div class="category">
+            <img src="/img/categories/tecnologia.jpg" alt="img">
+                <div class="name-category">
+                    <h3><%=categorias.name %></h3>
+                </div>
+       </div>
+    </a>
+
+       <% }) %>
+    </div>
+    
+</body>
+ <%- include('./partials/footer.ejs') %>

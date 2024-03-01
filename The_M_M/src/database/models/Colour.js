@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-
+    const db = require("./");
     let alias = "Colour";
 
     let cols = {
@@ -11,12 +11,8 @@ module.exports = function (sequelize, dataTypes) {
         colour: {
             type: dataTypes.STRING,
             allowNull: false
-        },
-        product_id: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-
         }
+        
     }
 
     let config = {
