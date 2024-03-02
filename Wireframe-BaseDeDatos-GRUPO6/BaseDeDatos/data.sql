@@ -25,8 +25,9 @@ DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +36,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'accesorios'),(2,'indumentaria'),(3,'tech');
+INSERT INTO `categories` VALUES (1,'Accesorios','/img/categories/accesorio.jpg'),(2,'Indumentaria','/img/categories/indumentaria.jpg'),(3,'Tecnología','/img/categories/tecnologia.jpg');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,7 +110,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`),
   KEY `category_id` (`category_id`),
   CONSTRAINT `products_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -118,7 +119,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Audífonos Bluetooth','Excelente calidad de audio, compatible con video llamadas, llamadas, tiene micrófono incorporado en cada audífono, puedes usar 1 o los 2. La mejor calidad que vas a poder encontrar. (en audio, calidad de construcción, etc).Posee funciones touch en cada au','/img/products/audifonos-bluetooth-celestes.jfif',3,6299),(2,'Botella de Acero Inoxidable','Botella de acero inoxidable, apta para bebidas de cualquier tipo calientes, frías. No transmiten olor y sabor al líquido interior. Capacidad de 500ml','/img/products/botella-aceroinoxidable-burdeos.jpg',1,8990),(3,'Chomba Piqué','Chomba de punto ligero, poco ceñida y larga hasta la cintura, con mangas y cuello abierto','/img/products/chomba-gris.jpg',2,7330),(4,'Funda para Notebook','Funda notebook neoprene textil, cierre forzado con deslizador metálico','/img/products/funda-notebook-azul.jpg',1,18599),(5,'Gorra Bagaje','Incluye un bordado en frente, 100% poliester. Corte alto. Costuras al tono. Vicera curva preformada. Talles varios','/img/products/gorra-azul.png',2,23999),(6,'Kit para el mate de Jean y Cuero','Jean y cuero vacuno. Estuche cerrado. Medidas estuche cerrado 34cm x 23cm x 12 cm. Termo de litro forrado en cuero y bombilla niquelada. Lata yerbera y azucarera forrada. Mate tipo baqueta costura artesanal.','/img/products/kitmatero-jean&cuero.jpg',1,39999),(7,'Libreta de anillas con tapa de carton','Libreta de anillas con tapa de carton reciclado. 80 hojas con disposición a una raya y acabado kraft y distintivo reciclado. Medidas 14,5 x 21 x 1 | Ø | 190 gr','/img/products/libreta-tapacartonreciclado-verde.jpg',1,13200),(8,'Llavero de tela y metal','Medidas 28mm x 60mm x 6mm. Materiales metal y webbing. Personalizables, colores varios.','/img/products/llavero-tela&metal-azul.jpg',1,3450),(9,'Mini Parlante bluetooth','Parlante bluetooth. Tamaño ideal para llevar a todas partes. Posee una calidad de sonido y bajos reforzados que te van a sorprender. Incluye microfono para atender tus llamadas por sistema de manos libres. Personalizable y varios colores disponibles','/img/products/miniparlante-negro.jpg',3,17499),(10,'Taza de ceramica y base de corcho','Medidas 6cm ancho x 10,50cm de alto y peso de 310gr. Capacidad de 280ml. Colores Rojo, Marron, Blanco, Azul y Verde','/img/products/tazas-ceramica-varias.jpg',1,2350);
+INSERT INTO `products` VALUES (1,'Audífonos Bluetooth','Excelente calidad de audio, compatible con video llamadas, llamadas, tiene micrófono incorporado en cada audífono, puedes usar 1 o los 2. La mejor calidad que vas a poder encontrar. (en audio, calidad de construcción, etc).Posee funciones touch en cada au','/img/products/audifonos-bluetooth-celestes.jfif',3,6299),(2,'Botella de Acero Inoxidable','Botella de acero inoxidable, apta para bebidas de cualquier tipo calientes, frías. No transmiten olor y sabor al líquido interior. Capacidad de 500ml','/img/products/botella-aceroinoxidable-burdeos.jpg',1,8990),(3,'Chomba Piqué','Chomba de punto ligero, poco ceñida y larga hasta la cintura, con mangas y cuello abierto','/img/products/chomba-gris.jpg',2,7330),(4,'Funda para Notebook','Funda notebook neoprene textil, cierre forzado con deslizador metálico','/img/products/funda-notebook-azul.jpg',1,18599),(5,'Gorra Bagaje','Incluye un bordado en frente, 100% poliester. Corte alto. Costuras al tono. Vicera curva preformada. Talles varios','/img/products/gorra-azul.png',2,23999),(6,'Kit para el mate de Jean y Cuero','Jean y cuero vacuno. Estuche cerrado. Medidas estuche cerrado 34cm x 23cm x 12 cm. Termo de litro forrado en cuero y bombilla niquelada. Lata yerbera y azucarera forrada. Mate tipo baqueta costura artesanal.','/img/products/kitmatero-jean&cuero.jpg',1,39999),(7,'Libreta de anillas con tapa de carton','Libreta de anillas con tapa de carton reciclado. 80 hojas con disposición a una raya y acabado kraft y distintivo reciclado. Medidas 14,5 x 21 x 1 | Ø | 190 gr','/img/products/libreta-tapacartonreciclado-verde.jpg',1,13200),(8,'Llavero de tela y metal','Medidas 28mm x 60mm x 6mm. Materiales metal y webbing. Personalizables, colores varios.','/img/products/llavero-tela&metal-azul.jpg',1,3450),(9,'Mini Parlante bluetooth','Parlante bluetooth. Tamaño ideal para llevar a todas partes. Posee una calidad de sonido y bajos reforzados que te van a sorprender. Incluye microfono para atender tus llamadas por sistema de manos libres. Personalizable y varios colores disponibles','/img/products/miniparlante-negro.jpg',3,17499),(10,'Taza de ceramica y base de corcho','Medidas 6cm ancho x 10,50cm de alto y peso de 310gr. Capacidad de 280ml. Colores Rojo, Marron, Blanco, Azul y Verde','/img/products/tazas-ceramica-varias.jpg',1,2350),(11,'Celular samsung','Memoria RAM: 8 GB Galaxy S23 con 256GB de almacenamiento interno y 8GB de RAM. Equipado con el último sistema operativo Android 13. Cuenta con una pantalla Dynamic AMOLED 2X de 6.1 pulgadas Full HD+. Triple cámara trasera de 50MP, 10MP y 12MP con funcione','/img/products/imagenProducto-1709238707241.jpg',3,100000);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -163,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-28 15:24:34
+-- Dump completed on 2024-03-02 19:01:31
