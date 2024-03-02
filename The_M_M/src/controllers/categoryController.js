@@ -5,11 +5,23 @@ const path = require('path');
 
 const db = require("../database/models");
 const categoryController = {
-    listCategory: (req , res) =>{
+    listCategories: (req , res) =>{
         
         db.Category.findAll()
-        .then((category)=>{
-            res.render("category", {category})
+        .then((categories)=>{
+            res.render("listCategories", {categories})
+        }) 
+    },
+    categoryId: (req, res) => {
+        db.Product.findAll({
+            where: {category_id: req.params.id},
+            include: [
+                { association: 'categories' },
+                { association: 'colours' }
+            ]
+        })
+        .then((products)=>{
+            res.render("categories/cateogria",{products})
         }) 
     }
 

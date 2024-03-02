@@ -224,6 +224,7 @@ main {
 .caja-productos-destacados a{
     text-decoration: none;
     color: #32381b;
+    width: 250px;
 }
 .caja-producto{
     width: 90%;

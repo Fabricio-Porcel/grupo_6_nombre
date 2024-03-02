@@ -47,7 +47,7 @@ app.use('/users' , usersRoutes);
 
 app.use('/products' , productsRoutes);
 
-app.use('/category', categoryRoutes);
+app.use('/categories', categoryRoutes);
 
 
 
