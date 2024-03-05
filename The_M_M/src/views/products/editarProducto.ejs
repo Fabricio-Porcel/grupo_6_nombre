@@ -23,20 +23,6 @@
         </div> -->
 
 
-<<<<<<< HEAD
-        <label for="colour" class="item-colorProducto">Color del Producto</label>
-        <div class="item-editarProductoColor">
-            <input type="checkbox" id="colour_id" name="colours" value="1" class="checkbox-editarProducto"><label for="colour1" class="label-colorProducto">celeste</label> 
-            <input type="checkbox" id="colour_id" name="colours" value="2" class="checkbox-editarProducto"><label for="colour2" class="label-colorProducto">burdeos</label>
-            <input type="checkbox" id="colour_id" name="colours" value="3" class="checkbox-editarProducto"><label for="colour3" class="label-colorProducto">gris melange</label>
-            <input type="checkbox" id="colour_id" name="colours" value="4" class="checkbox-editarProducto"><label for="colour4" class="label-colorProducto">azul</label>
-            <input type="checkbox" id="colour_id" name="colours" value="5" class="checkbox-editarProducto"><label for="colour5" class="label-colorProducto">negro</label>
-            <input type="checkbox" id="colour_id" name="colours" value="6" class="checkbox-editarProducto"><label for="colour6" class="label-colorProducto">verde oliva</label>
-            <input type="checkbox" id="colour_id" name="colours" value="7" class="checkbox-editarProducto"><label for="colour7" class="label-colorProducto">rojo</label>
-            <input type="checkbox" id="colour_id" name="colours" value="8" class="checkbox-editarProducto"><label for="colour8" class="label-colorProducto">rosa coral</label>
-            <input type="checkbox" id="colour_id" name="colours" value="9" class="checkbox-editarProducto"><label for="colour9" class="label-colorProducto">verde agua</label>
-            <input type="checkbox" id="colour_id" name="colours" value="10" class="checkbox-editarProducto"><label for="colour10" class="label-colorProducto">blanco</label>
-=======
         <div class="item-editarProducto">
             <label for="categoryProduct">Categoría de producto</label>
             <select id="categoryProduct" name="categoryProduct">
@@ -44,12 +30,11 @@
                     <option value="<%= category.id %>" <%= (product.category_id && product.category_id === category.id) ? 'selected' : '' %>> <%= category.name %> </option>
                 <% }); %>
             </select>
->>>>>>> 3ede4d848085a8ce17b885fef44897afbb2e295e
         </div>
         
 
 
-        <div class="item-editarProducto">
+        <div class="item-editarProducto" id="colour-product-list">
             <label>Color del Producto</label>
             <% const selectedColourId = product.colour_id; %>
             <% colour.forEach(colour => { %>

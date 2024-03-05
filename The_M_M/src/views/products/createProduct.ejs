@@ -6,15 +6,33 @@
     <form action="/products/Crear-Producto" class="form-editarProducto" method="POST" enctype="multipart/form-data">
         <div class="item-editarProducto">
             <label for="name">Nombre del Producto</label>
-            <input class="input-create-list" type="text" id="name" name="name" required>
+            <input class="input-create-list" type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null %>" required>
+            <div class="text-danger">
+
+                <% if (locals.errors && errors.name){ %>
+                <%= errors.name.msg %>
+                <% } %>    
+                </div>
         </div>
         <div class="item-editarProducto">
             <label for="description">Descripcion del Producto</label>
             <textarea id="description" name="description" required></textarea>
+                <div class="text-danger">
+
+                <% if (locals.errors && errors.description){ %>
+                <%= errors.description.msg %>
+                <% } %>    
+                </div>
         </div>
         <div class="item-editarProducto">
             <label for="image">Imagen del Producto</label>
             <input type="file" class="input-create-list" id="image" name="imagenProducto" required>
+            <div class="text-danger">
+
+                <% if (locals.errors && errors.imagenProducto){ %>
+                <%= errors.imagenProducto.msg %>
+                <% } %>    
+                </div>
         </div>
         
         <div class="item-editarProducto">
@@ -25,6 +43,12 @@
                 <option value="<%= categories[i].id %>"><%= categories[i].name %></option>
                 <% } %>
             </select>
+            <div class="text-danger">
+
+                <% if (locals.errors && errors.categories){ %>
+                <%= errors.categories.msg %>
+                <% } %>    
+                </div>
         </div>
     
         <div class="item-editarProducto" id="colour-product-list">
@@ -37,11 +61,23 @@
                     </div>
                 <% } %>
             </div>
+            <div class="text-danger">
+
+                <% if (locals.errors && errors.colours){ %>
+                <%= errors.colours.msg %>
+                <% } %>    
+                </div>
         </div>
 
         <div class="item-editarProducto">
             <label for="price">Precio del Producto</label>
             <input type="text" id="price" class="input-create-list" name="price" required>
+            <div class="text-danger">
+
+                <% if (locals.errors && errors.price){ %>
+                <%= errors.price.msg %>
+                <% } %>    
+                </div>
         </div>
         
         <button class="boton-editarProducto" type="submit">Enviar</button>
