@@ -679,7 +679,9 @@ main {
 
 /* REGISTER */
 
-
+#mensajeErrores{
+    text-align: center;
+}
 
 
 .formulario-registro {

@@ -3,7 +3,8 @@
 
 <main class="main-editarProducto">
     <h2 class="titulo-editarProducto">Crear Producto</h2>
-    <form action="/products/Crear-Producto" class="form-editarProducto" method="POST" enctype="multipart/form-data">
+    <ul id="mensajeErrores"></ul>
+    <form action="/products/Crear-Producto" id="formularioCrearProducto" class="form-editarProducto" method="POST" enctype="multipart/form-data">
         <div class="item-editarProducto">
             <label for="name">Nombre del Producto</label>
             <input class="input-create-list" type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null %>" required>
@@ -56,8 +57,8 @@
             <div class="colours-container">
                 <% for (let i = 0 ; i < colours.length ; i++){ %>
                     <div class="colour-option">
-                        <input type="checkbox" id="colour<%= i %>" name="colours"  value="<%= colours[i].id %>">
-                        <label for="colour<%= i %>"><%= colours[i].colour %></label>
+                        <input type="checkbox" id="colour" name="colours"  value="<%= colours[i].id %>">
+                        <label for="colour"><%= colours[i].colour %></label>
                     </div>
                 <% } %>
             </div>
@@ -84,6 +85,7 @@
 
 
 </main>
+<script src="/js/createProduct.js"></script>
 
 
 <%- include('../partials/footer.ejs') %>
