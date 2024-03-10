@@ -44,7 +44,8 @@ const productsController = {
 
             res.render("products/editarProducto", {product: pedidoProducto, categories: pedidoCategorias , colour: pedidoColores})
         } catch (error) {
-            console.error("Error en la función edit:", error); 
+            console.error("Error al cargar los colores y categorías:", error);
+            res.status(500).send("Error interno del servidor");
         }
 
 
@@ -69,7 +70,9 @@ const productsController = {
         });
         const categories = await db.Category.findAll();
         
-        res.render("products/createProduct", { colours: colours, categories: categories });
+     
+
+    res.render("products/createProduct", { colours: colours, categories: categories });
     } catch (error) {
         console.error("Error al cargar los colores y categorías:", error);
         res.status(500).send("Error interno del servidor");
