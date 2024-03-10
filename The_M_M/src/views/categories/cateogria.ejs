@@ -1,0 +1,61 @@
+<!-- <%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Detalle de Producto"}) %>
+<%- include('../partials/header.ejs') %>
+
+
+<main>
+    
+        
+    
+    <h2 class="titulo-main">Categoria:<%= products.category_id %></h2>
+    
+    
+    <section class="caja-productos-destacados">
+        <% products.forEach(producto => { %>
+
+            
+            <a href="products/Detalle-Producto/<%= producto.id %>" class="caja-producto">
+                <img src="<%= producto.image %>" class="imagen-producto">
+                <div class="descripcion-producto">
+                    <ul class="lista-descripcion-producto">
+                        <li><%=producto.name %></li>
+                        <li>Desde $<%= producto.price %></li>
+                        
+                        </ul>
+                        </div>
+                        
+                        
+                        </a>
+                    <% }) %>
+                    
+    </section>
+</main>
+
+
+<%- include('../partials/footer.ejs') %> -->
+
+
+<%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Detalle de Producto"}) %>
+<%- include('../partials/header.ejs') %>
+
+<main>
+    <% if (products.length > 0) { %>
+        <h2 class="titulo-main"><%= products[0].categories.name %></h2>
+    <% } %>
+        <section class="caja-productos-destacados">
+            <% products.forEach(producto => { %>
+                <a href="/products/Detalle-Producto/<%= producto.id %>" class="caja-producto">
+                    <img src="<%= producto.image %>" class="imagen-producto">
+                    <div class="descripcion-producto">
+                        <ul class="lista-descripcion-producto">
+                            <li><%= producto.name %></li>
+                            <li>Desde $<%= producto.price %></li>
+                        </ul>
+                    </div>
+                </a>
+            <% }) %>
+        </section>
+    
+   
+</main>
+
+<%- include('../partials/footer.ejs') %>

@@ -5,7 +5,9 @@ const router = express.Router();
 const categoryController = require ('../controllers/categoryController');
 
 
-router.get('/' , categoryController.listCategory)
+
+router.get('/' , categoryController.listCategories)
+router.get('/:id' , categoryController.categoryId)
 
 
 

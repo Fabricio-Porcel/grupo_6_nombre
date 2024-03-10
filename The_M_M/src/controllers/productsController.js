@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const {validationResult} = require('express-validator');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 
@@ -76,7 +77,6 @@ const productsController = {
 },
     
 processCreate: async (req, res) => {
-    console.log(req.body)
   
 
     try {
@@ -120,7 +120,7 @@ processCreate: async (req, res) => {
             res.redirect("/"); // O maneja el error de alguna otra forma adecuada
         }
     },
-    eliminarProducto: (req, res) => {
+    eliminarProducto: async (req, res) => {
         db.Product.destroy({
             where: {
                 id: req.params.id
@@ -130,6 +130,9 @@ processCreate: async (req, res) => {
 
         res.redirect("/products");
 
+
+        
+        
         // const productId = parseInt(req.params.id);
         
         // // Leer el archivo de productos
