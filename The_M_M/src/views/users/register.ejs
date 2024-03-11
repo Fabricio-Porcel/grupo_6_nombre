@@ -6,7 +6,7 @@
         
         <form action="/users/register" method="POST" enctype="multipart/form-data">
             <h2>Registro</h2>
-           
+            <ul id="errores"></ul>
             <div class="item-formulario">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="name" value="<%= locals.oldData ? oldData.name : null %>" >
