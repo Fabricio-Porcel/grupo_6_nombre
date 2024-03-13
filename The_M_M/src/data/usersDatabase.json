@@ -38,17 +38,6 @@
   "password": "$2a$10$yXgXuoAw.hGfGeEkn/FVtOfv3MuV7DAP85KD2CK6UDt465.b//FeK"
  },
  {
-  "id": 6,
-  "name": "Roman",
-  "lastName": "Ullua",
-  "email": "roman.ullua55@gmail.com",
-  "password": "$2a$10$4zZUOBOl0QzLUDsMbNxAz.CtywWyfEnlf8e58ARMSoVviyZKpC9yG",
-  "phoneNumber": "3245345",
-  "country": "Argentina",
-  "city": "Santa Fe",
-  "avatar": "avatar-1706752902712.jpg"
- },
- {
   "id": 7,
   "name": "Daniela ",
   "lastName": "Santini",
@@ -58,5 +47,19 @@
   "country": "Argentina",
   "city": "San Nicolas",
   "avatar": "avatar-1708999371442.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Roman",
+  "lastName": "Ullua",
+  "country": "Argentina",
+  "city": "Santa Fe",
+  "email": [
+   "roman.ullua55@gmail.com",
+   ""
+  ],
+  "phoneNumber": "3245345",
+  "avatar": "avatar-1710361976394.jpg",
+  "password": "$2a$10$dYiVBH//u/HG9cNhXJnVTegOfDBrUgBbL/ugmQiQbX5AUjtD/9Qse"
  }
 ]

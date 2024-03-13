@@ -4,13 +4,14 @@
 
 <body>
     <form action="/users/profileEdit/<%= users.id %>?_method=PUT" method="POST"  class="section-ProfileEdit">
-    
+        
+        <ul class="errores"></ul>
    
         <div class="form-desktop">
             <div class="form-block">
             <div class="control-form">
                 <label for="name"><i class="fa-solid fa-pen"></i>Nombre:</label>
-                <input type="text" id="name" name="name" class="control" value="<%= users.name %>">
+                <input type="text" id="name" name="name" class="control" value=" <%= users.name %> ">
             </div>
 
             <div class="control-form">
@@ -52,8 +53,9 @@
         
         </div>
         <form>
-
-</body>
+            <script src="./js/profileEdit.js"></script>
+        </body>
+        
 
 
 <%- include('../partials/footer.ejs') %>
