@@ -94,17 +94,9 @@ const usersController = {
        });
     },
     profileEdit: (req , res) => {
-        // let users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        // const userToEdit = users.find(users =>{
-        //     return users.id == req.params.id
-        // })
-
          res.render('users/profileEdit', {
         users: req.session.userLogged
-        // userToEdit
         });
-        // res.send("Editar usuario")
-      
      },
      profileProcessEdit:(req,res)=>{
         // users: req.session.userLogged

@@ -7,7 +7,7 @@
     <form action="/products/Crear-Producto" id="formularioCrearProducto" class="form-editarProducto" method="POST" enctype="multipart/form-data">
         <div class="item-editarProducto">
             <label for="name">Nombre del Producto</label>
-            <input class="input-create-list" type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null %>" required>
+            <input class="input-create-list" type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null %>" >
             <div class="text-danger">
 
                 <% if (locals.errors && errors.name){ %>
@@ -17,7 +17,7 @@
         </div>
         <div class="item-editarProducto">
             <label for="description">Descripcion del Producto</label>
-            <textarea id="description" name="description" required></textarea>
+            <textarea id="description" name="description" ></textarea>
                 <div class="text-danger">
 
                 <% if (locals.errors && errors.description){ %>
@@ -27,7 +27,7 @@
         </div>
         <div class="item-editarProducto">
             <label for="image">Imagen del Producto</label>
-            <input type="file" class="input-create-list" id="image" name="imagenProducto" required>
+            <input type="file" class="input-create-list" id="image" name="imagenProducto" >
             <div class="text-danger">
 
                 <% if (locals.errors && errors.imagenProducto){ %>
@@ -72,7 +72,7 @@
 
         <div class="item-editarProducto">
             <label for="price">Precio del Producto</label>
-            <input type="text" id="price" class="input-create-list" name="price" required>
+            <input type="text" id="price" class="input-create-list" name="price" >
             <div class="text-danger">
 
                 <% if (locals.errors && errors.price){ %>

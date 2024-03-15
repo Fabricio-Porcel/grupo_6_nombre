@@ -3,9 +3,9 @@
 
 
 <body>
+    <ul class="errores"></ul>
     <form action="/users/profileEdit/<%= users.id %>?_method=PUT" method="POST"  class="section-ProfileEdit">
-    
-   
+ 
         <div class="form-desktop">
             <div class="form-block">
             <div class="control-form">
@@ -20,40 +20,39 @@
 
             <div class="control-form">
                 <label for="email"><i class="fa-solid fa-envelope"></i>Email:</label>
-                <input type="email" id="email" name="email" class="control" value="<%= users.email %>">
+                <input type="email" id="emailEditar" name="email" class="control" value="<%= users.email %>">
             </div>
 
             <div class="control-form">
                 
                 <label for="phoneNumber"><i class="fa-solid fa-phone"></i>Telefono:</label>
-                <input type="tel" name="phoneNumber" class="control" value="<%= users.phoneNumber %>">
+                <input type="tel" id="phoneNumber" name="phoneNumber" class="control" value="<%=users.phoneNumber%>">
             </div>
         </div>
         <div class="form-block">
             <div class="control-form">
                 <label for="country"><i class="fa-solid fa-earth-americas"></i>Pais:</label>
-                <input type="text" name="country" class="control" value="<%= users.country %>">
+                <input type="text"  id="country" name="country" class="control" value="<%= users.country %>">
             </div>
             <div class="control-form">
                 <label for="city"><i class="fa-solid fa-location-dot"></i>Ciudad:</label>
-                <input type="text" name="city" class="control" value="<%= users.city %>">
+                <input type="text" id="city" name="city" class="control" value="<%= users.city %>">
             </div>
             <div class="control-form">
                 <label for="avatar"><i class="fa-solid fa-upload"></i>Imagen de pefil:</label>
-                <input type="file" name="avatar" class="control" value="<%= users.avatar %>">
+                <input type="file" id="avatar" name="avatar" class="control" value="<%= users.avatar %>">
             </div>
         </div>
         
          </div>
          <div class="buttons-edit">
-            
             <button type="reset" class="button-delete">Eliminar campos</button>
             <button type="submit" class="button-edit">Modificar</button>
-        
         </div>
         <form>
-
-</body>
+            <script src="/js/profileEdit.js"></script>
+        </body>
+        
 
 
 <%- include('../partials/footer.ejs') %>

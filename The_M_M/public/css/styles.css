@@ -1426,6 +1426,14 @@ label{
 .section-ProfileEdit .button-delete a{
     text-decoration: none;
 }
+.errores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.errores li{
+ color: red;
+}
 
 
 /* <------------------products details---------------> */
@@ -1650,3 +1658,4 @@ label{
     padding-bottom: 30px;
 
 }
+
