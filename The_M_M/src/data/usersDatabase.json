@@ -50,13 +50,13 @@
  },
  {
   "id": 8,
-  "name": "Roman",
-  "lastName": "Ullua",
-  "country": "Argentina",
-  "city": "Santa Fe",
-  "email": "roman.ullua55@gmail.com",
-  "phoneNumber": "3245345",
-  "avatar": "avatar-1710361976394.jpg",
-  "password": "$2a$10$dYiVBH//u/HG9cNhXJnVTegOfDBrUgBbL/ugmQiQbX5AUjtD/9Qse"
+  "name": "Carolina",
+  "lastName": "gonzalez portiglia",
+  "email": "caro.gonzalezp@hotmail.com",
+  "password": "$2a$10$Hxt4cpFZpd2Pl02RP6Pm8e/Tk89vl5pQllg18GBZwNiYHQ2dpv3HG",
+  "phoneNumber": "1168266106",
+  "country": "españa",
+  "city": "cordoba",
+  "avatar": "avatar-1710261030884.jpg"
  }
 ]
