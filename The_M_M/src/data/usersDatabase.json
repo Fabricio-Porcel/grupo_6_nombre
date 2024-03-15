@@ -39,7 +39,7 @@
  },
  {
   "id": 7,
-  "name": "Daniela ",
+  "name": "Daniela",
   "lastName": "Santini",
   "email": "danielasantini15@hotmail.com",
   "password": "$2a$10$OPqoZSwTlotmGBbBw6Ap9.3074VLBNMGvPIiSWk1VUsJg6A2JMJ/q",
@@ -54,10 +54,7 @@
   "lastName": "Ullua",
   "country": "Argentina",
   "city": "Santa Fe",
-  "email": [
-   "roman.ullua55@gmail.com",
-   ""
-  ],
+  "email": "roman.ullua55@gmail.com",
   "phoneNumber": "3245345",
   "avatar": "avatar-1710361976394.jpg",
   "password": "$2a$10$dYiVBH//u/HG9cNhXJnVTegOfDBrUgBbL/ugmQiQbX5AUjtD/9Qse"

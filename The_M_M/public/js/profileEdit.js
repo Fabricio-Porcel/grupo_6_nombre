@@ -1,11 +1,14 @@
 window.addEventListener('load', () => {
 
 let form = document.querySelector('.section-ProfileEdit')
+let errorsHTML = document.querySelector('.errores')
 
 
-form.addEventListener('submit',(e)=>{
-    let errores = document.querySelector('ul.errores')
-    // e.preventDefault();
+form.addEventListener('submit',(event)=>{
+    
+
+
+
 
     let errorList = [];
 
@@ -24,17 +27,17 @@ form.addEventListener('submit',(e)=>{
         if (email.value === "") {
             errorList.push('completa el campo de email')
         }
-        //numero de telefono
+        // numero de telefono 
         let phoneNumber = document.querySelector("#phoneNumber")    
         if (phoneNumber.value === "") {
             errorList.push('completa el campo de numero de telefono')
         }
-        //Pais
+        // Pais
        let country = document.querySelector("#country")    
        if (country.value === "") {
         errorList.push('completa el campo de numero de Pais')
         }
-        //Ciudad
+        // Ciudad
        let city = document.querySelector("#city")    
        if (city.value === "") {
         errorList.push('completa el campo de numero de Ciudad')
@@ -48,16 +51,21 @@ form.addEventListener('submit',(e)=>{
 
 
         if (errorList.length > 0) {
-            e.preventDefault()
-            errores.innerHTML = ""
+            event.preventDefault()
+            errorsHTML.innerHTML = "";
             errorList.forEach(error => {
-                errores.innerHTML += "<li>" + error + "</li>"
+                errorsHTML.innerHTML += "<li>" + error + "</li>"
             });
             
         } 
         // else{
-        //     errores.innerHTML = "Se guardó satisfactoriamente";   
+        //     errorsHTML.innerHTML = "Se guardó satisfactoriamente";   
         // }
+        console.log("Se envio el formulario!");
+
+
+
 })
 
-});
+}
+);
