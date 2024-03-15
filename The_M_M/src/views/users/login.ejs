@@ -4,14 +4,14 @@
 <main>
     <div class="formulario-registro">
         
-        <form action="/users/login" method="POST">
+        <form action="/users/login" method="POST" id="formularioLogin">
             <h2>Inicio de sesion</h2>
-            <ul id="errores"></ul>
+            <ul id="mensajeErrores"></ul>
             <div class="item-formulario">
                 
             <div class="item-formulario">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="emailLogin" name="email" required>
                 <% if (locals.errors && errors.email) { %>
                     <div class="text-danger">
                         <%= errors.email.msg %>
@@ -20,7 +20,7 @@
             </div>
             <div class="item-formulario">
                 <label for="password">Contraseña</label>
-                <input type="password" id="contraseña" name="password" minlength= "5" required >
+                <input type="password" id="contraseña" name="password" minlength= "8" required >
             </div>
 
             <div class="checkbox-login">
@@ -38,5 +38,5 @@
         </form>
     </div>
   </main>
-
+ <script src="/js/login.js"></script>
   <%- include('../partials/footer.ejs') %>

@@ -1,5 +1,5 @@
 window.addEventListener('load',() => {
- let formularioRegistro = document.querySelector('.formulario-registro');
+ let formularioRegistro = document.querySelector('#formularioRegistro');
 
  formularioRegistro.addEventListener("submit", function(e){
   e.preventDefault();
@@ -8,23 +8,25 @@ window.addEventListener('load',() => {
 
   let inputNombre = document.querySelector('#nombre');
 
-  if(inputNombre.value.trim === ""){
+  if(inputNombre.value.trim() === ""){
     errores.push ('Introduzca su nombre');
-  } else if (inputNombre.value.length < 2){
+  } 
+   if (inputNombre.value.length < 2){
     errores.push ('el campo de nombre debe tener al menos 2 caracteres');
   }
   
   let inputApellido = document.querySelector('#apellido');
 
-  if(inputApellido.value.trim === ""){
+  if(inputApellido.value.trim() === ""){
     errores.push ('Introduzca su apellido');
-  } else if (inputApellido.value.length < 2){
+  }
+    if (inputApellido.value.length < 2){
     errores.push ('el campo de apellido debe tener al menos 2 caracteres');
   }
 
-  let inputEmail = document.querySelector('#email');
+  let inputEmail = document.querySelector('#emailRegister');
 
-  if(inputEmail.value.trim === ""){
+  if(inputEmail.value.trim() === ""){
     errores.push ('Se requiere indicar un correo de mail');
   } else {
     // Validación de formato de correo electrónico
@@ -34,15 +36,10 @@ window.addEventListener('load',() => {
     }
     
   }
-  // Verificación de correo electrónico duplicado 
-  const emailDuplicado = verificarEmailDuplicado(inputEmail.value);
-  if (emailDuplicado) {
-      errores.push('Este correo electrónico ya está registrado');
-  }
-
+  
   let inputContraseña = document.querySelector('#contraseña');
 
-  if(inputContraseña.value.trim === ""){
+  if(inputContraseña.value.trim() === ""){
     errores.push ('Se requiere completar con la contraseña');
   }  else if (inputContraseña.value.length < 8){
     errores.push ('la contraseña, debe contener al menos 8 caracteres');
@@ -54,24 +51,25 @@ window.addEventListener('load',() => {
     }
   }
   // Validación de formato de archivo de imagen 
-  let inputFileImage = document.querySelector('avatar');
-  if (inputFileImagen.value.trim() !== "") {
+  let inputFileImage = document.querySelector('#avatar');
+  if (inputFileImage.value.trim() !== "") {
       const extensionesPermitidas = /\.(jpg|jpeg|png|gif)$/i;
-      if (!extensionesPermitidas.test(inputFileImagen.value)) {
+      if (!extensionesPermitidas.test(inputFileImage.value)) {
           errores.push('La imagen debe ser un archivo válido (JPG, JPEG, PNG, GIF)');
       }
   }
 
-  // si errores.length es mayor a cero, entonces cancelo el envío del formulario
-  if (errores.length > 0 ){
-    e.preventDefault();
-    let ulErrores = document.querySelector('#errores');
-    for (let i = 0; i < errores.length; i++) {
-
-        ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
-    }
-  }
   
- });
-}) 
+// Mostrar mensajes de error
+let mensajeErrores = document.querySelector('#mensajeErrores');
+if (errores.length > 0) {
+    mensajeErrores.innerHTML = '';
+    errores.forEach(error => {
+        mensajeErrores.innerHTML += `<li class='text-danger'>${error}</li>`;
+    });
+} else {
+    formularioRegistro.submit(); // Envío del formulario si no hay errores
+}
+});
+}); 
 
