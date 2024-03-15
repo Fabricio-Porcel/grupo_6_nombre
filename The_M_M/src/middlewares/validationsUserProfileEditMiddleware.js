@@ -2,8 +2,6 @@ const { check } = require('express-validator');
 
 const path = require('path');
 
-
-
 const validationsProfileEdit = [
     check('name')
     .not()

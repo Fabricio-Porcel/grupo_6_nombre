@@ -23,7 +23,7 @@ form.addEventListener('submit',(event)=>{
             errorList.push('completa el campo de apellido')
         }
         //email
-        let email = document.querySelector("#email")    
+        let email = document.querySelector("#emailEditar")    
         if (email.value === "") {
             errorList.push('completa el campo de email')
         }
