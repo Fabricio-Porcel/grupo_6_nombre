@@ -48,8 +48,6 @@ form.addEventListener('submit',(event)=>{
          errorList.push('debes subir imagen del perfil')
          }
 
-
-
         if (errorList.length > 0) {
             event.preventDefault()
             errorsHTML.innerHTML = "";
@@ -62,8 +60,6 @@ form.addEventListener('submit',(event)=>{
         //     errorsHTML.innerHTML = "Se guardó satisfactoriamente";   
         // }
         console.log("Se envio el formulario!");
-
-
 
 })
 
