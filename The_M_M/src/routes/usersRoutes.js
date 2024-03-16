@@ -10,6 +10,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const multer = require('multer');
 const {body} = require('express-validator');
 const validations = require('../middlewares/validationsMiddleware')
+const validationsProfileEdit = require('../middlewares/validationsUserProfileEdit')
 const {validationResult} = require('express-validator');
 
 const storage = multer.diskStorage({
@@ -54,7 +55,7 @@ router.get('/login',guestMiddleware, usersController.login);
 router.post('/login', usersController.loginProcess);
 router.get('/profile', authMiddleware, usersController.profile);//perfil del usuario
 router.get('/profileEdit/:id', authMiddleware, usersController.profileEdit);//perfil del usuario
-router.put('/profileEdit/:id', authMiddleware, usersController.profileProcessEdit);//perfil del usuario
+router.put('/profileEdit/:id', authMiddleware,validationsProfileEdit, usersController.profileProcessEdit);//perfil del usuario
 router.get('/logout', usersController.logout); 
 router.get('/adminLogin' , usersController.adminLogin);
 router.post('/admin' , usersController.admin);

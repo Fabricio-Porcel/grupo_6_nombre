@@ -1,32 +1,29 @@
-const { check } = require('express-validator');
+const { body } = require('express-validator');
 
 const path = require('path');
 
 const validationsProfileEdit = [
-    check('name')
-    .not()
-    .isLength({min:2})
+    body('name')
+    .notEmpty()
     .withMessage('Debes ingresar tu Nombre'),
 
-    check('lastName')
-    .not()
-    .isLength({min:2})
+    body('lastName')
+    .notEmpty()
     .withMessage('Debes ingresar tu Apellido'),
 
-    check('email')
+    body('email')
     .isEmail()
     .withMessage('Debes ingresar un email valido'),
 
-    check('phoneNumber')
-    .notEmpty()
+    body('phoneNumber')
     .isNumeric()
     .withMessage('Debes ingresar un número telefónico'),
 
-    check('country')
+    body('country')
     .notEmpty()
     .withMessage('Debes ingresar tu país'), 
 
-    check('city')
+    body('city')
     .notEmpty()
     .withMessage('Debes ingresar tu ciudad'),
 ];

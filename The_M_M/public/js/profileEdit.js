@@ -1,27 +1,36 @@
 window.addEventListener('load', () => {
-
+console.log("form validation")
 let form = document.querySelector('.section-ProfileEdit')
 let errorsHTML = document.querySelector('.errores')
 
+// const paises = ['Argentina','Colombia','Uruguay','Peru','Ecuador'];
+
+// let select = document.querySelector("#select");
+
+// paises.forEach(pais => {
+//     select.innerHTML += "<option value="+ pais +">"+ pais +"</option>";
+// });
 
 form.addEventListener('submit',(event)=>{
     
-
-
-
-
     let errorList = [];
 
         //nombre
         let name = document.querySelector("#name")    
         if (name.value === "") {
-            errorList.push('completa el campo de nombre')
-        }
+            errorList.push('Completa el campo de nombre');
+        } 
+        // else if (!/^[A-Z][a-z]*$/.test(name.value)) {
+        //     errorList.push('El nombre debe comenzar con mayúscula');
+        // }
         //apellido
         let lastName = document.querySelector("#lastName")    
         if (lastName.value === "") {
             errorList.push('completa el campo de apellido')
-        }
+        } 
+        // else if (!/^[A-Z][a-z]*$/.test(name.value)) {
+        //     errorList.push('El apellido debe comenzar con mayúscula');
+        // }
         //email
         let email = document.querySelector("#emailEditar")    
         if (email.value === "") {

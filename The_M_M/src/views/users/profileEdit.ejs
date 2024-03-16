@@ -3,6 +3,13 @@
 
 
 <body>
+    <% if (typeof errors !== 'undefined' && errors.length > 0){ %>
+        <ul class="errores">
+            <% errors.forEach(error => { %>
+                <li><%= error.msg %></li>
+            <% }) %>
+        </ul>
+   <% }%>
     <ul class="errores"></ul>
     <form action="/users/profileEdit/<%= users.id %>?_method=PUT" method="POST"  class="section-ProfileEdit">
  
@@ -44,15 +51,18 @@
             </div>
         </div>
         
-         </div>
-         <div class="buttons-edit">
-            <button type="reset" class="button-delete">Eliminar campos</button>
-            <button type="submit" class="button-edit">Modificar</button>
-        </div>
-        <form>
-            <script src="/js/profileEdit.js"></script>
-        </body>
-        
-
-
-<%- include('../partials/footer.ejs') %>
+    </div>
+    <div class="buttons-edit">
+        <button type="reset" class="button-delete">Eliminar campos</button>
+        <button type="submit" class="button-edit">Modificar</button>
+    </div>
+    <form>
+        <script src="/js/profileEdit.js"></script>
+ <!-- <select name="" id="select">
+    <option value="">Elige pais</option>
+ </select> -->
+    </body>
+    
+    
+    
+    <%- include('../partials/footer.ejs') %>

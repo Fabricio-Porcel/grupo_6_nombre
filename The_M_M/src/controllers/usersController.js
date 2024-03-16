@@ -99,32 +99,39 @@ const usersController = {
         });
      },
      profileProcessEdit:(req,res)=>{
-        // users: req.session.userLogged
-
-        const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        
+        let errors = validationResult(req);
+        // res.send(errors);
         let id = req.params.id
-
-        let UserToEdit = users.find(user => user.id == id)
-
-        UserToEdit = {
-            id:UserToEdit.id,
-            name:req.body.name,
-            lastName:req.body.lastName,
-            country:req.body.country,
-            city:req.body.city,
-            email:req.body.email,
-            phoneNumber:req.body.phoneNumber,
-            avatar:UserToEdit.avatar,
-            password:UserToEdit.password
+        if (errors.isEmpty()) {
+            // users: req.session.userLogged
+            
+           const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+           
+    
+           let UserToEdit = users.find(user => user.id == id)
+    
+           UserToEdit = {
+               id:UserToEdit.id,
+               name:req.body.name,
+               lastName:req.body.lastName,
+               country:req.body.country,
+               city:req.body.city,
+               email:req.body.email,
+               phoneNumber:req.body.phoneNumber,
+               avatar:UserToEdit.avatar,
+               password:UserToEdit.password
+           }
+           let indice = users.findIndex(user =>{
+               return user.id == id
+           })
+           users[indice] = UserToEdit;
+    
+           fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+           res.render("users/profile" ,{users: req.session.userLogged})
+        }else {
+             res.render("users/profileEdit" ,{users: req.session.userLogged,id: id, errors: errors.array()})
         }
-        let indice = users.findIndex(user =>{
-            return user.id == id
-        })
-        users[indice] = UserToEdit;
 
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-        res.render("users/profile" ,{users: req.session.userLogged})
      },
     logout: (req , res) =>{
         res.clearCookie('userEmail');

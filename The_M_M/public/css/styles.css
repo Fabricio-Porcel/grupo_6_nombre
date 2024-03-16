@@ -785,7 +785,9 @@ main {
     margin-right: 80px;
 
 }
-
+#mensajeErrores li{
+    color: red;
+}
 
 /* FOOTER */
 
