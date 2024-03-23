@@ -59,6 +59,7 @@
     </main> -->
 
     <body class="background-product">
+        <main class="main-product">
         <% if (locals.isLogged) { %>
         <a href="/products/edit/<%= product.id %>" class="link-editar">
         <h4 class="modificar-producto"><i class="fa-solid fa-pen-to-square  edit-product"></i>Modificar</h4>
@@ -112,13 +113,14 @@
         </div>
         <div class="product-detail" id="display-de-colores">
             <h2 class="detail">Color del producto</h2>
-            <div>
-                <ul>
+            
+                <ul class="colors">
                     <% product.colours.forEach(colour => { %>
                         <li><%= colour.colour %></li>
                     <% }) %>
                     </ul>
-            </div>
+            
         </div>
+    </main>
     </body>
     <%- include('../partials/footer.ejs') %>

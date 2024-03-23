@@ -1,10 +1,13 @@
 <%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Crear Producto"}) %>
 <%- include('../partials/header.ejs') %>
+<body class="background-index">
+    
 
 <main class="main-editarProducto">
     <h2 class="titulo-editarProducto">Crear Producto</h2>
     <ul id="mensajeErrores"></ul>
     <form action="/products/Crear-Producto" id="formularioCrearProducto" class="form-editarProducto" method="POST" enctype="multipart/form-data">
+        <div class="form-block-create-product">
         <div class="item-editarProducto">
             <label for="name">Nombre del Producto</label>
             <input class="input-create-list" type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null %>" >
@@ -17,7 +20,7 @@
         </div>
         <div class="item-editarProducto">
             <label for="description">Descripcion del Producto</label>
-            <textarea id="description" name="description" ></textarea>
+            <textarea class="textarea-createProduct" id="description" name="description" ></textarea>
                 <div class="text-danger">
 
                 <% if (locals.errors && errors.description){ %>
@@ -35,7 +38,8 @@
                 <% } %>    
                 </div>
         </div>
-        
+    </div>
+    <div class="form-block-create-product">
         <div class="item-editarProducto">
             <label for="categories">Categoría</label>
             <select id="category_id" name="categories" required>
@@ -80,12 +84,13 @@
                 <% } %>    
                 </div>
         </div>
-        
         <button class="boton-editarProducto" type="submit">Enviar</button>
+    </div>
+        </form>
 
 
 </main>
 <script src="/js/createProduct.js"></script>
-
+</body>
 
 <%- include('../partials/footer.ejs') %>

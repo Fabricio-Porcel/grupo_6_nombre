@@ -2,9 +2,14 @@
 <%- include('./partials/head.ejs', {cssSheet: "styles.css", title: "Home"}) %>
 <%- include('./partials/header.ejs') %>
 
+<body class="background-index">
+    
 
     <main>
         <h2 class="titulo-main"> Productos Destacados</h2>
+        <!-- <button id="ordenarMayorAMenor">ordenar Mayor A Menor</button>
+        <button id="ordenarMenorAMayor">ordenar Menor A Mayor</button> -->
+        
         <section class="caja-productos-destacados">
 
             <% productos.forEach(producto => { %>
@@ -42,11 +47,12 @@
 
 
 
-        
+        <script src="/js/index.js"></script>
 
 
 
 
     </main>
+</body>
 
  <%- include('./partials/footer.ejs') %>

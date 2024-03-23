@@ -63,11 +63,11 @@
   "id": 9,
   "name": "Roman",
   "lastName": "Ullua",
-  "email": "roman.ullua55@gmail.com",
-  "password": "$2a$10$ngLUqwODRzayzzEWXrWH/OFX7Zwbr4HvvLDdbBt9fuJOvJI1gY.hK",
-  "phoneNumber": "2312313",
   "country": "Argentina",
   "city": "Santa Fe",
-  "avatar": "avatar-1710545745983.jpg"
+  "email": "roman.ullua55@gmail.com",
+  "phoneNumber": "2312313",
+  "avatar": "avatar-1710545745983.jpg",
+  "password": "$2a$10$ngLUqwODRzayzzEWXrWH/OFX7Zwbr4HvvLDdbBt9fuJOvJI1gY.hK"
  }
 ]

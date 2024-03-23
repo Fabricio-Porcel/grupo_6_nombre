@@ -34,7 +34,7 @@
 <%- include('../partials/footer.ejs') %> -->
 
 
-<%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Detalle de Producto"}) %>
+<%- include('../partials/head.ejs', {cssSheet: "styles.css",title: products.length > 0 ? products[0].categories.name : "Nombre por defecto"}) %>
 <%- include('../partials/header.ejs') %>
 
 <main>

@@ -12,24 +12,28 @@
 header {
     background-color: #606C34;
     font-family: 'Pacifico', cursive;
-    
+
 }
 
 .header-principal{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;   
+    width: 100%;
 }
 .header-navbar ul li a{
     text-decoration: none;
+    color: black;
+}
+.header-navbar ul li{
+    list-style-type: none;
 }
 .caja-logo{
     width: 25%;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    
+
 }
 .logo{
     display: none;
@@ -51,10 +55,10 @@ header {
     color: #FEFAE0;
     text-align: center;
     width: 100%;
-    
+
 }
 .caja-barra-busqueda{
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,7 +84,7 @@ header {
 .icono-carrito{
     display: none;
     margin: auto;
-    
+
 }
 
 
@@ -98,7 +102,7 @@ header {
 }
 .icono-carrito a:hover{
     transform: rotate(-90deg);
-    
+
 }
 
 .botones-ingresa-registrate {
@@ -107,16 +111,16 @@ header {
     align-items:self-end;
     padding: 10px;
     justify-content: center;
-    
+
 }
 
 
 .botones-ingresa-registrate a{
     text-decoration: none;
-    
+
 }
 .enlace-ingresa{
-    
+
     background-color: #32381b;
     color: #FEFAE0;
     border: 0px;
@@ -131,7 +135,7 @@ header {
     border: 0px;
     border-radius: 30px;
     width: 80px;
-    text-align: center; 
+    text-align: center;
 }
 
 .botones-miPerfil-logOut{
@@ -140,7 +144,7 @@ header {
     align-items:self-end;
     padding: 10px;
     justify-content: center;
-    
+
 }
 
 .enlace-miPerfil{
@@ -159,14 +163,14 @@ header {
     border: 0px;
     border-radius: 30px;
     width: 80px;
-    text-align: center; 
+    text-align: center;
 
 }
 
 .barra-navegacion{
     font-family: 'Amatic SC', sans-serif;
     background-color: #FEFAE0;
-    
+
 
 }
 
@@ -176,12 +180,12 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
+
 }
 
 .caja-barra-navegacion li {
     font-weight: 600;
-    
+
 }
 
 header{
@@ -199,19 +203,22 @@ body{
 
 /* Main Home*/
 
-main {
-    background-color: #f5f5f5; 
-  }
+/* main {
+    /* background-color: #f5f5f5;  */
+  /* }  */
+
 .titulo-main{
     font-family: 'Pacifico', cursive;
     text-align: center;
     padding: 15px;
+    color:#32381b ;
 }
 .titulo-nuevos-productos{
     font-family: 'Pacifico', cursive;
     text-align: center;
     padding: 10px;
-    
+    color: #32381b;
+
 }
 
 .caja-productos-destacados{
@@ -219,7 +226,7 @@ main {
     flex-wrap: wrap;
     padding: 10px;
     flex-direction: row;
-    justify-content: center; 
+    justify-content: center;
 }
 .caja-productos-destacados a{
     text-decoration: none;
@@ -251,7 +258,7 @@ main {
 .lista-descripcion-producto{
      display: flex;
      flex-direction: column;
-     justify-content: flex-end; 
+     justify-content: flex-end;
      align-items: flex-start;
 }
 .lista-descripcion-producto li{
@@ -260,13 +267,13 @@ main {
     font-weight: 600;
 }
 .caja-hija-productos-nuevos{
-    width: 90%;
+    width: 210px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     border: solid black 1px;
     padding: 10px;
-    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 10px;
     background-color: white;
 }
@@ -278,7 +285,7 @@ main {
     color: black;
     font-family: 'Amatic SC', sans-serif;
     font-weight: 600;
-   
+
 }
 .ver-mas{
     text-align: center;
@@ -292,6 +299,10 @@ main {
     color: white;
 }
 
+.background-index{
+    background-color: #afb988;
+}
+
 /*sección-de-carrito-*/
 
 .carrito{
@@ -300,7 +311,7 @@ main {
     margin-top: 30px;
     margin-left: 700px;
     border-radius: 1px;
-      
+
 }
 
 .carrito .header-carrito{
@@ -436,7 +447,7 @@ main {
     margin-top: 50px;
     margin-bottom: 30px;
     text-decoration: underline #32381b;
-    
+
 }
 
 .container-producto{
@@ -462,19 +473,19 @@ main {
     padding-left: 20px;
     padding-right: 50px;
     border: #32381b 1px;
-    
+
 }
 
 .imagen-single-product{
     width: 350px;
-    
+
 }
 
 .descripcion-producto{
     margin-top: 60px;
     padding-right: 50px;
     padding-left: 50px;
-    
+
 }
 
 .descripcion{
@@ -494,7 +505,7 @@ main {
     font-weight: bold;
     color: #32381b;
     margin-top: 50px;
-   
+
 }
 
 .button-carrito{
@@ -502,7 +513,7 @@ main {
     height: 50px;
     background-color: #475128;
     border-radius: 1px solid;
-    border: #475128; 
+    border: #475128;
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 40px;
@@ -529,7 +540,7 @@ main {
     height: 50px;
     background-color: #475128;
     border-radius: 1px solid;
-    border: #475128; 
+    border: #475128;
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 40px;
@@ -559,7 +570,7 @@ main {
     height: 50px;
     background-color: #475128;
     border-radius: 1px solid;
-    border: #475128; 
+    border: #475128;
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 40px;
@@ -607,7 +618,7 @@ main {
     border: #32381b;
     cursor: pointer;
     transition-duration: 0.5s;
-    
+
 }
 
 .button-flechaAnterior:hover{
@@ -672,7 +683,7 @@ main {
     font-weight: bold;
     margin-top: 10px;
     text-align: center;
-   
+
 }
 
 
@@ -692,7 +703,7 @@ main {
     padding: 15px;
 
 
-   
+
 }
 
 
@@ -705,7 +716,7 @@ main {
     margin-bottom: 20px;
 
 
-   
+
 
 
 }
@@ -713,7 +724,7 @@ main {
 
 .item-formulario {
     margin-bottom: 15px;
-   
+
 }
 
 
@@ -733,7 +744,7 @@ main {
     padding: 10px;
     border: 1px solid #ccc;
     text-align: center;
-   
+
 }
 
 
@@ -749,6 +760,7 @@ main {
     border: none;
     cursor: pointer;
     margin-bottom: 10px;
+    max-width: 100%;
 }
 
 
@@ -800,7 +812,7 @@ main {
     margin-top: 80px;
     display: flex;
     justify-content: center;
- 
+
 }
 
 .footer-data {
@@ -808,7 +820,7 @@ main {
     text-align: center;
     flex-direction: row;
   }
-  
+
 
 
 .barra-navegacion-footer1 {
@@ -833,13 +845,13 @@ main {
 p.contactoTelefono .contactoWhatsapp{
     font-weight: 400;
     margin-bottom: 20px;
-    
+
 }
 
 a.link-email{
     color: #FEFAE0;
     margin-bottom: 15px;
-    
+
 }
 
 .redesSociales{
@@ -850,7 +862,7 @@ a.link-email{
 .fa-instagram .fa-facebook .fa-x-twitter{
     color: #FEFAE0;
     margin-bottom: 10px;
-    
+
 }
 
 .suscripcion{
@@ -881,7 +893,7 @@ a.link-email{
 .boton-footer-suscribir:hover{
     background-color: #FEFAE0;
     color: #606C34;
-    
+
 }
 
 .nav-footer-copyright{
@@ -926,7 +938,7 @@ a.link-email{
 /* Editar Producto Ejs */
 
 .main-editarProducto{
-    background-color: #ebebeb;
+    /* background-color: #ebebeb; */
     display: flex;
     flex-direction: column;
 }
@@ -944,78 +956,84 @@ a.link-email{
 }
 
 .form-editarProducto{
-    width: 450px; 
+    max-width: 700px;
     height: auto;
     margin: 80px auto;
-    border-radius: 2px;  
+    border-radius: 2px;
     padding-top: 30px;
-    padding-bottom: 20px;  
-    padding-left: 30px; 
-    background-color: #606C38; 
+    padding-bottom: 20px;
+    padding-left: 30px;
+    background-color: #606C38;
     font-family: 'Amatic SC', sans-serif;
     font-weight: bold;
     color: #ebebeb;
-   
-   
+
+
 }
 
 .item-editarProducto{
     width: 400px;
     font-size: 18px;
     font-weight: bold;
-    
+
 
 
 }
 .colours-container {
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .colour-option {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 
 .colour-option input[type="checkbox"] {
     margin-right: 5px;
 }
 
-label{
-    display: block; 
+.item-editarProducto label{
+    display: block;
     margin-top: 10px;
     margin-bottom: 10px;
+    width: 300px;
 }
 
 .input-create-list{
-    background-color: #ebebeb; 
-    width: 350px; 
-    height: 40px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
+    background-color: #ebebeb;
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
     border-color: #606C34;
-    margin-top: 10px;  
+    margin-top: 10px;
     padding-left: 10px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .input-create-list:hover{
     background-color: white;
 }
+.textarea-createProduct{
+    width: 350px;
+    height: 120px;
+    font-size: 16px;
+}
 
 .boton-editarProducto{
         padding: 10px;
         font-size: 16px;
-        text-align: center;  
-        margin-bottom: 20px; 
+        text-align: center;
+        margin-bottom: 20px;
         margin-top: 10px;
         text-transform: uppercase;
-        background-color: #ebebeb; 
-        border-style: solid; 
-        border-radius: 10px;  
-        width: 100px;   
+        background-color: #ebebeb;
+        border-style: solid;
+        border-radius: 10px;
+        width: 100px;
         color: #32381b;
         font-family: 'Pacifico', cursive;
         cursor: pointer;
@@ -1024,7 +1042,7 @@ label{
 
 .boton-editarProducto:hover{
         background-color: #afb988;
-    }  
+    }
 
 .botones-borrar-editar{
     display: flex;
@@ -1035,9 +1053,9 @@ label{
     width: 20px;
     height: 20px;
     margin-right: 5px;
-    
+
 }
-    
+
 .label-colorProducto{
     font-family: 'Pacifico' cursive;
     font-size: 15px;
@@ -1056,297 +1074,25 @@ label{
 
 }
 
-/* MEDIA QUERIES */
-
-@media (min-width: 420px){
-.icono-carrito{
-    display: block;
-}
-
-}
-
-
-@media (min-width: 768px){
-.logo{
-    display: block;
-}
-.mini-logo{
-    display: none;
-}
-
-.icono-carrito{
-    margin-right: 10px;
-}
-.caja-barra-navegacion li{
-    font-size: 18px;
-}
-.caja-producto{
-    width: 28%;
-    margin-left: 10px;
-}
-.caja-hija-productos-nuevos{
-    width: 20%;
-}
-
-
-
-}
-
-
-@media (min-width: 992px){
-.titulo{
-    font-size: 22px;
-}
-.caja-barra-navegacion li{
-    font-size: 20px;
-}
-.botones-ingresa-registrate{
-    padding-right: 40px;
-}
-.enlace-ingresa{
-    font-size: 18px;
-    width: 100px;
-}
-.enlace-registrate{
-    font-size: 18px;
-    width: 100px;
-}
-.lista-descripcion-producto li{
-    font-size: 19px;
-}
-.link-ver-mas{
-    font-size: 19px;
-}
-
-}
-
-@media (min-width: 1200px){
-.titulo{
-    font-size: 26px;
-}
-
-}
-
-.button-editar , .button-eliminar {
-    width: 80px;
-    height: 50px;
-    background-color: #FEFAE0;
-    border-radius: 1px solid;
-    border: #FEFAE0;
-    margin-left: 10px;
-    transition-duration: 0.5s;
-    
-}
-
-.eliminarProducto-formulario{
-    width: 300px;
-    margin: 0 auto;
-    justify-items: center;
-    display: flex;
-    padding: 15px;
-}
-
-.eliminarProducto-formulario h2{
-    text-align: center;
-    width: 100%;
-    display: flex;
-   font-family: 'Pacifico', cursive;
-    font-size: 30px;
-    margin-bottom: 20px;
-
-}
-
-
-
-.item-eliminarProducto label {
-    display: block;
-    margin-bottom: 5px;
-    font-family: 'Amatic SC', sans-serif;
-    font-size: 20px;
-
-
-}
-
-
-.item-eliminarProducto input {
-    width: 150%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: center;
-   
-}
-
-.boton-eliminarProducto {
-    display: block;
-    text-align: center;
-    font-family: 'Pacifico', cursive;
-    font-size: 25px;
-    width: 150%;
-    padding: 10px;
-    background-color: #606C38;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.boton-eliminarProducto:hover {
-    background-color: #475128;
-}
-
-
-/*----------------------- usersMyProfileLogin ---------------------- */
-.section-MyProfile {
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 1px;
-}
-.section-MyProfile .name-email {
-    
-    padding: 15px 15px;
-    margin: 20px auto;
-    margin-bottom: 20px;
-    width: 50%; 
-    max-width: 600px; 
-    box-shadow: 0px 0px 8px rgb(157, 157, 157);
-    transition: all 450ms;
-    border-radius: 10px;
-
-}
-.section-MyProfile .name-email:hover{
-    box-shadow: 0px 0px 15px rgb(100, 100, 100);
-    opacity: 1;
-}
-
-.section-MyProfile .info-profile {
- 
-    padding: 25px 15px;
-    margin: auto;
-    margin-bottom: 20px;
-    width: 50%; 
-    max-width: 600px; 
-    box-shadow: 0px 0px 8px rgb(157, 157, 157);
-    transition: all 450ms;
-    border-radius: 10px;
-
-}
-.section-MyProfile .info-profile:hover{
-    box-shadow: 0px 0px 15px rgb(100, 100, 100);
-    opacity: 1;
-}
-
-.name-email img{
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    margin-right: 15px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.name-email {
-    display: flex;
-    justify-content:flex-start;
-}
-.name-email .name{
-    margin-top: 20px;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-.name-email .email{
-    font-weight: 200;
-}
-.info-profile h3{
-    font-weight: 500;
-}
-
-.info-profile .info{
-    display: flex;
-    justify-content: flex-start;
-    
-}
-.fa-phone {
-    margin-right: 10px;
-    margin-bottom: 16px;
-    
-}
-.fa-location-dot{
-    margin-right: 10px;
-    margin-bottom: 16px;
-}
-.fa-earth-americas{
-    margin-right: 10px;
-    margin-bottom: 16px;
-}
-
-.link-myProfile{
+/*----------------------- userProfileEdit ---------------------- */
+.background-profileEdit{
     background-color: #afb988;
 }
-
-.buttons{
-    display: flex;
-    justify-content: end;
-    margin: 0 auto;
-    max-width: 600px; 
-}
-
-
-.section-MyProfile  .button-logout{
-    background-color:#ce1515;
-    border: none;
-    padding: 5px 15px;
-    border-radius: 5px;
-    transition: 450ms;
-    text-decoration: none;
-    display: flex;
-    justify-content: flex-end;
-    font-size: medium;
-    margin-right: 20px;
-}
-.section-MyProfile .button-logout:hover{
-    background-color: #690707;
-}
-.section-MyProfile .button-logout a{
-    text-decoration: none;
-    color: white;
-}
-
-
-
-
-.section-MyProfile  .button-edit{
-    background-color:#4f96e1;
-    border: none;
-    padding: 5px 15px;
-    border-radius: 5px;
-    transition: 450ms;
-    text-decoration: none;
-    display: flex;
-    justify-content: flex-end;
-    font-size: medium;
-}
-.section-MyProfile .button-edit:hover{
-    background-color: #094e98;
-}
-.section-MyProfile .button-edit a{
-    text-decoration: none;
-    color: white;
-}
-
-/*----------------------- userProfileEdit ---------------------- */
-
 .section-ProfileEdit {
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 1px;
 }
 .section-ProfileEdit .form-desktop{
-    
+
     padding: 15px 15px;
     margin: 20px auto;
     margin-bottom: 20px;
-    width: 50%; 
-    max-width: 700px; 
+    width: 100%;
+    max-width: 700px;
     box-shadow: 0px 0px 8px rgb(157, 157, 157);
     transition: all 450ms;
     border-radius: 10px;
+    background-color: white;
 
 }
 .section-ProfileEdit .form-desktop:hover{
@@ -1403,10 +1149,6 @@ label{
 }
 
 
-
-
-
-
 .section-ProfileEdit  .button-delete{
     background-color:#ce1515;
     border: none;
@@ -1437,6 +1179,57 @@ label{
  color: red;
 }
 
+/* -------------------Category----------------------- */
+.background-category{
+    background-color: #afb988;
+    margin-top: 200px;
+}
+.section-categories{
+    font-family: sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+    padding: 20px 20px;
+    border-radius: 7px;
+}
+.section-categories h1{
+    display: block;
+}
+
+.category{
+    display: flex;
+    padding: 10px 10px;
+    background-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #b5b5b5;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-width: 2px;
+}
+.category img{
+    width: 100px;
+}
+
+.name-category h3{
+    padding: 10px;
+    width: 150px;
+}
+.section-categories a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.title-category{
+    margin-left: 20%;
+    font-family: 'Pacifico', cursive;
+    padding-bottom: 30px;
+    color: #32381b;
+
+}
 
 /* <------------------products details---------------> */
 .background-product{
@@ -1446,11 +1239,14 @@ label{
 .background-product a{
     text-decoration: none;
 }
+.main-product{
+    padding: 10px;
+}
 
 .modificar-producto{
     margin: auto;
     text-align: end;
-    width: 700px;
+    max-width: 700px;
     color: black;
 }
 .modificar-producto .edit-product{
@@ -1465,10 +1261,12 @@ label{
     display: flex;
     justify-content: center;
     background-color:white;
-    width: 700px;
+    max-width: 700px;
     margin: auto;
     padding: 20px 20px;
     border-radius: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 .products img{
     width: 400px;
@@ -1478,25 +1276,25 @@ label{
     /* border-style: solid;
     border-width: 2px;
     border-radius: 10px; */
-   
+
 }
  .cantidad{
     display: flex;
     padding-top: 10px;
-   
+
 }
 .cantidad select{
     border: none;
     font-size: 15px;
-    
+
 }
 .product-name{
-    font-size: 25px;
+    font-size: 20px;
 }
  .price-green{
     color: green;
     font-size: 30px;
-    
+
 }
 .payment{
     font-size: 15px;
@@ -1508,7 +1306,7 @@ label{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .products .button-buy {
@@ -1546,7 +1344,7 @@ label{
     width: 150px;
     height: 42px;
     margin-bottom: 20px;
-   
+
 }
 .products .button-shopping-cart:hover{
     background-color:rgba(51, 164, 41, 0.415);
@@ -1599,7 +1397,7 @@ label{
     display: flex;
     justify-content:start;
     background-color:#f3f3f3;
-    width: 700px;
+    max-width: 700px;
     margin: auto;
     margin-top: 20px;
     padding: 20px 20px;
@@ -1608,56 +1406,434 @@ label{
     background-color:white;
     flex-direction: column;
 }
-
-
-/* -------------------Category----------------------- */
-.background-category{
-    background-color: #afb988;
-    margin-top: 200px;
+.product-detail .colors{
+    padding-left: 20px;
 }
-.section-categories{
-    font-family: sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: 20%;
-    margin-right: 20%;
-    background-color: white;
-    padding: 20px 20px;
-    border-radius: 7px;  
-}
-.section-categories h1{
+
+/* ======= MEDIA QUERIES ======= */
+
+@media (min-width: 420px){
+.icono-carrito{
     display: block;
 }
-
-.category{
-    display: flex;
-    padding: 10px 10px;
-    background-color: white;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #b5b5b5;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border-width: 2px;
+/* > crear producto */
+.titulo-editarProducto{
+    margin-top: 20px;
 }
-.category img{
+/* > Categoria  */
+.category img {
+    width: 40px;
+}
+.background-category {
+    margin-top: 180px;
+}
+
+/* > Home */
+.background-index{
+    margin-top: 170px;
+}
+.imagen-producto {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+.caja-productos-destacados a {
+    width: 188px;
+    margin-right: 10px ;
+}
+.descripcion-producto {
+    margin-top: 10px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 40px;
+}
+.caja-hija-productos-nuevos {
+    width: 190px;
+}
+
+/* > formulario editar */
+.form-editarProducto{
+width: 400px;
+margin: 0 auto;
+}
+.item-editarProducto{
+    width: 0;
+}
+.main-editarProducto{
+    margin: 0 ;
+}
+
+/* > formulario Register */
+.formulario-registro{
+width: 300px;
+
+}
+.item-formulario input, .item-formulario select{
+    width: 280px;
+}
+.boton-registro{
+    width: 300px;
+}
+
+/* Profile */
+.background-profile{
+    margin-top: 200px;
+    background-color: #afb988;
+}
+.section-MyProfile .name-email{
+    width: 100%;
+    background-color: white;
+
+}
+.name-email img{
+    width: 50px;
+    height: 50px;
+}
+/* > profile edit */
+.section-ProfileEdit{
+    padding: 0 10px;
+}
+.form-desktop .form-block{
+    margin: auto;
+}
+.form-desktop {
+    justify-content: space-around;
+    flex-direction: column;
+}
+.control-form input{
+    width: 351px;
+    height: 30px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* >detail products */
+.products{
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.products img{
+    width: 300px;
+}
+}
+
+
+@media (min-width: 768px){
+.logo{
+    display: block;
+}
+.mini-logo{
+    display: none;
+}
+
+.icono-carrito{
+    margin-right: 10px;
+}
+.caja-barra-navegacion li{
+    font-size: 18px;
+}
+.caja-producto{
+    width: 28%;
+    /* margin-left: 10px; */
+}
+.caja-hija-productos-nuevos{
+    width: 20%;
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/* > create product */
+/* .form-editarProducto{
+width: 700px;
+}
+.form-block-create-product{
+    width: 100%;
+} */
+
+/* > Categoria */
+.name-category h3 {
+    width: 136px;
+}
+
+
+.caja-hija-productos-nuevos{
+    width: 16%;
+}
+/* profile edit */
+.form-desktop {
+    display: flex;
+    flex-direction: row;
+}
+.form-desktop .form-block {
+    margin: 0 auto;
+}
+.control-form input{
+    width: 280px;
+}
+/* > editar Producto form */
+.main-editarProducto {
+    /* background-color: #ebebeb; */
+    display: flex;
+    flex-direction: column;
+}
+}
+
+
+@media (min-width: 992px){
+.titulo{
+    font-size: 22px;
+}
+.caja-barra-navegacion li{
+    font-size: 20px;
+}
+.botones-ingresa-registrate{
+    padding-right: 40px;
+}
+.enlace-ingresa{
+    font-size: 18px;
     width: 100px;
 }
+.enlace-registrate{
+    font-size: 18px;
+    width: 100px;
+}
+.lista-descripcion-producto li{
+    font-size: 19px;
+}
+.link-ver-mas{
+    font-size: 19px;
+}
 
-.name-category h3{
+.category img {
+    width: 115px;
+}
+
+}
+
+@media (min-width: 1200px){
+.titulo{
+    font-size: 26px;
+}
+
+/*> Home */
+.caja-productos-destacados{
+    margin: 0px 70px 0px 70px;
+}
+/* > Editar Producto */
+
+
+}
+
+.button-editar , .button-eliminar {
+    width: 80px;
+    height: 50px;
+    background-color: #FEFAE0;
+    border-radius: 1px solid;
+    border: #FEFAE0;
+    margin-left: 10px;
+    transition-duration: 0.5s;
+
+}
+
+.eliminarProducto-formulario{
+    width: 300px;
+    margin: 0 auto;
+    justify-items: center;
+    display: flex;
+    padding: 15px;
+}
+
+.eliminarProducto-formulario h2{
+    text-align: center;
+    width: 100%;
+    display: flex;
+   font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+
+
+
+.item-eliminarProducto label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 20px;
+
+
+}
+
+
+.item-eliminarProducto input {
+    width: 150%;
     padding: 10px;
-    width: 150px;  
+    border: 1px solid #ccc;
+    text-align: center;
+
 }
-.section-categories a{
+
+.boton-eliminarProducto {
+    display: block;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    width: 150%;
+    padding: 10px;
+    background-color: #606C38;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.boton-eliminarProducto:hover {
+    background-color: #475128;
+}
+
+
+/*----------------------- usersMyProfileLogin ---------------------- */
+.section-MyProfile {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 10px;
+}
+.section-MyProfile .name-email {
+
+    padding: 15px 15px;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0px 0px 8px rgb(157, 157, 157);
+    transition: all 450ms;
+    border-radius: 10px;
+
+}
+.section-MyProfile .name-email:hover{
+    box-shadow: 0px 0px 15px rgb(100, 100, 100);
+    opacity: 1;
+}
+
+.section-MyProfile .info-profile {
+
+    padding: 25px 15px;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0px 0px 8px rgb(157, 157, 157);
+    transition: all 450ms;
+    border-radius: 10px;
+    background-color: white;
+
+}
+.section-MyProfile .info-profile:hover{
+    box-shadow: 0px 0px 15px rgb(100, 100, 100);
+    opacity: 1;
+}
+
+.name-email img{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    margin-right: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.name-email {
+    display: flex;
+    justify-content:flex-start;
+}
+.name-email .name{
+    margin-top: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.name-email .email{
+    font-weight: 200;
+}
+.info-profile h3{
+    font-weight: 500;
+}
+
+.info-profile .info{
+    display: flex;
+    justify-content: flex-start;
+
+}
+.fa-phone {
+    margin-right: 10px;
+    margin-bottom: 16px;
+
+}
+.fa-location-dot{
+    margin-right: 10px;
+    margin-bottom: 16px;
+}
+.fa-earth-americas{
+    margin-right: 10px;
+    margin-bottom: 16px;
+}
+
+.link-myProfile{
+    background-color: #afb988;
+}
+
+.buttons{
+    display: flex;
+    justify-content: end;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+
+.section-MyProfile  .button-logout{
+    background-color:#ce1515;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 450ms;
     text-decoration: none;
-    color: inherit;
+    display: flex;
+    justify-content: flex-end;
+    font-size: medium;
+    margin-right: 20px;
+}
+.section-MyProfile .button-logout:hover{
+    background-color: #690707;
+}
+.section-MyProfile .button-logout a{
+    text-decoration: none;
+    color: white;
 }
 
-.title-category{
-    margin-left: 20%;
-    font-family: sans-serif;
-    padding-bottom: 30px;
 
+
+
+.section-MyProfile  .button-edit{
+    background-color:#4f96e1;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 450ms;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: medium;
 }
+.section-MyProfile .button-edit:hover{
+    background-color: #094e98;
+}
+.section-MyProfile .button-edit a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
 
