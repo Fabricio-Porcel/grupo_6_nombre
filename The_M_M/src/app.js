@@ -29,7 +29,8 @@ const usersRoutes = require('./routes/usersRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
 
 //Aquí llamo a la ruta de las api
-const apiUsersRoutes = require('./routes/api/apiUsersRoutes')
+const apiUsersRoutes = require('./routes/api/apiUsersRoutes');
+const apiProductsRoutes = require('./routes/api/apiProductsRoutes');
 
 app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
@@ -52,7 +53,8 @@ app.use('/products' , productsRoutes);
 
 app.use('/categories', categoryRoutes);
 
-app.use('/api/products', apiUsersRoutes )
+app.use('/api/users', apiUsersRoutes );
+app.use ('/api/products' , apiProductsRoutes);
 
 
 
