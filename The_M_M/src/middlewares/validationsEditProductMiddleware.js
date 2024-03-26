@@ -9,7 +9,7 @@ const validationsEditProduct = [
         .isLength({min:20}).withMessage('La descripción debe tener un minimo de 20 caracteres'), 
     
     
-    body('categories').notEmpty().withMessage('Debes ingresar una categoría'), 
+    body('category_id').notEmpty().withMessage('Debes ingresar una categoría'), 
     body('colours').notEmpty().withMessage('Ingresa un color para el producto'), 
     body('price').notEmpty().withMessage('Ingresa el precio del producto').bail()
         .isNumeric().withMessage('Expresa el precio en numeros'),

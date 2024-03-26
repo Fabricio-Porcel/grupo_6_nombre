@@ -6,7 +6,7 @@
     <h2 class="titulo-editarProducto">Editar Producto</h2>
     <ul id="mensajeErrores"></ul>
 
-    <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" class="form-editarProducto" id="formularioEditarProducto">
+    <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" class="form-editarProducto" enctype="multipart/form-data" id="formularioEditarProducto">
         
         <div class="item-editarProducto"> 
             <label for="name">Nombre del Producto</label>
@@ -32,7 +32,7 @@
 
         <div class="item-editarProducto">
             <label for="imagenProducto">Imagen del Producto</label>
-            <input type="file" id="image" name="imagenProducto"  value="<%= product.image%>">
+            <input type="file" id="image" name="imagenProducto">
             <div class="text-danger">
 
                 <% if (locals.errors && errors.imagenProducto){ %>
@@ -51,8 +51,8 @@
             </select>
             <div class="text-danger">
 
-                <% if (locals.errors && errors.categories){ %>
-                <%= errors.categories.msg %>
+                <% if (locals.errors && errors.category_id){ %>
+                <%= errors.category_id.msg %>
                 <% } %>    
                 </div>
         </div>
@@ -61,17 +61,15 @@
 
         <div class="item-editarProducto" id="colour-product-list">
             <label>Color del Producto</label>
-            <% const selectedColourId = product.colour_id; %>
             <% colour.forEach(colour => { %>
-                <input type="checkbox" id="colour" name="colours" value="<%= colour.id %>" class="checkbox-editarProducto" <% if (selectedColourId === colour.id) { %> checked <% } %>>
+                <input type="checkbox" id="colour" name="colours" value="<%= colour.id %>" class="checkbox-editarProducto" <% if (coloresAsociados.find(colourAsociado => colourAsociado.id === colour.id)) { %> checked <% } %>>
                 <label for="colour_<%= colour.id %>" class="label-colorProducto"><%= colour.colour %></label>
             <% }) %>
             <div class="text-danger">
-
                 <% if (locals.errors && errors.colours){ %>
-                <%= errors.colours.msg %>
+                    <%= errors.colours.msg %>
                 <% } %>    
-                </div>
+            </div>
         </div>
         
         

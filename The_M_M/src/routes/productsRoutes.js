@@ -71,12 +71,16 @@ router.delete('/eliminarProducto/:id', productsController.eliminarProducto);
 
 //Editar
 router.get('/edit/:id', productsController.edit); 
-router.put('/edit/:id', productsController.processEdit);
-router.post('/Editar-Producto', upload.single("imagenProducto"), validationsEditProduct, async (req, res) => {
+// router.put('/edit/:id', productsController.processEdit);
+
+
+router.put('/edit/:id', upload.single("imagenProducto"), validationsEditProduct, async (req, res) => {
     try {
         // Obtener las categorías de la base de datos
         const categories = await db.Category.findAll();
         const colours = await db.Colour.findAll();
+
+        console.log('Esto viene en el req.file' + req.file)
 
         // Verificar las validaciones del formulario
         let validationEditProductErrors = validationResult(req);
@@ -88,11 +92,12 @@ router.post('/Editar-Producto', upload.single("imagenProducto"), validationsEdit
                 fs.unlinkSync(imagePath); // Elimina el archivo
             }
             // Renderiza la vista con los errores, datos antiguos y categorías
-            return res.render('products/editProduct', {
+            return res.render('products/editarProducto', {
                 errors: validationEditProductErrors.mapped(),
                 oldData: req.body,
                 categories: categories,
-                colours : colours
+                colour : colours,
+                product : req.body
             });
         }
         // Llama a la función processEdit del controlador si no hay errores de validación

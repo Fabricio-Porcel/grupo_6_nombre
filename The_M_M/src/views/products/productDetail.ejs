@@ -2,62 +2,7 @@
 <%- include('../partials/header.ejs') %>
 
     
-    <!-- <main class="main-detalleProducto">
-        <div class="titulo-principal">
-            <h1>Detalle de Productos:</h1>
-        </div>
-
-        <div class="nombre-producto">
-            <h2><%= product.name %></h2>
-        </div>
-   
-        <div class="container-producto">
-            <div class="imagen-producto">
-                <img src="/img/products/<%= product.image %>" alt="<%= product.name %>" class="imagen-single-product">
-            </div>
-            <div class="descripcion-producto">
-                <p class="descripcion"><u class="subrayado">Descripcion:</u> <%= product.description %></p>
-                <p class="descripcion"><u class="subrayado">Color:</u> <%= product.colour %></p>
-                <p class="descripcion"><u class="subrayado">Costo por unidad:</u> $<%= product.price %></p>
-                <p class="descripcion"><u class="subrayado">Formas de pago</u>: efectivo - débito - crédito - Mercado Pago</p>
-                <p class="descripcion"><u class="subrayado">Modos de envio</u>: Correo Argentino - Andreani - retiro en oficina</p>
-            
-                <p class="agregarAlCarrito">Agregar al carrito:</p>
-                <button class="button-carrito"><i class="fa-solid fa-cart-shopping" id="fa-cart-shopping"></i></button>
-                
-                
-                <a href="/products/edit/<%= product.id %>" class="link-editar">
-                    <button class="button-editar-productDetail" title="Editar producto">
-                        <i class="fa-regular fa-pen-to-square"></i>
-                    </button>
-                </a>
-                
-                
-                <form action="/products/admin/eliminarProducto/<%= product.id %>?_method=DELETE"  method="POST" id="eliminarProductoForm">
-                
-                    <button type="submit" class="button-eliminar-productDetail" title="Eliminar producto">
-                      <i class="fa-solid fa-x"></i>
-                    </button>
-                </form>
-            </div>
-
-        </div>
-
-
-        <div class="flechas">
-            <div class="flecha-anterior">
-                <button class="button-flechaAnterior" title="Producto anterior"><i class="fa-solid fa-arrow-left"></i></button>
-            </div>
-
-            <div class="flecha-siguiente">
-                <button class="button-flechaSiguiente" title="Producto siguiente"><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-        </div>
-
-            
-
-    </main> -->
-
+    
     <body class="background-product">
         <main class="main-product">
         <% if (locals.isLogged) { %>

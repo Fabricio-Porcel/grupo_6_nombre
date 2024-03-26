@@ -41,8 +41,10 @@ const productsController = {
             let pedidoProducto = await db.Product.findByPk(req.params.id);
             let pedidoCategorias = await db.Category.findAll();
             let pedidoColores = await db.Colour.findAll()
+            let coloresAsociados = await pedidoProducto.getColours();
+            console.log(coloresAsociados)
 
-            res.render("products/editarProducto", {product: pedidoProducto, categories: pedidoCategorias , colour: pedidoColores})
+            res.render("products/editarProducto", {product: pedidoProducto, categories: pedidoCategorias , colour: pedidoColores , coloresAsociados : coloresAsociados})
         } catch (error) {
             console.error("Error al cargar los colores y categorías:", error);
             res.status(500).send("Error interno del servidor");
@@ -110,7 +112,8 @@ processCreate: async (req, res) => {
                 description: req.body.description,
                 category_id: req.body.categoryProduct,
                 price: req.body.price,
-                colour_id: req.body.colours
+                colour_id: req.body.colours,
+                image: '/img/products/' + req.file.filename
             }, {
                 where: {
                     id: req.params.id
@@ -124,33 +127,26 @@ processCreate: async (req, res) => {
         }
     },
     eliminarProducto: async (req, res) => {
-        db.Product.destroy({
-            where: {
-                id: req.params.id
-
-            }
-        })
-
-        res.redirect("/products");
-
-
-        
-        
-        // const productId = parseInt(req.params.id);
-        
-        // // Leer el archivo de productos
-        // const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-        // // Filtrar los productos, excluyendo el que se va a eliminar
-        // const productsActualizado = products.filter(product => product.id !== productId);
-       
-      
-        // // Guardar los productos actualizados en el archivo
-        // fs.writeFileSync(productsFilePath, JSON.stringify(productsActualizado, null, 2), 'utf-8');
-      
-        // // Redirigir 
-        // res.redirect('/'); 
-      },
+        try {
+            // Eliminar las relaciones del producto con los colores en la tabla intermedia
+            await db.sequelize.query('DELETE FROM colour_product WHERE product_id = :productId', {
+                replacements: { productId: req.params.id }
+            });
+    
+            // Eliminar el producto
+            await db.Product.destroy({
+                where: {
+                    id: req.params.id
+                }
+            });
+    
+            // Redirigir al listado de productos
+            res.redirect("/products");
+        } catch (error) {
+            console.error('Error al eliminar el producto:', error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
       listProducts: function(req, res){
         db.Product.findAll()
           .then(function(products) {
