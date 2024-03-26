@@ -42,7 +42,7 @@ const productsController = {
             let pedidoCategorias = await db.Category.findAll();
             let pedidoColores = await db.Colour.findAll()
             let coloresAsociados = await pedidoProducto.getColours();
-            console.log(coloresAsociados)
+            
 
             res.render("products/editarProducto", {product: pedidoProducto, categories: pedidoCategorias , colour: pedidoColores , coloresAsociados : coloresAsociados})
         } catch (error) {
@@ -107,12 +107,42 @@ processCreate: async (req, res) => {
     ,
     processEdit: async (req, res) => {
         try {
+
+             // Obtener la ruta de la imagen anterior del producto
+             const product = await db.Product.findByPk(req.params.id);
+             const oldImagePath = path.join(__dirname, '../../public/', product.image);
+             console.log(oldImagePath);
+
+             // Eliminar la imagen anterior del producto
+             fs.unlinkSync(oldImagePath);
+
+            // Eliminar las filas asociadas al producto en la tabla intermedia
+            await db.sequelize.query('DELETE FROM colour_product WHERE product_id = ?', {
+                replacements: [req.params.id]
+            });
+    
+            console.log('\x1b[31m', req.body.colours);
+    
+            // Insertar las nuevas filas en la tabla intermedia con los nuevos IDs de colores
+            let newColours = [];
+            if (Array.isArray(req.body.colours)) {
+                newColours = req.body.colours.map(colourId => [req.params.id, colourId]);
+            } else {
+                newColours.push([req.params.id, req.body.colours]);
+            }
+    
+            console.log(newColours);
+    
+            await db.sequelize.query('INSERT INTO colour_product (product_id, colour_id) VALUES ?', {
+                replacements: [newColours]
+            });
+    
+            // Actualizar otros campos del producto
             await db.Product.update({
                 name: req.body.name,
                 description: req.body.description,
-                category_id: req.body.categoryProduct,
+                category_id: req.body.category_id,
                 price: req.body.price,
-                colour_id: req.body.colours,
                 image: '/img/products/' + req.file.filename
             }, {
                 where: {
@@ -125,9 +155,20 @@ processCreate: async (req, res) => {
             console.error("Error al procesar la edición del producto:", error);
             res.redirect("/"); // O maneja el error de alguna otra forma adecuada
         }
-    },
+    }
+    
+    
+    ,
     eliminarProducto: async (req, res) => {
         try {
+
+            // Obtener la ruta de la imagen del producto a eliminar
+            const product = await db.Product.findByPk(req.params.id);
+            const imagePath = path.join(__dirname, '../../public', product.image);
+
+            // Eliminar la imagen del producto del sistema de archivos
+            fs.unlinkSync(imagePath);
+            
             // Eliminar las relaciones del producto con los colores en la tabla intermedia
             await db.sequelize.query('DELETE FROM colour_product WHERE product_id = :productId', {
                 replacements: { productId: req.params.id }
