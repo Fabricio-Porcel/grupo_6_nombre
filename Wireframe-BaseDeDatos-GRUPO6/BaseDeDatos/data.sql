@@ -143,7 +143,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`),
   UNIQUE KEY `phoneNumber_UNIQUE` (`phoneNumber`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -152,6 +152,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'danielasantini15@hotmail.com','123456D*','Daniela','Santini','Argentina','San Nicolas',336433116,'/img/users/avatar-1708999371442.jpg'),(2,'caro.gonzalezp@hotmail.com','123456C*','Carolina','Gonzalez Portiglia','Argentina','Cordoba',1168266106,'/img/users/avatar-1710261030884.jpg'),(3,'roman.ullua55@gmail.com','123456R*','Roman','Ullua','Argentina','Santa Fe',231231,'/img/users/avatar-1710545745983.jpg');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -164,4 +165,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-02 19:01:31
+-- Dump completed on 2024-03-25 20:26:08
