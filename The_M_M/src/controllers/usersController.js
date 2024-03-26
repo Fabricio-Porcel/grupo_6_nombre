@@ -1,52 +1,69 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
-const {validationResult} = require('express-validator');
-const User = require('../modules/Users');
+const { validationResult } = require('express-validator');
+// const User = require('../modules/Users');
+
+const db = require('../database/models');
+
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/usersDatabase.json');
 const fs = require('fs');
 
 const usersController = {
-    register: (req , res) =>{
+    register: (req, res) => {
         res.render('users/register')
     },
-    processRegister: (req , res) =>{
-        const resultsValidation = validationResult(req);
-        if (resultsValidation.errors.length > 0 ){
-            return res.render('users/register' , 
-            {errors : resultsValidation.mapped(),
-            oldData : req.body
-        })
+    processRegister: async (req, res) => {
+        try {
+            const resultsValidation = validationResult(req);
+            if (resultsValidation.errors.length > 0) {
+                return res.render('users/register', {
+                    errors: resultsValidation.mapped(),
+                    oldData: req.body
+                });
+            }
+
+            const userInDB = await db.User.findOne({ where: { email: req.body.email } });
+            if (userInDB) {
+                return res.render('users/register', {
+                    errors: { email: { msg: "Ya hay un usuario con este email" } },
+                    oldData: req.body
+                });
+            }
+
+            // Elimino el repeatPassword para que no se almacene esa información
+            const { repeatPassword, ...userWithoutRepeatPassword } = req.body;
+
+            const userToCreate = {
+                ...userWithoutRepeatPassword,
+                password: bcrypt.hashSync(req.body.password, 10),
+                avatar: req.file.filename
+            };
+
+            const userCreated = await db.User.create(userToCreate);
+            res.redirect('/users/profile');
+        } catch (error) {
+            console.error('Error al registrar el usuario:', error);
+            res.status(500).send('Error interno del servidor');
         }
-
-        let userInDB = User.findByField('email' , req.body.email)
-        if (userInDB){
-            return res.render('users/register' , 
-            {errors : {email:{msg: "Ya hay un usuario con este email"}},
-            oldData : req.body})
-        }
-        // Elimino el repeatPassword para que no se almacene esa informacion
-        const { repeatPassword, ...userWithoutRepeatPassword } = req.body;
-
-        let userToCreate = {
-            ...userWithoutRepeatPassword,
-            password: bcrypt.hashSync(req.body.password, 10),
-            avatar: req.file.filename
-        }
-
-        let userCreated =  User.create(userToCreate)
-        res.redirect('/users/profile')
-
-       
     },
-    login: (req , res) =>{
+    login: (req, res) => {
         res.render('users/login');
     },
-    loginProcess: (req, res) => {
-        let userToLogin = User.findByField('email', req.body.email);
-        
-    
-        if (userToLogin) {
+    loginProcess: async (req, res) => {
+        try {
+
+            const userToLogin = await db.User.findOne({ where: { email: req.body.email } });
+            if (!userToLogin) {
+                return res.render('users/login', {
+                    errors: {
+                        email: {
+                            msg: 'No se encuentra este correo en nuestra base de datos'
+                        }
+                    }
+                });
+            }
+
             // Verificar si req.body.password está definido
             if (!req.body.password) {
                 return res.render('users/login', {
@@ -57,99 +74,136 @@ const usersController = {
                     }
                 });
             }
-    
-            let passwordOk = bcrypt.compareSync(req.body.password, userToLogin.password);
-    
-            if (passwordOk) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
 
-            if(req.body.rememberUser){
-                res.cookie('userEmail' , req.body.email , {maxAge : (1000 * 60) * 2})
-            }
-                
-                return res.redirect('/users/profile');
-            }
-    
-            return res.render('users/login', {
-                errors: {
-                    email: {
-                        msg: 'El correo o contraseña son incorrectos'
+            const passwordOk = bcrypt.compareSync(req.body.password, userToLogin.password);
+
+            if (!passwordOk) {
+                return res.render('users/login', {
+                    errors: {
+                        email: {
+                            msg: 'El correo o contraseña son incorrectos'
+                        }
                     }
-                }
-            });
-        }
-    
-        return res.render('users/login', {
-            errors: {
-                email: {
-                    msg: 'No se encuentra este correo en nuestra base de datos'
-                }
+                });
             }
-        });
-    },
-    profile: (req , res) => {
-       return res.render('users/profile', {
-       users: req.session.userLogged
-       });
-    },
-    profileEdit: (req , res) => {
-         res.render('users/profileEdit', {
-        users: req.session.userLogged
-        });
-     },
-     profileProcessEdit:(req,res)=>{
-        let errors = validationResult(req);
-        // res.send(errors);
-        let id = req.params.id
-        if (errors.isEmpty()) {
-            // users: req.session.userLogged
-            
-           const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-           
-    
-           let UserToEdit = users.find(user => user.id == id)
-    
-           UserToEdit = {
-               id:UserToEdit.id,
-               name:req.body.name,
-               lastName:req.body.lastName,
-               country:req.body.country,
-               city:req.body.city,
-               email:req.body.email,
-               phoneNumber:req.body.phoneNumber,
-               avatar:UserToEdit.avatar,
-               password:UserToEdit.password
-           }
-           let indice = users.findIndex(user =>{
-               return user.id == id
-           })
-           users[indice] = UserToEdit;
-    
-           fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-           res.render("users/profile" ,{users: req.session.userLogged})
-        }else {
-             res.render("users/profileEdit" ,{users: req.session.userLogged,id: id, errors: errors.array()})
-        }
 
-     },
-    logout: (req , res) =>{
+            delete userToLogin.password;
+            req.session.userLogged = userToLogin;
+
+            if (req.body.rememberUser) {
+                res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 30 });
+            }
+
+            return res.redirect('/users/profile');
+        } catch (error) {
+            console.error('Error al iniciar sesión:', error);
+            res.status(500).send('Error interno del servidor');
+        }
+    }
+    ,
+    profile: (req, res) => {
+
+        return res.render('users/profile', {
+            users: req.session.userLogged
+        });
+    },
+    profileEdit: async (req, res) => {
+        try {
+            // Obtener el usuario actual desde la base de datos utilizando el ID de usuario almacenado en la sesión
+            const user = await db.User.findByPk(req.session.userLogged.id);
+            console.log('el usuario tiene un id ' + req.session.userLogged.id)
+
+            if (!user) {
+                return res.status(404).send('Usuario no encontrado');
+            }
+
+            res.render('users/profileEdit', { users: user });
+        } catch (error) {
+            console.error('Error al obtener datos del usuario:', error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
+    profileProcessEdit: async (req, res) => {
+        try {
+            const errors = validationResult(req);
+            if (!errors.isEmpty()) {
+                return res.render("users/profileEdit", {
+                    user: req.session.userLogged,
+                    id: req.params.id,
+                    errors: errors.array()
+                });
+            }
+
+            // Obtener el ID del usuario a editar desde los parámetros de la URL
+            const userId = req.params.id;
+
+            // Obtener el usuario a editar desde la base de datos
+            const userToUpdate = await db.User.findByPk(userId);
+            if (!userToUpdate) {
+                return res.status(404).send('Usuario no encontrado');
+            }
+
+            // Actualizar los datos del usuario con los nuevos datos del formulario
+            await userToUpdate.update({
+                name: req.body.name,
+                lastName: req.body.lastName,
+                country: req.body.country,
+                city: req.body.city,
+                email: req.body.email,
+                phoneNumber: req.body.phoneNumber
+                // No actualices el avatar o la contraseña aquí, a menos que permitas cambiarlos en este formulario
+            });
+
+            // Redirigir al perfil del usuario actualizado
+            res.redirect("/users/profile");
+        } catch (error) {
+            console.error('Error al procesar la edición del perfil:', error);
+            res.status(500).send('Error interno del servidor');
+        }
+    }
+    ,
+    logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
 
     },
+    delete: async (req, res) => {
+        try {
+            const userId = req.params.id;
+    
+            // Eliminar la imagen asociada al usuario si existe
+            const user = await db.User.findByPk(userId);
+            if (user && user.avatar) {
+                const imagePath = path.resolve(__dirname, `../../public/img/users/${user.avatar}`);
+                fs.unlinkSync(imagePath);
+            }
+    
+            // Eliminar el usuario de la base de datos
+            await db.User.destroy({ where: { id: userId } });
+    
+            // Eliminar las cookies y la sesión
+            res.clearCookie('userEmail');
+            req.session.destroy();
+    
+            // Redirigir al usuario a alguna página de confirmación o inicio
+            res.redirect('/');
+        } catch (error) {
+            console.error('Error al eliminar el usuario:', error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
 
-    adminLogin : (req, res) =>{
+    adminLogin: (req, res) => {
         res.render('users/adminLogin')
     },
-    admin : (req,res) =>{
+    admin: (req, res) => {
         res.render('users/admin')
     },
-    eliminarProducto :(req , res) =>{
+    eliminarProducto: (req, res) => {
         res.render('users/eliminarProducto')
     },
-    editarProducto : (req , res) =>{
+    editarProducto: (req, res) => {
         res.render('users/editarProducto')
     }
 }

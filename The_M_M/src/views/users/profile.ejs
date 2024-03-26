@@ -39,6 +39,10 @@
             <button class="button-edit">
                 <a href="/users/profileEdit/<%= users.id %>">Editar</a>
             </button>
+            <form action="/users/profileDelete/<%= users.id %>?_method=DELETE" method="POST" method="POST">
+                <input type="hidden">
+                <button type="submit" class="button-delete">Eliminar</button>
+            </form>
         </div>
         </div>
 
