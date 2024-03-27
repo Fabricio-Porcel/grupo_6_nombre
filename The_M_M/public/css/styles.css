@@ -276,6 +276,7 @@ body{
     margin-right: 10px;
     margin-bottom: 10px;
     background-color: white;
+    justify-content: space-between;
 }
 .imagen-producto-nuevo{
     width: 90%;
@@ -692,6 +693,8 @@ body{
 
 #mensajeErrores{
     text-align: center;
+    font-size: 20;
+    font-weight: bold;
 }
 
 
@@ -988,6 +991,7 @@ a.link-email{
 .colour-option {
     display: flex;
     align-items: center;
+    margin: auto;
 }
 
 .colour-option input[type="checkbox"] {
@@ -1058,9 +1062,10 @@ a.link-email{
 
 .label-colorProducto{
     font-family: 'Pacifico' cursive;
-    font-size: 15px;
+    font-size: 20px;
     color: #ebebeb;
     margin-right: 5px;
+    margin-left: 10px;
 }
 
 .item-editarProductoColor{
@@ -1440,6 +1445,7 @@ a.link-email{
 .caja-productos-destacados a {
     width: 188px;
     margin-right: 10px ;
+    justify-content: space-between;
 }
 .descripcion-producto {
     margin-top: 10px;

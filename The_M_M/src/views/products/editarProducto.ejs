@@ -61,10 +61,15 @@
 
         <div class="item-editarProducto" id="colour-product-list">
             <label>Color del Producto</label>
-            <% colour.forEach(colour => { %>
-                <input type="checkbox" id="colour" name="colours" value="<%= colour.id %>" class="checkbox-editarProducto" <% if (coloresAsociados.find(colourAsociado => colourAsociado.id === colour.id)) { %> checked <% } %>>
-                <label for="colour_<%= colour.id %>" class="label-colorProducto"><%= colour.colour %></label>
-            <% }) %>
+            <div class="colours-container">
+
+                <% colour.forEach(colour => { %>
+                    <div class="colour-option">
+                    <input type="checkbox" id="colour" name="colours" value="<%= colour.id %>" class="checkbox-editarProducto" <% if (coloresAsociados.find(colourAsociado => colourAsociado.id === colour.id)) { %> checked <% } %>>
+                    <label for="colour_<%= colour.id %>" class="label-colorProducto"><%= colour.colour %></label>
+                    </div>
+                    <% }) %>
+                </div>
             <div class="text-danger">
                 <% if (locals.errors && errors.colours){ %>
                     <%= errors.colours.msg %>

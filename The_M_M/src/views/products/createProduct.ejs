@@ -42,7 +42,7 @@
     <div class="form-block-create-product">
         <div class="item-editarProducto">
             <label for="categories">Categoría</label>
-            <select id="category_id" name="categories" required>
+            <select id="category_id" name="categories" >
                 <option value="" disabled selected>Elige uno</option>
                 <% for (let i = 0 ; i < categories.length ; i++){ %>
                 <option value="<%= categories[i].id %>"><%= categories[i].name %></option>
@@ -61,8 +61,8 @@
             <div class="colours-container">
                 <% for (let i = 0 ; i < colours.length ; i++){ %>
                     <div class="colour-option">
-                        <input type="checkbox" id="colour" name="colours"  value="<%= colours[i].id %>">
-                        <label for="colour"><%= colours[i].colour %></label>
+                        <input type="checkbox" id="colour" name="colours"  value="<%= colours[i].id %>" class="checkbox-editarProducto">
+                        <label for="colour" class="label-colorProducto"><%= colours[i].colour %></label>
                     </div>
                 <% } %>
             </div>
