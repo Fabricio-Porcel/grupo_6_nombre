@@ -1,5 +1,4 @@
 module.exports = function (sequelize, dataTypes) {
-        const db = require("./");
 
         let alias = "Product";
 
