@@ -7,22 +7,34 @@ const basePath = "http://localhost:3011"
 
 const productsAPIController = {
     'list': (req, res) => {
-        console.log("mati", req, res)
-        try {
-            const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        Products.findAll({
+            include: ['categories']
+        })
+        .then(products => {
+            let count = products.length;
+            let countByCategory = {};
+            let productList = [];
+            for (let product of products) {
+                productList.push({
+                    id: product.id,
+                    name: product.name,
+                    description: product.description,
+                    categories: product.categories.map(category => category.name),
+                    detail: `/api/products/${product.id}`
+                });
+                for (let category of product.categories) {
+                    countByCategory[category.name] = countByCategory[category.name] ? countByCategory[category.name] + 1 : 1;
+                }
+            }
 
-            return res.status(200).json({
-                total: products.length,
-                products: products,
-                status: 200
-            });
-        } catch (error) {
-            console.error("Error reading products file:", error);
-            return res.status(500).json({
-                error: "Internal server error",
-                status: 500
-            });
-        }
+            let response = {
+                count: count,
+                countByCategory: countByCategory,
+                products: productList
+            };
+            res.json(response);
+        })
+        .catch(error => res.status(200).json({ error: "Internal server error" }));
     },
 
     getProductById: async (req, res) => {
