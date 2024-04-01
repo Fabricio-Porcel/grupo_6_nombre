@@ -6,36 +6,57 @@ const productsFilePath = path.join(__dirname, '../../data/productsDataBase.json'
 const basePath = "http://localhost:3011"
 
 const productsAPIController = {
-    'list': (req, res) => {
-        Products.findAll({
-            include: ['categories']
-        })
-        .then(products => {
+    list: async (req, res) => {
+        try {
+            const products = await db.Product.findAll({
+                include: [{ model: db.Category, as: 'categories' }]
+            });
+    
             let count = products.length;
             let countByCategory = {};
             let productList = [];
+    
             for (let product of products) {
+                let categoryNames = '';
+    
+                if (Array.isArray(product.categories)) {
+                    categoryNames = product.categories.map(category => category.name).join(', ');
+                } else if (product.categories && product.categories.name) {
+                    categoryNames = product.categories.name;
+                }
+    
                 productList.push({
                     id: product.id,
                     name: product.name,
                     description: product.description,
-                    categories: product.categories.map(category => category.name),
+                    categories: categoryNames,
                     detail: `/api/products/${product.id}`
                 });
-                for (let category of product.categories) {
-                    countByCategory[category.name] = countByCategory[category.name] ? countByCategory[category.name] + 1 : 1;
+    
+                if (categoryNames) {
+                    if (Array.isArray(product.categories)) {
+                        product.categories.forEach(category => {
+                            countByCategory[category.name] = countByCategory[category.name] ? countByCategory[category.name] + 1 : 1;
+                        });
+                    } else {
+                        countByCategory[categoryNames] = countByCategory[categoryNames] ? countByCategory[categoryNames] + 1 : 1;
+                    }
                 }
             }
-
+    
             let response = {
                 count: count,
                 countByCategory: countByCategory,
                 products: productList
             };
-            res.json(response);
-        })
-        .catch(error => res.status(200).json({ error: "Internal server error" }));
-    },
+    
+            return res.status(200).json(response);
+        } catch (error) {
+            console.error("Error al obtener la lista de productos:", error);
+            return res.status(500).json({ error: "Error interno del servidor" });
+        }
+    }
+    ,
 
     getProductById: async (req, res) => {
         try {

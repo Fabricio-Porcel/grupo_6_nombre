@@ -1,8 +1,15 @@
 const express = require('express');
 const session = require('express-session');
 const cookies = require('cookie-parser');
+const cors = require('cors');
 
 const app = express();
+
+// Configuración de CORS
+app.use(cors({
+    origin: 'http://localhost:3000', //URL de la aplicación en React
+    methods: 'GET,POST', // Métodos HTTP permitidos
+  }));
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
