@@ -1,4 +1,6 @@
+
 window.addEventListener('load', () => {
+   
     let formularioCrearProducto = document.querySelector('#formularioCrearProducto');
     let inputNombreProducto = document.querySelector('#name');
     let inputDescripcionProducto = document.querySelector('#description');
@@ -7,10 +9,14 @@ window.addEventListener('load', () => {
     let inputsColoresProducto = document.querySelectorAll('#colour');
     let inputPrecioProducto = document.querySelector('#price');
 
+
+    
     formularioCrearProducto.addEventListener('submit', (event) => {
         event.preventDefault();
-
+        
         let errores = [];
+        let acceptedExtensions = ['jpg', 'png', 'gif' , 'jpeg'];
+        let fileExtension = inputImagenProducto.value.trim().toLowerCase().split('.').pop();
 
         // Validar campo nombre
         if (inputNombreProducto.value.trim() === '') {
@@ -31,7 +37,9 @@ window.addEventListener('load', () => {
         // Validar campo imagen
         if (inputImagenProducto.value.trim() === '') {
             errores.push('La imagen del producto es requerida.');
-        }
+        } else if (!acceptedExtensions.includes(fileExtension)) {
+                errores.push('La extensión de la imagen no es válida. Solo se permiten archivos JPG, JPEG, PNG y GIF.');
+            }
 
         // Validar selección de categoría
         if (selectCategoria.value === '') {
@@ -109,10 +117,17 @@ window.addEventListener('load', () => {
     });
     //Validar con focusout la imagen del producto
     inputImagenProducto.addEventListener('focusout', () => {
+        let acceptedExtensions = ['jpg', 'png', 'gif' , 'jpeg'];
+        let fileExtension = inputImagenProducto.value.trim().toLowerCase().split('.').pop();
+        
+        
+        
         let errores = [];
         // Validar campo imagen
         if (inputImagenProducto.value.trim() === '') {
             errores.push('La imagen del producto es requerida.');
+        } else if (!acceptedExtensions.includes(fileExtension)) {
+            errores.push('La extensión de la imagen no es válida. Solo se permiten archivos JPG, JPEG, PNG y GIF.');
         }
         
 
@@ -150,6 +165,9 @@ window.addEventListener('load', () => {
             mensajeErrores.innerHTML = '';
         }
     });
+
+    
+
 });
 
 
