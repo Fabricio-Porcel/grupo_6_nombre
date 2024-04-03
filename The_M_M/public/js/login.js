@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
     if(inputContraseña.value.trim() === ""){
     errores.push ('Se requiere completar con la contraseña');
   } else if (inputContraseña.value.length < 8) {
-    errores.push('La contraseña debe tener como máximo 8 caracteres');
+    errores.push('La contraseña debe tener como mínimo 8 caracteres');
   }
   
   // me falta hacer que la conraseña coincida con la base de datos
