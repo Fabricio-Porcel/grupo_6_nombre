@@ -1,6 +1,7 @@
 <%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Editar Producto"}) %>
 <%- include('../partials/header.ejs') %>
-
+<%- include('../partials/navMobile.ejs') %>
+<body class="background-index">
 <main class="main-listProducts">
     <h2 class="titulo-listProducts">Lista de Productos</h2>
     
@@ -27,6 +28,6 @@
 
     <form action="../products/productDetail.ejs" class="form-listProducts" method="POST" enctype="multipart/form-data">
 
-
+    </body>
 
 <%- include('../partials/footer.ejs') %>

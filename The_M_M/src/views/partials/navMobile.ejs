@@ -1,0 +1,39 @@
+<nav class="navMobile">
+    <div class="navbar-top">
+        <h1 class="titulo-logo"> The Merch Market</h1>
+        <form action="" >
+            <label class="caja-barra-busqueda">
+                <input type="text" name="barra-busqueda" class="barra-busqueda" placeholder="Buscar...">
+            </label>
+        </form>
+        <div class="navbar-rigth">
+<!--             
+            <span class="material-symbols-outlined">
+                sms
+                </span>
+                <span class="material-symbols-outlined">
+                    group
+                    </span> -->
+        </div>
+    </div>
+    <ul class="ulMobile">
+        <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+        <li><a href="/categories"><i class="fa-solid fa-list"></i></a></li>
+        <!-- <li><a href="/products/Crear-Producto"><i class="fa-solid fa-plus"></i></a></li> -->
+        <% if (locals.isLogged) { %>
+            <li><a href="/products/Crear-Producto"><i class="fa-solid fa-plus"></i></a></li>
+        <% } else { %>
+            <li><a href="/users/profile"><i class="fa-solid fa-plus"></i></a></li>
+        <% } %>
+        <li><a href="/Carrito-de-compras"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <!-- <li><a href="/users/profile"><i class="fa-solid fa-user"></i></a></li> -->
+        <% if (locals.isLogged) { %>
+            <li><a href="/users/profile"><i class="fa-solid fa-user"></i></a></li>
+        <% } else { %>
+            <li><a href="/users/profile"><i class="fa-solid fa-right-to-bracket"></i></a></li>
+        <% } %>
+    </ul>
+   
+   
+</nav>
+
