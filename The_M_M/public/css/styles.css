@@ -64,6 +64,10 @@ header {
     align-items: center;
     width: 100%;
 }
+.caja-barra-busqueda i{
+    color: #475128;
+    right: 20px;
+}
 
 .barra-busqueda{
     padding: 10px;
@@ -72,10 +76,7 @@ header {
     width: 60%;
     background-color: #FEFAE0;
 }
-.fa-magnifying-glass {
-    position: relative;
-    right: 30px;
-}
+
 .caja-botones-y-carrito{
     display: flex;
     flex-wrap: wrap;
@@ -198,7 +199,6 @@ header{
 body{
     margin: 0;
     padding: 0;
-    margin-top: 175px;
 }
 
 /* Main Home*/
@@ -1082,6 +1082,7 @@ a.link-email{
 /*----------------------- userProfileEdit ---------------------- */
 .background-profileEdit{
     background-color: #afb988;
+    margin-top: 110px;
 }
 .section-ProfileEdit {
     font-family: Arial, Helvetica, sans-serif;
@@ -1231,7 +1232,7 @@ a.link-email{
 .title-category{
     margin-left: 20%;
     font-family: 'Pacifico', cursive;
-    padding-bottom: 30px;
+    padding-bottom: 13px;
     color: #32381b;
 
 }
@@ -1418,6 +1419,71 @@ a.link-email{
 /* ======= MEDIA QUERIES ======= */
 
 @media (min-width: 420px){
+    /* header */
+    .header-principal{
+        display: none;
+    }
+    .caja-barra-navegacion{
+        display: none;
+    }
+    .navbar-top{
+        display: flex;
+        font-family:'Pacifico', cursive;
+        color: #fdfad7;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-top .titulo-logo{
+        padding-left: 20px;
+        font-size: 22px;
+    }
+  
+    .navbar-top .navbar-rigth span{
+        font-size: 25px;
+        padding-right: 20px;
+    }
+    .barra-busqueda{
+        width: 100%;
+    }
+
+    /* > navMobile */
+    .navMobile {
+        display: block;
+        text-align: center;
+        background-color: #606C34;
+        padding: 10px 0; 
+        position: fixed;
+        top: 0;
+        width: 100%;
+        border-bottom: 2px solid #475128
+    }
+    
+    .ulMobile {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .ulMobile li {
+        display: inline-block;
+        margin: 0 10px; 
+    }
+   
+
+    .ulMobile li a {
+        color: #fff; 
+        text-decoration: none;
+        font-size: 20px; 
+    }
+    
+    .ulMobile li a i {
+        font-size: 24px;
+        color: #fdfad7;
+    }
+    
 .icono-carrito{
     display: block;
 }
@@ -1430,12 +1496,12 @@ a.link-email{
     width: 40px;
 }
 .background-category {
-    margin-top: 180px;
+    margin-top: 110px;
 }
 
 /* > Home */
 .background-index{
-    margin-top: 170px;
+    margin-top: 110px;
 }
 .imagen-producto {
     padding-top: 0;
@@ -1483,7 +1549,7 @@ width: 300px;
 
 /* Profile */
 .background-profile{
-    margin-top: 200px;
+    margin-top: 125px;
     background-color: #afb988;
 }
 .section-MyProfile .name-email{
@@ -1522,7 +1588,10 @@ width: 300px;
 .products img{
     width: 300px;
 }
-
+.background-product{
+    margin-top: 80px;
+}
+}
 
 @media (min-width: 768px){
 .logo{
@@ -1582,6 +1651,36 @@ width: 700px;
     display: flex;
     flex-direction: column;
 }
+.navMobile {
+    display: none;
+}
+.header-principal{
+    display: flex;
+}
+.caja-barra-navegacion{
+    display:flex;
+}
+.barra-busqueda {
+    width: 60%;
+}
+.background-index {
+    margin-top: 135px;
+}
+.background-product {
+    margin-top: 120px;
+}
+.background-category {
+    margin-top: 150px;
+}
+.background-profile {
+    margin-top: 165px;
+}
+.background-profileEdit{
+    margin-top: 150px;
+}
+.background-login{
+    margin-top: 150px;
+}
 }
 
 
@@ -1612,6 +1711,24 @@ width: 700px;
 
 .category img {
     width: 115px;
+}
+.background-index {
+    margin-top: 175px;
+}
+.background-product {
+    margin-top: 150px;
+}
+.background-category {
+    margin-top: 180px;
+}
+.background-profile {
+    margin-top: 195px;
+}
+.background-profileEdit{
+    margin-top: 175px;
+}
+.background-login{
+    margin-top: 180px;
 }
 
 }
