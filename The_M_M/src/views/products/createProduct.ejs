@@ -1,97 +1,111 @@
-<%- include('../partials/head.ejs', {cssSheet: "styles.css", title: "Crear Producto"}) %>
-<%- include('../partials/header.ejs') %>
-<%- include('../partials/navMobile.ejs') %>
-<body class="background-index">
-    
+<%- include('../partials/head.ejs', {cssSheet: "styles.css" , title: "Crear Producto" }) %>
+    <%- include('../partials/header.ejs') %>
+        <%- include('../partials/navMobile.ejs') %>
 
-<main class="main-editarProducto">
-    <h2 class="titulo-editarProducto">Crear Producto</h2>
-    <ul id="mensajeErrores"></ul>
-    <form action="/products/Crear-Producto" id="formularioCrearProducto" class="form-editarProducto" method="POST" enctype="multipart/form-data">
-        <div class="form-block-create-product">
-        <div class="item-editarProducto">
-            <label for="name">Nombre del Producto</label>
-            <input class="input-create-list" type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null %>" >
-            <div class="text-danger">
-
-                <% if (locals.errors && errors.name){ %>
-                <%= errors.name.msg %>
-                <% } %>    
-                </div>
-        </div>
-        <div class="item-editarProducto">
-            <label for="description">Descripcion del Producto</label>
-            <textarea class="textarea-createProduct" id="description" name="description" ></textarea>
-                <div class="text-danger">
-
-                <% if (locals.errors && errors.description){ %>
-                <%= errors.description.msg %>
-                <% } %>    
-                </div>
-        </div>
-        <div class="item-editarProducto">
-            <label for="image">Imagen del Producto</label>
-            <input type="file" class="input-create-list" id="image" name="imagenProducto" >
-            <div class="text-danger">
-
-                <% if (locals.errors && errors.imagenProducto){ %>
-                <%= errors.imagenProducto.msg %>
-                <% } %>    
-                </div>
-        </div>
-    </div>
-    <div class="form-block-create-product">
-        <div class="item-editarProducto">
-            <label for="categories">Categoría</label>
-            <select id="category_id" name="categories" >
-                <option value="" disabled selected>Elige uno</option>
-                <% for (let i = 0 ; i < categories.length ; i++){ %>
-                <option value="<%= categories[i].id %>"><%= categories[i].name %></option>
-                <% } %>
-            </select>
-            <div class="text-danger">
-
-                <% if (locals.errors && errors.categories){ %>
-                <%= errors.categories.msg %>
-                <% } %>    
-                </div>
-        </div>
-    
-        <div class="item-editarProducto" id="colour-product-list">
-            <label for="colours">Color del Producto:</label>
-            <div class="colours-container">
-                <% for (let i = 0 ; i < colours.length ; i++){ %>
-                    <div class="colour-option">
-                        <input type="checkbox" id="colour" name="colours"  value="<%= colours[i].id %>" class="checkbox-editarProducto">
-                        <label for="colour" class="label-colorProducto"><%= colours[i].colour %></label>
-                    </div>
-                <% } %>
-            </div>
-            <div class="text-danger">
-
-                <% if (locals.errors && errors.colours){ %>
-                <%= errors.colours.msg %>
-                <% } %>    
-                </div>
-        </div>
-
-        <div class="item-editarProducto">
-            <label for="price">Precio del Producto</label>
-            <input type="text" id="price" class="input-create-list" name="price" >
-            <div class="text-danger">
-
-                <% if (locals.errors && errors.price){ %>
-                <%= errors.price.msg %>
-                <% } %>    
-                </div>
-        </div>
-        <button class="boton-editarProducto" type="submit">Enviar</button>
-    </div>
-        </form>
+            <body class="background-index">
 
 
-</main>
-<script src="/js/createProduct.js"></script>
-</body>
+                <main class="main-editarProducto">
+                    <h2 class="titulo-editarProducto">Crear Producto</h2>
+                    <ul id="mensajeErrores"></ul>
+                    <form action="/products/Crear-Producto" id="formularioCrearProducto" class="form-editarProducto"
+                        method="POST" enctype="multipart/form-data">
+                        <div class="form-block-create-product">
+                            <div class="item-editarProducto">
+                                <label for="name">Nombre del Producto</label>
+                                <input class="input-create-list" type="text" id="name" name="name"
+                                    value="<%= locals.oldData ? oldData.name : null %>">
+                                <div class="text-danger">
 
-<%- include('../partials/footer.ejs') %>
+                                    <% if (locals.errors && errors.name){ %>
+                                        <%= errors.name.msg %>
+                                            <% } %>
+                                </div>
+                                <div class="text-danger-CP" id="name-error"></div>
+                            </div>
+                            <div class="item-editarProducto">
+                                <label for="description">Descripcion del Producto</label>
+                                <textarea class="textarea-createProduct" id="description" name="description"></textarea>
+                                <div class="text-danger">
+
+                                    <% if (locals.errors && errors.description){ %>
+                                        <%= errors.description.msg %>
+                                            <% } %>
+                                </div>
+                                <div class="text-danger-CP" id="description-error"></div>
+                            </div>
+                            <div class="item-editarProducto">
+                                <label for="image">Imagen del Producto</label>
+                                <input type="file" class="input-create-list" id="image" name="imagenProducto">
+                                <div class="text-danger">
+
+                                    <% if (locals.errors && errors.imagenProducto){ %>
+                                        <%= errors.imagenProducto.msg %>
+                                            <% } %>
+                                </div>
+                                <div class="text-danger-CP" id="image-error"></div>
+                            </div>
+                        </div>
+                        <div class="form-block-create-product">
+                            <div class="item-editarProducto">
+                                <label for="categories">Categoría</label>
+                                <select id="category_id" name="categories">
+                                    <option value="" disabled selected>Elige uno</option>
+                                    <% for (let i=0 ; i < categories.length ; i++){ %>
+                                        <option value="<%= categories[i].id %>">
+                                            <%= categories[i].name %>
+                                        </option>
+                                        <% } %>
+                                </select>
+                                <div class="text-danger">
+
+                                    <% if (locals.errors && errors.categories){ %>
+                                        <%= errors.categories.msg %>
+                                            <% } %>
+                                </div>
+                                <div class="text-danger-CP" id="category-error"></div>
+                            </div>
+
+                            <div class="item-editarProducto" id="colour-product-list">
+                                <label for="colours">Color del Producto:</label>
+                                <div class="colours-container">
+                                    <% for (let i=0 ; i < colours.length ; i++){ %>
+                                        <div class="colour-option">
+                                            <input type="checkbox" id="colour" name="colours"
+                                                value="<%= colours[i].id %>" class="checkbox-editarProducto">
+                                            <label for="colour" class="label-colorProducto">
+                                                <%= colours[i].colour %>
+                                            </label>
+                                        </div>
+                                        <% } %>
+                                </div>
+                                <div class="text-danger">
+
+                                    <% if (locals.errors && errors.colours){ %>
+                                        <%= errors.colours.msg %>
+                                            <% } %>
+                                </div>
+                                <div class="text-danger-CP" id="colour-error"></div>
+                            </div>
+
+                            <div class="item-editarProducto">
+                                <label for="price">Precio del Producto</label>
+                                <input type="text" id="price" class="input-create-list" name="price">
+                                <div class="text-danger">
+
+                                    <% if (locals.errors && errors.price){ %>
+                                        <%= errors.price.msg %>
+                                            <% } %>
+                                </div>
+                                <div class="text-danger-CP" id="price-error"></div>
+                            </div>
+                            <button class="boton-editarProducto" type="submit">Enviar</button>
+                        </div>
+                    </form>
+
+
+                </main>
+                <script src="/js/createProduct.js"></script>
+            </body>
+
+            <%- include('../partials/footer.ejs') %>

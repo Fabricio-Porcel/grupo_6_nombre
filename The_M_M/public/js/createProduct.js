@@ -70,27 +70,24 @@ window.addEventListener('load', () => {
             formularioCrearProducto.submit(); // Envío del formulario si no hay errores
         }
     });
+    //Validaciones focusout
+
     // Validar con focusout el nombre del producto
     inputNombreProducto.addEventListener('focusout', () => {
         let errores = [];
 
         if (inputNombreProducto.value.trim() === '') {
-            errores.push('El nombre del producto es requerido.');
+            
+            document.querySelector('#name-error').innerText = 'El nombre del producto es requerido.';
             // Validar que el campo nombre tenga mínimo 2 caracteres
         } else if (inputNombreProducto.value.trim().length < 2){
-            errores.push('El nombre del producto tiene que tener mínimo 2 caracteres.')
+            document.querySelector('#name-error').innerText ='El nombre del producto tiene que tener mínimo 2 caracteres.'
+        } else {
+            document.querySelector('#nombre-error').innerText = ''; // Limpiar el mensaje de error si no hay errores
         }
 
-        // Mostrar mensajes de error
-        let mensajeErrores = document.querySelector('#mensajeErrores');
-        if (errores.length > 0) {
-            mensajeErrores.innerHTML = '';
-            errores.forEach(error => {
-                mensajeErrores.innerHTML += `<li class='text-danger'>${error}</li>`;
-            });
-        }else {
-            mensajeErrores.innerHTML = '';
-        }
+        
+        
     });
     //Validar con focusout la descripcion del producto
     inputDescripcionProducto.addEventListener('focusout', () => {
@@ -98,22 +95,15 @@ window.addEventListener('load', () => {
 
         // Validar campo descripción
         if (inputDescripcionProducto.value.trim() === '') {
-            errores.push('La descripción del producto es requerida.');
+            document.querySelector('#description-error').innerText ='La descripción del producto es requerida.';
             // Validar que la descripción tenga mínimo 20 caracteres
         } else if (inputDescripcionProducto.value.trim().length < 20){
-            errores.push('La descripción del producto tiene que tener mínimo 20 caracteres.')
+            document.querySelector('#description-error').innerText ='La descripción del producto tiene que tener mínimo 20 caracteres.'
+        } else {
+            document.querySelector('#description-error').innerText = '';
         }
 
-        // Mostrar mensajes de error
-        let mensajeErrores = document.querySelector('#mensajeErrores');
-        if (errores.length > 0) {
-            mensajeErrores.innerHTML = '';
-            errores.forEach(error => {
-                mensajeErrores.innerHTML += `<li class='text-danger'>${error}</li>`;
-            });
-        }else {
-            mensajeErrores.innerHTML = '';
-        }
+       
     });
     //Validar con focusout la imagen del producto
     inputImagenProducto.addEventListener('focusout', () => {
@@ -125,47 +115,32 @@ window.addEventListener('load', () => {
         let errores = [];
         // Validar campo imagen
         if (inputImagenProducto.value.trim() === '') {
-            errores.push('La imagen del producto es requerida.');
+            document.querySelector('#image-error').innerText ='La imagen del producto es requerida.';
         } else if (!acceptedExtensions.includes(fileExtension)) {
-            errores.push('La extensión de la imagen no es válida. Solo se permiten archivos JPG, JPEG, PNG y GIF.');
+            document.querySelector('#image-error').innerText ='La extensión de la imagen no es válida. \nSolo se permiten archivos JPG, JPEG, PNG y GIF.';
+        } else {
+            document.querySelector('#image-error').innerText = ''
         }
         
 
-        // Mostrar mensajes de error
-        let mensajeErrores = document.querySelector('#mensajeErrores');
-        if (errores.length > 0) {
-            mensajeErrores.innerHTML = '';
-            errores.forEach(error => {
-                mensajeErrores.innerHTML += `<li class='text-danger'>${error}</li>`;
-            });
-        } else {
-            mensajeErrores.innerHTML = '';
-        }
+      
     });
      //Validar con focusout al precio del producto
      inputPrecioProducto.addEventListener('focusout', () => {
         let errores = [];
-        // Validar campo imagen
+        
         // Validar campo precio
         if (inputPrecioProducto.value.trim() === '') {
-            errores.push('El precio del producto es requerido.');
+            document.querySelector('#price-error').innerText ='El precio del producto es requerido.';
         } else if (isNaN(inputPrecioProducto.value)) {
-            errores.push('El precio del producto debe ser un número válido.');
+            document.querySelector('#price-error').innerText ='El precio del producto debe ser un número válido.';
+        } else {
+            document.querySelector('#price-error').innerText =''
         }
         
 
-        // Mostrar mensajes de error
-        let mensajeErrores = document.querySelector('#mensajeErrores');
-        if (errores.length > 0) {
-            mensajeErrores.innerHTML = '';
-            errores.forEach(error => {
-                mensajeErrores.innerHTML += `<li class='text-danger'>${error}</li>`;
-            });
-        } else {
-            mensajeErrores.innerHTML = '';
-        }
+        
     });
-
     
 
 });
