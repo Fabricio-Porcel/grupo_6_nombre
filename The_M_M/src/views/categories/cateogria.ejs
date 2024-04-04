@@ -36,7 +36,8 @@
 
 <%- include('../partials/head.ejs', {cssSheet: "styles.css",title: products.length > 0 ? products[0].categories.name : "Nombre por defecto"}) %>
 <%- include('../partials/header.ejs') %>
-
+<%- include('../partials/navMobile.ejs') %>
+<body class="background-index">
 <main>
     <% if (products.length > 0) { %>
         <h2 class="titulo-main"><%= products[0].categories.name %></h2>
@@ -57,5 +58,5 @@
     
    
 </main>
-
+</body>
 <%- include('../partials/footer.ejs') %>
