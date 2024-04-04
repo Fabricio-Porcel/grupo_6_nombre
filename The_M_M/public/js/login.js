@@ -1,6 +1,10 @@
 window.addEventListener('load', () => {
   let formularioLogin = document.querySelector('#formularioLogin');
   let ulErrores = document.querySelector('#mensajeErrores');
+  let emailErrors = document.querySelector('#email-errors');
+  let passwordErrors = document.querySelector('#password-errors');
+  let inputEmail = document.querySelector('#emailLogin');
+  let inputContraseña = document.querySelector('#contraseña');
 
   formularioLogin.addEventListener("submit", function (e) {
     // e.preventDefault();
@@ -49,4 +53,37 @@ window.addEventListener('load', () => {
   }
   
 });
+
+inputEmail.addEventListener('focusout', () => {
+        
+  const emailFormato = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+
+    if (inputEmail.value.trim() === "") {
+      emailErrors.innerText = 'Se requiere indicar un correo electrónico';
+  } else if(!emailFormato.test(inputEmail.value.trim())){
+      // Validación de formato de correo electrónico
+    
+          emailErrors.innerText = 'El formato de correo electrónico no es válido';
+    
+  } else {
+    emailErrors.innerText = '';
+  }
+});
+
+
+  // Validar con evento focusout al campo password
+  inputContraseña.addEventListener('focusout', () => {
+        
+    if(inputContraseña.value.trim() === ""){
+      passwordErrors.innerText = 'Se requiere completar con la contraseña';
+    } else if (inputContraseña.value.length < 8) {
+      passwordErrors.innerText = 'La contraseña debe tener como mínimo 8 caracteres';
+    } else {
+      passwordErrors.innerText = '';
+    }
+  
+  
+  });
+
+
 });

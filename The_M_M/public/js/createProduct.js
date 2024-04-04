@@ -91,7 +91,7 @@ window.addEventListener('load', () => {
     });
     //Validar con focusout la descripcion del producto
     inputDescripcionProducto.addEventListener('focusout', () => {
-        let errores = [];
+        
 
         // Validar campo descripción
         if (inputDescripcionProducto.value.trim() === '') {
@@ -112,7 +112,7 @@ window.addEventListener('load', () => {
         
         
         
-        let errores = [];
+        
         // Validar campo imagen
         if (inputImagenProducto.value.trim() === '') {
             document.querySelector('#image-error').innerText ='La imagen del producto es requerida.';
@@ -127,7 +127,7 @@ window.addEventListener('load', () => {
     });
      //Validar con focusout al precio del producto
      inputPrecioProducto.addEventListener('focusout', () => {
-        let errores = [];
+        
         
         // Validar campo precio
         if (inputPrecioProducto.value.trim() === '') {
