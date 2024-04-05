@@ -1599,6 +1599,9 @@ width: 300px;
 .background-product{
     margin-top: 80px;
 }
+.background-carrito{
+    margin-top: 220px;
+}
 }
 
 @media (min-width: 768px){
