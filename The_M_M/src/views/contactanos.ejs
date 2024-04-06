@@ -1,0 +1,42 @@
+<body>
+    <main>
+        <a href="/contact/contactanos"></a>
+        <div class="formulario-contactanos">
+
+            <form action="/contactanos" method="POST">
+                <h2>Para más información envianos un email!</h2>
+                <div>
+                    <label for="nombre-y-apellido">Nombre y Apellido</label>
+                    <input type="text" id="nombre-y-apellido" name="nombre-y-apellido" value= >
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                </div>
+                
+                <div>
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" name="phoneNumber">
+                </div>
+
+                <div>
+                    <label for="empresa">Empresa</label>
+                    <input type="text" name="empresa">
+                </div>
+
+                <div>
+                    <label for="mensaje">Escribí tu consulta acá</label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+
+                    
+            </form>
+        </div>
+       
+        
+
+    </main>
+</body>
+<%- include('./partials/footer.ejs') %>
