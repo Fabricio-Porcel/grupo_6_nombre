@@ -78,6 +78,10 @@ const mainController = {
   
     productCart: (req , res) =>{
         res.render('productCart')
+    },
+
+    nosotros: (req, res) =>{
+        res.render('nosotros')
     }
 
 };

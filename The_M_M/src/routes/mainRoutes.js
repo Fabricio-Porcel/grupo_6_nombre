@@ -9,6 +9,8 @@ router.get('/' , mainController.index)
 
 router.get('/Carrito-de-compras' , mainController.productCart)
 
+router.get('/nosotros', mainController.nosotros)
+
 
 
 module.exports = router;
