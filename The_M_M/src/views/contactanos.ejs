@@ -1,35 +1,40 @@
-<body>
+
+<%- include('./partials/head.ejs', {cssSheet: "styles.css", title: "Home"}) %>
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navMobile.ejs') %>
+
+<body class="background-index">
     <main>
         <a href="/contact/contactanos"></a>
-        <div class="formulario-contactanos">
+        <div class="formulario-registro">
 
             <form action="/contactanos" method="POST">
                 <h2>Para más información envianos un email!</h2>
-                <div>
+                <div class="item-formulario">
                     <label for="nombre-y-apellido">Nombre y Apellido</label>
                     <input type="text" id="nombre-y-apellido" name="nombre-y-apellido" value= >
                 </div>
 
-                <div>
+                <div class="item-formulario">
                     <label for="email">Email</label>
                     <input type="email" name="email">
                 </div>
                 
-                <div>
+                <div class="item-formulario">
                     <label for="telefono">Teléfono</label>
                     <input type="tel" name="phoneNumber">
                 </div>
 
-                <div>
+                <div class="item-formulario">
                     <label for="empresa">Empresa</label>
                     <input type="text" name="empresa">
                 </div>
 
-                <div>
+                <div class="item-formulario">
                     <label for="mensaje">Escribí tu consulta acá</label>
-                    <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
-                </div>
-                <button type="submit">Enviar</button>
+                    <textarea name="mensaje" id="mensaje" cols="36" rows="10"></textarea>
+                </div class="item-formulario">
+                <button class="boton-registro" type="submit">Enviar</button>
 
                     
             </form>
