@@ -28,24 +28,30 @@ header {
 .header-navbar ul li{
     list-style-type: none;
 }
-.caja-logo{
-    width: 25%;
+/* .caja-logo{
+    width: 90px;
+    height: 90px;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
 
-}
+} */
 .logo{
     display: none;
-    width: 100%;
+    width: 180px;
     border-radius: 30px;
 }
 .mini-logo{
-    width: 100%;
-    border-radius: 30px;
+    width: 80px;
+    border-radius: 12px;
+    padding: 5px;
+
+    margin-top: 30px;
+    height: 70px;
 }
 .caja-titulo-y-barra-busqueda{
-    width: 40%;
+    max-width: 250px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -55,6 +61,7 @@ header {
     color: #FEFAE0;
     text-align: center;
     width: 100%;
+    font-size: 20px;
 
 }
 .caja-barra-busqueda{
@@ -70,11 +77,12 @@ header {
 }
 
 .barra-busqueda{
-    padding: 10px;
+    padding: 6px;
     border: 1px solid #ccc;
     border-radius: 30px;
     width: 60%;
     background-color: #FEFAE0;
+    margin: 12px 0px 20px 0;
 }
 
 .caja-botones-y-carrito{
@@ -1087,7 +1095,7 @@ a.link-email{
 /*----------------------- userProfileEdit ---------------------- */
 .background-profileEdit{
     background-color: #afb988;
-    margin-top: 110px;
+    margin-top: 155px;
 }
 .section-ProfileEdit {
     font-family: Arial, Helvetica, sans-serif;
@@ -1236,49 +1244,11 @@ a.link-email{
 
 .title-category{
     font-family: 'Pacifico', cursive;
-    padding-bottom: 13px;
+    text-align: center;
+    padding: 15px;
     color: #32381b;
 
 }
-
-/* ----- Nosotros ------ */
-
-.body-nosotros{
-    background-color: #afb988;
-    font-family: 'Amatic SC', sans-serif;
-    font-weight: bold;
-    color:#32381b;
-    margin-top: 200px;
-
-}
-
-.text-nosotros{
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-bottom: 20px;
-    font-size: 20px;
-
-}
-
-.contenedor-imagen-nosotros{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    
-}
-
-.imagen-texto-nosotros{
-    margin-bottom: 50px;
-    margin-top: 20px;
-    max-width: 100%;
-    
-}
-
-
-
 
 /* <------------------products details---------------> */
 .background-product{
@@ -1458,16 +1428,31 @@ a.link-email{
 .product-detail .colors{
     padding-left: 20px;
 }
+.titulo-listProducts{
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    padding: 15px;
+    color: #32381b;
+}
 
 /* ======= MEDIA QUERIES ======= */
+/* @media (min-width: 380px){
+    .titulo{
+        font-size: 16px;
+    }
+    .barra-busqueda{
 
+    } */
+/* } */
+@media (min-width: 380px){
+    
     /* header */
-    .header-principal{
-        display: none;
+    .titulo{
+        
+        padding-top: 10px;
     }
-    .caja-barra-navegacion{
-        display: none;
-    }
+    
+    
     .navbar-top{
         display: flex;
         font-family:'Pacifico', cursive;
@@ -1487,9 +1472,10 @@ a.link-email{
     }
     .barra-busqueda{
         width: 100%;
+        
     }
 
-    /* > navMobile */
+    /* > navMobile
     .navMobile {
         display: block;
         text-align: center;
@@ -1524,11 +1510,12 @@ a.link-email{
     .ulMobile li a i {
         font-size: 24px;
         color: #fdfad7;
-    }
+    } */
     
 .icono-carrito{
     display: block;
 }
+
 /* > crear producto */
 .titulo-editarProducto{
     margin-top: 20px;
@@ -1537,13 +1524,20 @@ a.link-email{
 .category img {
     width: 40px;
 }
+.name-category h3{
+    padding: 10px;
+    width: 121px;
+    font-size: 16px;
+    /* padding: 10px;
+    width: 150px; */
+}
 .background-category {
-    margin-top: 110px;
+    margin-top: 150px;
 }
 
 /* > Home */
 .background-index{
-    margin-top: 110px;
+    margin-top: 142px;
 }
 .imagen-producto {
     padding-top: 0;
@@ -1579,7 +1573,7 @@ margin: 0 auto;
 
 /* > formulario Register */
 .background-register{
-    margin-top: 110px;
+    margin-top: 140px;
 }
 .formulario-registro{
 width: 300px;
@@ -1594,7 +1588,7 @@ width: 300px;
 
 /* Profile */
 .background-profile{
-    margin-top: 125px;
+    margin-top: 165px;
     background-color: #afb988;
 }
 .section-MyProfile .name-email{
@@ -1618,7 +1612,7 @@ width: 300px;
     flex-direction: column;
 }
 .control-form input{
-    width: 351px;
+    width: 330px;
     height: 30px;
     font-size: 16px;
     margin-top: 10px;
@@ -1634,19 +1628,47 @@ width: 300px;
     width: 300px;
 }
 .background-product{
-    margin-top: 80px;
+    margin-top: 150px;
 }
 .background-carrito{
     margin-top: 220px;
 }
+.background-login{
+    margin-top: 140px;
 }
-
+}
+@media (min-width: 410px){
+    .mini-logo{
+        margin-left: 10px;
+    }
+}
+@media (min-width: 540px){
+    .caja-botones-y-carrito{
+        width: 20%;
+    }
+}
+@media (min-width: 670px){
+    .mini-logo{
+        margin-top: 18px;
+    }
+}
 @media (min-width: 768px){
+   
 .logo{
     display: block;
+    margin-top: 28px;
+    margin-left: 20px;
 }
 .mini-logo{
     display: none;
+}
+
+.barra-busqueda{
+    margin-top: 8px;
+    padding: 10px;
+}
+.titulo{
+    font-size: 20px;
 }
 
 .icono-carrito{
@@ -1704,13 +1726,12 @@ width: 700px;
 }
 .header-principal{
     display: flex;
+
 }
 .caja-barra-navegacion{
     display:flex;
 }
-.barra-busqueda {
-    width: 60%;
-}
+
 .background-index {
     margin-top: 135px;
 }
@@ -1738,6 +1759,7 @@ width: 700px;
 @media (min-width: 992px){
 .titulo{
     font-size: 22px;
+    margin: 0 20px;
 }
 .caja-barra-navegacion li{
     font-size: 20px;
@@ -1764,7 +1786,7 @@ width: 700px;
     width: 115px;
 }
 .background-index {
-    margin-top: 175px;
+    margin-top: 150px;
 }
 .background-product {
     margin-top: 150px;
@@ -1781,7 +1803,15 @@ width: 700px;
 .background-login{
     margin-top: 180px;
 }
-
+.logo{
+    
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 250px;
+}
+.name-category h3{
+    font-size: 20px;
+}
 }
 
 @media (min-width: 1200px){
