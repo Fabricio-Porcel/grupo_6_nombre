@@ -2046,3 +2046,35 @@ width: 700px;
     text-decoration: none;
     color: white;
 }
+.body-nosotros{
+    background-color: #afb988;
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: bold;
+    color:#32381b;
+    margin-top: 200px;
+
+}
+
+.text-nosotros{
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+}
+
+.contenedor-imagen-nosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    
+}
+.imagen-texto-nosotros{
+    margin-bottom: 50px;
+    margin-top: 20px;
+    max-width: 100%;
+    
+}
