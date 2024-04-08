@@ -1235,7 +1235,6 @@ a.link-email{
 }
 
 .title-category{
-    margin-left: 20%;
     font-family: 'Pacifico', cursive;
     padding-bottom: 13px;
     color: #32381b;
@@ -1423,7 +1422,6 @@ a.link-email{
 
 /* ======= MEDIA QUERIES ======= */
 
-@media (min-width: 420px){
     /* header */
     .header-principal{
         display: none;
