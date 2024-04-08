@@ -1,8 +1,8 @@
 <%- include('./partials/head.ejs', {cssSheet: "styles.css", title: "Carrito de Compras"}) %>
 <%- include('./partials/header.ejs') %>
-<%- include('./partials/navMobile.ejs') %>
+
 <body class="background-carrito">
-    <main>
+    <!-- <main>
         <div class="carrito" id="carrito">
             <div class="header-carrito">
                 <h2>Tu Carrito</h2>
@@ -53,6 +53,53 @@
             </div>
         </div>
 
-    </main>
+    </main> -->
+
+
+<main>
+    <div class="product-cart-Container">
+        <h1>Mi carrito</h1>
+        <div class="flex-product-cart">
+        <div class="productosSeleccionado">
+            <img src="/img/products/audifonos-bluetooth-celestes.jfif" width="80px" alt="audifonos-bluetooth-celestes">
+            <h3 class="nombre-de-producto">Auriculares Bluetooth</h3>
+        </div>
+        <div class="product-cart-option">
+        <div class="product-cart-select">
+            <h4>Elige cantidad</h4>
+            <select name="" id="">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+            </select>
+        </div>
+            <div class="eliminarDelCarrito">
+                <i class="fa-regular fa-trash-can"></i>
+                <h4>Eliminar</h4>
+            </div>
+        </div>
+        </div>
+        <div class="flex-product-cart">
+            <div class="productosSeleccionado">
+                <img src="/img/products/llavero-tela&metal-azul.jpg" width="80px" alt="llavero-tela-azul">
+                <h3 class="nombre-de-producto">Llavero de tela (azul)</h3>
+            </div>
+            <div class="product-cart-option">
+            <div class="product-cart-select">
+                <h4>Elige cantidad</h4>
+                <select name="" id="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+            </div>
+                <div class="eliminarDelCarrito">
+                    <i class="fa-regular fa-trash-can"></i>
+                    <h4>Eliminar</h4>
+                </div>
+            </div>
+            </div>
+    </div>
+</main>
 </body>
     <%- include('./partials/footer.ejs') %>

@@ -1309,6 +1309,14 @@ a.link-email{
 }
 .product-name{
     font-size: 20px;
+    font-size: 20px;
+    overflow: hidden;
+    width: 300px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 48px;
 }
  .price-green{
     color: green;
@@ -1337,10 +1345,15 @@ a.link-email{
     text-decoration: none;
     font-size: medium;
     color: white;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 10px 0 ;
     width: 150px;
     height: 42px;
+}
+.products .button-buy a{
+    color: white;
+}
+.button-shopping-cart a {
+    color: green;
 }
 .products .button-buy:hover{
     background-color: #139319;
@@ -1362,7 +1375,7 @@ a.link-email{
     color: rgb(31, 166, 19);
     width: 150px;
     height: 42px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
 }
 .products .button-shopping-cart:hover{
@@ -1447,7 +1460,76 @@ a.link-email{
 
     } */
 /* } */
+
+.product-cart-Container{
+    background-color: #606c34;
+    margin: 0 auto;
+    max-width: 700px;
+    
+}
+.product-cart-Container h1{
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid #000000;
+}
+.product-cart-Container img{
+    width: 74px;
+    padding: 10px;
+}
+.product-cart-Container .nombre-de-producto{
+padding-top: 20px;
+}
+
+.flex-product-cart{
+    display: flex;   
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000000; 
+    background-color: #99a569;
+}
+.productosSeleccionado {
+    display: flex;
+}
+.product-cart-option{
+    display: flex;
+    flex-direction: column;
+}
+.product-cart-select{
+    display: flex;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+.product-cart-option select{
+height: 20px;
+background: none;
+border: none;
+
+}
+.eliminarDelCarrito{
+display: flex;
+background-color: #fefae0;
+width: 100px;
+height: 30px;
+padding: 5px;
+border-radius: 10px;
+color: black;
+}
+.eliminarDelCarrito i{
+    margin-left: 2px;
+}
+.eliminarDelCarrito h4{
+    margin-left: 6px;
+}
+.background-carrito main{
+    margin: 0 10px;
+}
 @media (min-width: 360px){
+    .enlace-logOut{
+        font-size: 13px;
+    }
     
     /* header */
     .titulo{
@@ -1635,24 +1717,46 @@ width: 300px;
 }
 .background-carrito{
     margin-top: 220px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .background-login{
     margin-top: 140px;
 }
 }
 @media (min-width: 410px){
+    .name-email .email{
+        font-size: 16px;
+    }
+    
     .mini-logo{
         margin-left: 10px;
     }
+    .product-cart-option{
+
+        flex-direction: row;
+        padding-top: 20px;
+    }
 }
 @media (min-width: 540px){
+   
+    .product-cart-select{
+        padding-right: 20px;
+    }
     .caja-botones-y-carrito{
         width: 20%;
+    }
+    .flex-product-cart{
+        padding-right: 20px;
+        padding-left: 20px;
+       
     }
 }
 @media (min-width: 670px){
     .mini-logo{
         margin-top: 18px;
+    }
+    .enlace-logOut{
+        font-size: 16px;
     }
 }
 @media (min-width: 768px){
@@ -1958,6 +2062,7 @@ width: 700px;
 }
 .name-email .email{
     font-weight: 200;
+    font-size: 15px;
 }
 .info-profile h3{
     font-weight: 500;
