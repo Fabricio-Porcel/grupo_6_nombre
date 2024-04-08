@@ -189,10 +189,35 @@ processCreate: async (req, res) => {
         }
     },
       listProducts: function(req, res){
-        db.Product.findAll()
-          .then(function(products) {
-            res.render("products/listProducts", {products:products})
-          })
+        const searchTerm = req.query['barra-busqueda'];
+
+        // Si hay un término de búsqueda, realiza la búsqueda filtrando los productos
+        if (searchTerm) {
+            db.Product.findAll({
+                where: {
+                    name: {
+                        [db.Sequelize.Op.like]: '%' + searchTerm + '%' // Búsqueda por coincidencia parcial en el nombre del producto
+                    }
+                }
+            })
+            .then(function(products) {
+                res.render("products/listProducts", { products: products });
+            })
+            .catch(function(error) {
+                console.error('Error al buscar productos:', error);
+                res.status(500).send('Error interno del servidor');
+            });
+        } else {
+            // Si no hay un término de búsqueda, simplemente obtén todos los productos
+            db.Product.findAll()
+            .then(function(products) {
+                res.render("products/listProducts", { products: products });
+            })
+            .catch(function(error) {
+                console.error('Error al obtener todos los productos:', error);
+                res.status(500).send('Error interno del servidor');
+            });
+        }
       },
       detail: function(req, res){
         db.Product.findByPk(req.params.id, {
