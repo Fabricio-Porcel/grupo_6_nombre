@@ -318,7 +318,7 @@ body{
     border: 1px solid #606C34;
     width: 30%;
     margin-top: 30px;
-    margin-left: 700px;
+    margin-left: 33%;
     border-radius: 1px;
 
 }
@@ -1434,6 +1434,9 @@ a.link-email{
     padding: 15px;
     color: #32381b;
 }
+.background-index{
+    margin-top: 142px;
+}
 
 /* ======= MEDIA QUERIES ======= */
 /* @media (min-width: 380px){
@@ -1444,7 +1447,7 @@ a.link-email{
 
     } */
 /* } */
-@media (min-width: 380px){
+@media (min-width: 360px){
     
     /* header */
     .titulo{
