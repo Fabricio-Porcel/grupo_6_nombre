@@ -26,7 +26,7 @@ form.addEventListener('submit',(event)=>{
         //apellido
         let lastName = document.querySelector("#lastName")    
         if (lastName.value === "") {
-            errorList.push('completa el campo de apellido')
+            errorList.push('Completa el campo de apellido')
         } 
         // else if (!/^[A-Z][a-z]*$/.test(name.value)) {
         //     errorList.push('El apellido debe comenzar con mayúscula');
@@ -34,27 +34,27 @@ form.addEventListener('submit',(event)=>{
         //email
         let email = document.querySelector("#emailEditar")    
         if (email.value === "") {
-            errorList.push('completa el campo de email')
+            errorList.push('Completa el campo de email')
         }
         // numero de telefono 
         let phoneNumber = document.querySelector("#phoneNumber")    
         if (phoneNumber.value === "") {
-            errorList.push('completa el campo de numero de telefono')
+            errorList.push('Completa el campo de numero de telefono')
         }
         // Pais
        let country = document.querySelector("#country")    
        if (country.value === "") {
-        errorList.push('completa el campo de numero de Pais')
+        errorList.push('Completa el campo de numero de Pais')
         }
         // Ciudad
        let city = document.querySelector("#city")    
        if (city.value === "") {
-        errorList.push('completa el campo de numero de Ciudad')
+        errorList.push('Completa el nombre de la Ciudad')
         }
         //Avatar
         let avatar = document.querySelector("#avatar")    
         if (avatar.value === "") {
-         errorList.push('debes subir imagen del perfil')
+         errorList.push('Debes subir imagen del perfil')
          }
 
         if (errorList.length > 0) {
